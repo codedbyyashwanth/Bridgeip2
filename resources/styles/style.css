@@ -1004,6 +1004,21 @@ footer .links .legal-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+footer .links .legal-section .legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  footer .links .legal-section .legal {
+    display: block;
+  }
 }
 
 footer .links .legal-section h3 {
@@ -1011,16 +1026,47 @@ footer .links .legal-section h3 {
   display: inline;
 }
 
+@media (max-width: 600px) {
+  footer .links .legal-section h3 {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 footer .links .legal-section ul {
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  footer .links .legal-section ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 footer .links .legal-section ul li {
   display: inline-block;
 }
 
+@media (max-width: 600px) {
+  footer .links .legal-section ul li {
+    margin: 5px 0;
+  }
+}
+
 footer .links .legal-section ul li a {
-  margin: 0 15px;
+  margin: 0px 15px;
   text-decoration: none;
   color: #fafafa;
   -webkit-transition: ease 0.4s;
@@ -1032,7 +1078,17 @@ footer .links .legal-section ul li a:hover {
 }
 
 footer .links .legal-section .social-links {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 footer .links .legal-section .social-links ion-icon {
@@ -1042,6 +1098,12 @@ footer .links .legal-section .social-links ion-icon {
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  footer .links .legal-section .social-links ion-icon {
+    margin-top: 30px;
+  }
 }
 
 footer .links .legal-section .social-links ion-icon:hover {

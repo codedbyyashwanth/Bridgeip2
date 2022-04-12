@@ -911,23 +911,51 @@ footer {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        flex-wrap: wrap;
+                        margin-top: 20px;
+
+                        .legal {
+                                display: flex;
+                                
+                                @media (max-width:600px) {
+                                        display: block;
+                                }
+                        }
 
 
                         h3 {
                                 color: #fafafa;
                                 display: inline;
+
+                                @media (max-width:600px) {
+                                        text-align: center;
+                                        display: block;
+                                        margin-bottom: 20px;
+                                }
                         }
 
                         ul {
-                                display: inline;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                flex-wrap: wrap;
+
+                                @media (max-width:600px) {
+                                        
+                                justify-content: center;
+                                }
                         }
 
                         ul li {
                                 display: inline-block;
+
+                                @media (max-width:600px) {
+                                        margin: 5px 0;
+                                }
                         }
 
                         ul li a {
-                                margin: 0 15px;
+                                margin: 0px 15px;
                                 text-decoration: none;
                                 color: #fafafa;
                                 transition: ease 0.4s;
@@ -938,7 +966,11 @@ footer {
                         }
 
                         .social-links {
-                                display: inline-block;
+                                display: flex;
+                                margin-top: 20px;
+                                justify-content: center;
+                                align-items: center;
+                                margin: auto;
 
                                 ion-icon {
                                         margin: 0 10px;
@@ -946,6 +978,10 @@ footer {
                                         font-size: 1.5rem;
                                         transition: ease 0.4s;
                                         cursor: pointer;
+
+                                        @media (max-width:600px) {
+                                                margin-top: 30px;
+                                        }
 
                                         &:hover {
                                                 color: $accent-color;
