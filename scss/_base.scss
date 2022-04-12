@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+$poppins:  'Poppins', sans-serif;
+$san:  'Open Sans', sans-serif;
+$inter: 'Inter', sans-serif;
+
+$primary-color: #191A19;
+$secondary-color: #F7F4FF;
+$accent-color: #FF8303;
+
+$primary-shadow: 0 0 20px rgba($accent-color, 0.4);
+$secondary-shadow: 0 0 20px rgba(rgb(235, 235, 235), 0.4);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $poppins;
+    box-sizing: border-box;
+}
+
+@mixin layout-width {
+        width: 94%;
+        max-width: 1500px;
+        margin: 0 auto;
+}
