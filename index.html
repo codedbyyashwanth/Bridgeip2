@@ -13,7 +13,7 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
         <!-- Slick Js-->
-        <script src="./resources/scripts/slick.min.js"></script>
+        <!-- <script src="./resources/scripts/slick.min.js"></script> -->
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -28,9 +28,25 @@
 <body>
         <section class="head-section">
                 <header>
+                        <div class="user-acc">
+                                <div class="search-bar">
+                                        <button>
+                                                <ion-icon name="search-outline"></ion-icon>
+                                        </button>
+                                        <input type="text" placeholder="Search">
+                                </div>
+                                <div class="login-btn">
+                                        <a href="#">
+                                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                                <button>
+                                                        Login
+                                                </button>
+                                        </a>
+                                </div>
+                        </div>
                         <div class="navbar">
                             <div class="logo">
-                                <a href="#"><img src="./resources/img/logo.png" alt=""></a>
+                                <a href="./index.html"><img src="./resources/img/logo.png" alt=""></a>
                                 <img class="govt" src="./resources/img/govt.png" alt="">
                             </div>
                             <div id="menu" class="menu">
@@ -38,13 +54,80 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li><a href="#">Products<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li>
+                                            <a   id="products" href="#" class="nav-item" >
+                                                Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
+                                        </a>
+                                                <div id="product-items" class="nav-items">
+                                                        <div class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridge I2P</h3>
+                                                                        <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="./resources/img/Group 851.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./pages/products.html">Business Phone System</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="./resources/img/Group 852.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="#">Contact Centre</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="./resources/img/Group 853.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="#">IVR Broadcasting</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                                </p>
+                                                                <img src="./resources/img/logo.png" alt="">
+                                                        </div>
+                                                </div>
+                                        </li>
                                     <li><a href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
                                     <li><a href="#">Plans & Pricing</a></li>
                                     <li><a href="#">About us</a></li>
                                     <li><a href="#" id="contact-us-btn">Contact us</a></li>
                                 </ul>
                             </nav>
+                            <script>
+                                    const productsBtn = document.getElementById('products');
+                                    const productsItems = document.getElementById('product-items');
+                                    var clicked = false;
+                                    productsBtn.addEventListener('click', () => {
+                                        if (clicked) {
+                                                console.log("Clicked Again")
+                                                productsItems.style.visibility = "collapse";
+                                                productsItems.classList.remove("active-nav-items");
+                                                clicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "visible";
+                                                productsItems.classList.add("active-nav-items");
+                                                clicked = true;
+                                        }
+                                    })
+                            </script>
                         </div>
                 </header>
                 <div class="swiper mySwiper">

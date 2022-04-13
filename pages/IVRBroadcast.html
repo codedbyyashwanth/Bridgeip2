@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bridge Ip2</title>
+        <link rel="stylesheet" href="../resources/styles/product.css">
+        <script src="../resources/scripts/script.js" defer></script>
+
+        <!-- Ioniconic -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- Slick Js-->
+        <!-- <script src="../resources/scripts/slick.min.js"></script> -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="../resources/styles/slick.css">
+        <link rel="stylesheet" href="../resources/styles/slick-theme.css">
+
+        <!-- Swiper JS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+</head>
+<body>
+        <section class="head-section">
+                <header>
+                        <div class="user-acc">
+                                <div class="search-bar">
+                                        <button>
+                                                <ion-icon name="search-outline"></ion-icon>
+                                        </button>
+                                        <input type="text" placeholder="Search">
+                                </div>
+                                <div class="login-btn">
+                                        <a href="#">
+                                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                                <button>
+                                                        Login
+                                                </button>
+                                        </a>
+                                </div>
+                        </div>
+                        <div class="navbar">
+                            <div class="logo">
+                                <a href="../index.html"><img src="../resources/img/logo.png" alt=""></a>
+                                <img class="govt" src="../resources/img/govt.png" alt="">
+                            </div>
+                            <div id="menu" class="menu">
+                                <ion-icon id="menu-icon" name="menu"></ion-icon>
+                            </div>
+                            <nav id="nav">  
+                                <ul>
+                                    <li>
+                                            <a   id="products" href="#" class="nav-item" >
+                                                Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
+                                        </a>
+                                                <div id="product-items" class="nav-items">
+                                                        <div class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridge I2P</h3>
+                                                                        <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 851.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./products.html">Business Phone System</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 852.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./contact.html">Contact Centre</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 853.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./IVRBroadcast.html">IVR Broadcasting</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                                </p>
+                                                                <img src="../resources/img/logo.png" alt="">
+                                                        </div>
+                                                </div>
+                                        </li>
+                                    <li><a href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#" id="contact-us-btn">Contact us</a></li>
+                                </ul>
+                            </nav>
+                            <script>
+                                    const productsBtn = document.getElementById('products');
+                                    const productsItems = document.getElementById('product-items');
+                                    var clicked = false;
+                                    productsBtn.addEventListener('click', () => {
+                                        if (clicked) {
+                                                console.log("Clicked Again")
+                                                productsItems.style.visibility = "collapse";
+                                                productsItems.classList.remove("active-nav-items");
+                                                clicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "visible";
+                                                productsItems.classList.add("active-nav-items");
+                                                clicked = true;
+                                        }
+                                    })
+                            </script>
+                        </div>
+                </header>
+                <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <span>Home Right business phone system</span>
+                                                <h2>Simpler <br> Communications</h2>
+                                                <p>Call, Meet and Message all in one app</p>
+                                                <div class="btn-container">
+                                                        <button>Start Free Trail</button>
+                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Group-850.png" alt="">
+                                        </div>
+                                </div>
+                          </div>
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>Simpler <br> Communications</h2>
+                                                <p>Call, Meet and Message all in one app</p>
+                                                <div class="btn-container">
+                                                        <button>Start Free Trail</button>
+                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/header-img.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+        </section>
+        <section class="business-phone-section">
+                <div class="section-heading">
+                        <h2>Business Phone System</h2>
+                </div>
+                <div class="business-phone-layout">
+                        <ul class="tabs">
+                                <li data-tab-target="#overview" class="active tab">Overview</li>
+                                <li data-tab-target="#features" class="tab">Features</li>
+                                <li data-tab-target="#faq" class="tab">FAQs</li>
+                                <li data-tab-target="#pricing" class="tab">Pricing</li>
+                        </ul>
+                            
+                        <div class="tab-content">
+                                <div id="overview" data-tab-content class="active">
+                                        <div class="text-content">
+                                                <h4>Business Edition</h4>
+                                                <p>
+                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
+                                                </p>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                                <div id="features" data-tab-content>
+                                        <div class="text-content">
+                                                <h4>Business Features</h4>
+                                                <p>
+                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        <br><br>
+                                                </p>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                                <div id="faq" data-tab-content>
+                                        <div class="text-content">
+                                                <h4>Business FAQs</h4>
+                                                <p>
+                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
+                                                </p>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                                <div id="pricing" data-tab-content>
+                                        <div class="text-content">
+                                                <h4>Business Pricing</h4>
+                                                <p>
+                                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                        <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud. <br>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minima, ducimus aliquid esse quas molestias quos veritatis aperiam accusamus saepe nemo minus repellendus repellat, dolores impedit perferendis excepturi fugiat ea.
+                                                </p>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="login-section">
+                <div class="login-layout">
+                        <div class="login-content">
+                                <h3>Login to your Account</h3>
+                                <div class="input-content">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                        <input type="text" placeholder="Username">
+                                </div>
+                                <div class="input-content">
+                                        <ion-icon name="lock-closed-outline"></ion-icon>
+                                        <input type="password" placeholder="Password">
+                                </div>
+                                <div class="check-box">
+                                        <input type="checkbox" name="" id=""><span>Keep me logged in</span>
+                                </div>
+                                <a href="#"><button>Login</button></a>
+                        </div>
+                        <div class="text-content">
+                                <h2 >Bring everyone and everything 
+                                        together on Bridge i2p  </h2>
+                                        <div class="btn-container">
+                                                <button>See Pricing</button>
+                                                <button>View Demo<ion-icon name="play"></ion-icon></button>
+                                        </div>
+                        </div>
+                </div>
+        </section>
+        <section class="business-edition-section">
+                <div class="business-edition-layout">
+                        <div class="tab-content"  style="flex-direction: row-reverse;">
+                                <div class="text-content">
+                                        <h4>Business Edition</h4>
+                                        <p>
+                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
+                                        </p>
+                                </div>
+                                <div class="img-container">
+                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <div class="circle-yellow"></div>
+                                        <div class="circle-grey"></div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="quote-section">
+                <div class="quote-layout">
+                        <h3>
+                                Make your business stand out with your own branding added to the PBXware.
+                        </h3>
+                        <button>See Pricing</button>
+                </div>
+        </section>
+        <section class="business-contain-section">
+                <div class="business-contain-layout">
+                        <h3>
+                                Bring everyone and everything together on Bridge i2p 
+                        </h3>
+                        <div class="img-container">
+                                <img src="../resources/img/Image-5.png" alt=""><img src="../resources/img/Image-6.png" alt="">
+                        </div>
+                        <div class="text-content">
+                                <h3>Business Edition</h3>
+                                <p>
+                                        Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                </p>
+                                <button>View More</button>
+                        </div>
+                </div>
+        </section>
+        <section class="demo-section">
+                <div class="header-container">
+                        <div class="text-container">
+                                <h2 style="text-align: center; font-size: clamp(1.6rem, 4vw, 3rem); font-weight: 600;">Bring everyone and everything <br>together on Bridge i2p</h2>
+                                <div class="btn-container">
+                                        <button>See Pricing</button>
+                                        <button>View Demo<ion-icon name="play"></ion-icon></button>
+                                </div>
+                        </div>
+                        <div class="img-container">
+                                <img src="../resources/img/pricing.png" alt="">
+                        </div>
+                </div>
+        </section>
+        <section class="clients-section">
+                <div class="client">
+                        <h2>Our Clients</h2>
+                        <div class="logo-section">
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-1.png" alt="">
+                                                <img src="../resources/img/logo-2.png" alt="">
+                                                <img src="../resources/img/logo-3.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-4.png" alt="">
+                                                <img src="../resources/img/logo-5.png" alt="">
+                                                <img src="../resources/img/logo-6.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-1.png" alt="">
+                                                <img src="../resources/img/logo-2.png" alt="">
+                                                <img src="../resources/img/logo-3.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-4.png" alt="">
+                                                <img src="../resources/img/logo-5.png" alt="">
+                                                <img src="../resources/img/logo-6.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-1.png" alt="">
+                                                <img src="../resources/img/logo-2.png" alt="">
+                                                <img src="../resources/img/logo-3.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-4.png" alt="">
+                                                <img src="../resources/img/logo-5.png" alt="">
+                                                <img src="../resources/img/logo-6.png" alt="">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="partner">
+                        <h2>Our Partners</h2>
+                        <div class="logo-section">
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-1.png" alt="">
+                                                <img src="../resources/img/logo-2.png" alt="">
+                                                <img src="../resources/img/logo-3.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-4.png" alt="">
+                                                <img src="../resources/img/logo-5.png" alt="">
+                                                <img src="../resources/img/logo-6.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-1.png" alt="">
+                                                <img src="../resources/img/logo-2.png" alt="">
+                                                <img src="../resources/img/logo-3.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-4.png" alt="">
+                                                <img src="../resources/img/logo-5.png" alt="">
+                                                <img src="../resources/img/logo-6.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-1.png" alt="">
+                                                <img src="../resources/img/logo-2.png" alt="">
+                                                <img src="../resources/img/logo-3.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/logo-4.png" alt="">
+                                                <img src="../resources/img/logo-5.png" alt="">
+                                                <img src="../resources/img/logo-6.png" alt="">
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="business-edition-section">
+                <div class="business-edition-layout">
+                        <div class="tab-content"  style="flex-direction: row;">
+                                <div class="text-content">
+                                        <h4>Business Edition</h4>
+                                        <p>
+                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
+                                        </p>
+                                </div>
+                                <div class="img-container">
+                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <div class="circle-yellow"></div>
+                                        <div class="circle-grey"></div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="login-section">
+                <div class="login-layout">
+                        <div class="login-content">
+                                <h3>Login to your Account</h3>
+                                <div class="input-content">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                        <input type="text" placeholder="Username">
+                                </div>
+                                <div class="input-content">
+                                        <ion-icon name="lock-closed-outline"></ion-icon>
+                                        <input type="password" placeholder="Password">
+                                </div>
+                                <div class="check-box">
+                                        <input type="checkbox" name="" id=""><span>Keep me logged in</span>
+                                </div>
+                                <a href="#"><button>Login</button></a>
+                        </div>
+                        <div class="text-content">
+                                <h2 >Bring everyone and everything 
+                                        together on Bridge i2p  </h2>
+                                        <div class="btn-container">
+                                                <button>See Pricing</button>
+                                                <button>View Demo<ion-icon name="play"></ion-icon></button>
+                                        </div>
+                        </div>
+                </div>
+        </section>
+        <section class="business-edition-section">
+                <div class="business-edition-layout">
+                        <div class="tab-content"  style="flex-direction: row-reverse;">
+                                <div class="text-content">
+                                        <h4>Business Edition</h4>
+                                        <p>
+                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
+                                                <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
+                                        </p>
+                                </div>
+                                <div class="img-container">
+                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <div class="circle-yellow"></div>
+                                        <div class="circle-grey"></div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="subscribe-section">
+                <div class="subscribe-layout">
+                        <div class="text-content">
+                                <h2>Subscribe</h2>
+                                <p>get more from us</p>
+                        </div>
+                        <div class="input-layout">
+                                <div class="input-content">
+                                        <input type="text" placeholder="Your Email Address">
+                                        <ion-icon name="play"></ion-icon>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="integration-section">
+                <div class="integration-heading">
+                        <h2>Integration</h2>
+                </div>
+                <div class="integration-layout">
+                        <div class="brand">
+                                <img src="https://www.orangewater.in/assets/img/brand/racold-logo.webp" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/brand.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="https://www.orangewater.in/assets/img/brand/aosmith.webp" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="https://www.orangewater.in/assets/img/brand/brand5.webp" alt="">
+                        </div>
+                </div>
+                <button>View More</button>
+        </section>
+        <footer>
+                <div class="sitemap-links">
+                        <div class="sitemap">
+                                <h3>Plans</h3>
+                                <ul>
+                                        <li><a href="#"> US/Cannada Unlimited</a></li>
+                                        <li><a href="#"> Asia Pacific Unlimited</a></li>
+                                        <li><a href="#"> Europe Unlimited</a></li>
+                                        <li><a href="#"> Unlimited US/Cannada
+                                                <div>
+                                                        <p>+ 10 Selected Countries</p>
+                                                </div></a>
+                                        </li>
+                                        <li><a href="#"> World Unlimited + 63 Countries </a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="#"> Professional Services</a></li>
+                                        <li><a href="#"> Call Center</a></li>
+                                        <li><a href="#"> Healthcare</a></li>
+                                        <li><a href="#"> Financial Services</a></li>
+                                        <li><a href="#"> Retail</a></li>
+                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Integrations</h3>
+                                <ul>
+                                        <li><a href="#"> Salesforce</a></li>
+                                        <li><a href="#"> Zendesk</a></li>
+                                        <li><a href="#"> Zoho Crm </a></li>
+                                        <li><a href="#"> Bullhorn</a></li>
+                                        <li><a href="#"> HubSpot</a></li>
+                                        <li><a href="#"> SugarCRM & More</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Resources</h3>
+                                <ul>
+                                        <li><a href="#"> Press Release</a></li>
+                                        <li><a href="#"> Testimonials</a></li>
+                                        <li><a href="#"> Knowledge Base</a></li>
+                                        <li><a href="#"> Blogs</a></li>
+                                        <li><a href="#"> Gallery</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="links">
+                        <div class="legal-section">
+                                <div class="legal">
+                                        <h3>COPYRIGHTS DETAILS</h3>
+                                        <ul>
+                                                <li><a href="#">T&C</a></li>
+                                                <li><a href="#">Legal</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Cookie</a></li>
+                                                <li><a href="#">Preferances</a></li>
+                                                <li><a href="#">Accessibility</a></li>
+                                                <li><a href="#">Patents</a></li>
+                                                <li><a href="#">Sitemaps</a></li>
+                                        </ul>
+                                </div>
+                                <div class="social-links">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                        <ion-icon name="logo-youtube"></ion-icon>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</body>
+</html>
