@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bridge Ip2</title>
+        <link rel="stylesheet" href="../resources/styles/about.css">
+        <script src="../resources/scripts/script.js" defer></script>
+
+        <!-- Ioniconic -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- Slick Js-->
+        <!-- <script src="../resources/scripts/slick.min.js"></script> -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="../resources/styles/slick.css">
+        <link rel="stylesheet" href="../resources/styles/slick-theme.css">
+
+        <!-- Swiper JS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+</head>
+<body>
+        <section class="head-section">
+                <header>
+                        <div class="user-acc">
+                                <div class="search-bar">
+                                        <button>
+                                                <ion-icon name="search-outline"></ion-icon>
+                                        </button>
+                                        <input type="text" placeholder="Search">
+                                </div>
+                                <div class="login-btn">
+                                        <a href="#">
+                                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                                <button>
+                                                        Login
+                                                </button>
+                                        </a>
+                                </div>
+                        </div>
+                        <div class="navbar">
+                            <div class="logo">
+                                <a href="../index.html"><img src="../resources/img/logo.png" alt=""></a>
+                                <img class="govt" src="../resources/img/govt.png" alt="">
+                            </div>
+                            <div id="menu" class="menu">
+                                <ion-icon id="menu-icon" name="menu"></ion-icon>
+                            </div>
+                            <nav id="nav">  
+                                <ul>
+                                    <li>
+                                            <a   id="products" href="#" class="nav-item" >
+                                                Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
+                                        </a>
+                                                <div id="product-items" class="nav-items">
+                                                        <div class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridge I2P</h3>
+                                                                        <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 851.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./products.html">Business Phone System</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 852.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="#">Contact Centre</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 853.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="#">IVR Broadcasting</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                                </p>
+                                                                <img src="../resources/img/logo.png" alt="">
+                                                        </div>
+                                                </div>
+                                        </li>
+                                    <li><a href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li><a href="./integration.html">Integration</a></li>
+                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <li><a href="./about.html">About us</a></li>
+                                    <li><a href="./contact-us.html" id="contact-us-btn">Contact us</a></li>
+                                </ul>
+                            </nav>
+                            <script>
+                                    const productsBtn = document.getElementById('products');
+                                    const productsItems = document.getElementById('product-items');
+                                    var clicked = false;
+                                    productsBtn.addEventListener('click', () => {
+                                        if (clicked) {
+                                                console.log("Clicked Again")
+                                                productsItems.style.visibility = "collapse";
+                                                productsItems.classList.remove("active-nav-items");
+                                                clicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "visible";
+                                                productsItems.classList.add("active-nav-items");
+                                                clicked = true;
+                                        }
+                                    })
+                            </script>
+                        </div>
+                </header>
+                <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>About Our Company</h2>
+                                                <p>Get To Know Us Better</p>
+                                                <div class="btn-container">
+                                                        <button>Start Free Trail</button>
+                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Group 945.png" alt="">
+                                        </div>
+                                </div>
+                          </div>
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>About Our Company</h2>
+                                                <p>Get To Know Us Better</p>
+                                                <div class="btn-container">
+                                                        <button>Start Free Trail</button>
+                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/Group 945.png" alt="">
+                                        </div>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+        </section>
+
+        <section class="who-section">
+                <div class="who-layout">
+                        <div class="who-heading">
+                                <h2>Who We Are And What We Do</h2>
+                        </div>
+                        <div class="text-content">
+                                <p>
+                                        Bridge is an on-demand Voice-over-Internet Protocol (VoIP) Service Providers. Bridge allows startups and businesses to buy instant local support numbers from over 50+ countries around the world. 
+                                        With our easy to use interface and robust backend architecture any business can setup their call center within less than 3 minutes. CallHippo implements cloud computing into the world of telephony. 
+                                        Our platform allows deployment of a flexible telephony network, wherever an internet connection is available. We aim to replace the desk phones with soft phones, eliminating the complexity of setting up a support center.
+                                </p>
+                        </div>
+                </div>
+        </section>
+
+        <section class="world-wide-section">
+                <div class="world-wide-layout">
+                        <div class="text-content">
+                                <h1>
+                                        We can and have deployed 
+                                        <br>on every continent!
+                                </h1>
+                                <hr>
+                        </div>
+                        <div class="img-container">
+                                <img src="../resources/img/global-reach.png" alt="">
+                        </div>
+                </div>
+        </section>
+
+        <section class="quote-section">
+                <div class="quote-layout">
+                        <h3>
+                                Make your business stand out with your own branding added to the PBXware.
+                        </h3>
+                        <button>See Pricing</button>
+                </div>
+        </section>
+
+        <section class="market-section">
+                <div class="global-market-layout">
+                        <div class="text-content">
+                                <h1>The global market leader</h1>
+                                <p>
+                                        A Gartner UCaaS Magic Quadrant Leader.
+                                </p>
+                                <p class="content">
+                                        A Leader in the 2021 Gartner Magic Quadrant for Unified Communications as a Service, Worldwide
+                                        Read the latest Gartner report to learn:
+                                        <br> <br>
+                                        Why RingCentral has been named a 2021 UCaaS Leader
+                                        Key strengths of and cautions about UCaaS providers
+                                        Critical considerations when evaluating your next cloud communications solution
+                                </p>
+                                <button>View More</button>
+                        </div>
+                        <div class="img-container">
+                                <img src="../resources/img/Image 8.png" alt="">
+                                <div class="circle-container">
+                                        <div class="client-circle">
+                                                <b>25000+</b>
+                                                <p>Happy Clients</p>
+                                        </div>
+                                        <div class="client-circle">
+                                                <b>80%</b>
+                                                <p>Time Saved</p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+        <section class="quote-section" style="background-color: #fff; text-align: center; ">
+                <h1 style="font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 600;">Our products are used daily by</h1>
+        </section>
+
+        <section class="used-section">
+                <div class="used-layout">
+                        <div class="text-content">
+                                <div class="options">
+                                        <div class="option-content">
+                                                <div class="img">
+                                                        <img src="../resources/img/Group 1002.png" alt="">
+                                                </div>
+                                                <h3>Call Centers</h3>
+                                        </div>
+                                        <div class="option-content">
+                                                <div class="img">
+                                                        <img src="../resources/img/Group 1002.png" alt="">
+                                                </div>
+                                                <h3>Small and Medium 
+                                                        Businesses</h3>
+                                        </div>
+                                </div>
+                                <div class="options">
+                                        <div class="option-content">
+                                                <div class="img">
+                                                        <img src="../resources/img/Group 1002.png" alt="">
+                                                </div>
+                                                <h3>Blue Chip
+                                                        Corporations</h3>
+                                        </div>
+                                        <div class="option-content">
+                                                <div class="img">
+                                                        <img src="../resources/img/Group 1002.png" alt="">
+                                                </div>
+                                                <h3>Governments</h3>
+                                        </div>
+                                </div>
+                                <div class="options">
+                                        <div class="option-content">
+                                                <div class="img">
+                                                        <img src="../resources/img/Group 1002.png" alt="">
+                                                </div>
+                                                <h3>Service
+                                                        Providers</h3>  
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="img-container">
+                                <img src="../resources/img/Image-5.png" alt=""><img src="../resources/img/Image-6.png" alt="">
+                        </div>
+                </div>
+        </section>
+
+        <section class="logo-container-section">
+                <div class="logo-container-layout">
+                        <img src="../resources/img/logo.png" alt="">
+                        <h1>Make your business stand out with your
+                              <br>  own branding added to the PBXware.</h1>
+                </div>
+        </section>
+
+        <section class="blog-section">
+                <div class="blog-layout">
+                        <div class="blog-container">
+                                <div class="blog-card">
+                                        <div class="img-container">
+                                                <img src="../resources/img/blog-image.png" alt="">
+                                        </div>
+                                        <h3>Vision</h3>
+                                        <hr>
+                                        <p>
+                                                Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
+                                        </p>
+                                        <button>View More</button>
+                                </div>
+                                <div class="blog-card">
+                                        <div class="img-container">
+                                                <img src="../resources/img/blog-image.png" alt="">
+                                        </div>
+                                        <h3>Strategy</h3>
+                                        <hr>
+                                        <p>
+                                                Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
+                                        </p>
+                                        <button>View More</button>
+                                </div>
+                                <div class="blog-card">
+                                        <div class="img-container">
+                                                <img src="../resources/img/blog-image.png" alt="">
+                                        </div>
+                                        <h3>Goal</h3>
+                                        <hr>
+                                        <p>
+                                                Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
+                                        </p>
+                                        <button>View More</button>
+                                </div>
+                        </div>
+                        <div class="blog-container">
+                                <div class="blog-card">
+                                        <div class="img-container">
+                                                <img src="../resources/img/blog-image.png" alt="">
+                                        </div>
+                                        <h3>Vision</h3>
+                                        <hr>
+                                        <p>
+                                                Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
+                                        </p>
+                                        <button>View More</button>
+                                </div>
+                                <div class="blog-card">
+                                        <div class="img-container">
+                                                <img src="../resources/img/blog-image.png" alt="">
+                                        </div>
+                                        <h3>Strategy</h3>
+                                        <hr>
+                                        <p>
+                                                Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
+                                        </p>
+                                        <button>View More</button>
+                                </div>
+                                <div class="blog-card">
+                                        <div class="img-container">
+                                                <img src="../resources/img/blog-image.png" alt="">
+                                        </div>
+                                        <h3>Goal</h3>
+                                        <hr>
+                                        <p>
+                                                Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
+                                        </p>
+                                        <button>View More</button>
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+        <footer>
+                <div class="sitemap-links">
+                        <div class="sitemap">
+                                <h3>Plans</h3>
+                                <ul>
+                                        <li><a href="#"> US/Cannada Unlimited</a></li>
+                                        <li><a href="#"> Asia Pacific Unlimited</a></li>
+                                        <li><a href="#"> Europe Unlimited</a></li>
+                                        <li><a href="#"> Unlimited US/Cannada
+                                                <div>
+                                                        <p>+ 10 Selected Countries</p>
+                                                </div></a>
+                                        </li>
+                                        <li><a href="#"> World Unlimited + 63 Countries </a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="#"> Professional Services</a></li>
+                                        <li><a href="#"> Call Center</a></li>
+                                        <li><a href="#"> Healthcare</a></li>
+                                        <li><a href="#"> Financial Services</a></li>
+                                        <li><a href="#"> Retail</a></li>
+                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Integrations</h3>
+                                <ul>
+                                        <li><a href="#"> Salesforce</a></li>
+                                        <li><a href="#"> Zendesk</a></li>
+                                        <li><a href="#"> Zoho Crm </a></li>
+                                        <li><a href="#"> Bullhorn</a></li>
+                                        <li><a href="#"> HubSpot</a></li>
+                                        <li><a href="#"> SugarCRM & More</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Resources</h3>
+                                <ul>
+                                        <li><a href="#"> Press Release</a></li>
+                                        <li><a href="#"> Testimonials</a></li>
+                                        <li><a href="#"> Knowledge Base</a></li>
+                                        <li><a href="#"> Blogs</a></li>
+                                        <li><a href="#"> Gallery</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="links">
+                        <div class="legal-section">
+                                <div class="legal">
+                                        <h3>COPYRIGHTS DETAILS</h3>
+                                        <ul>
+                                                <li><a href="#">T&C</a></li>
+                                                <li><a href="#">Legal</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Cookie</a></li>
+                                                <li><a href="#">Preferances</a></li>
+                                                <li><a href="#">Accessibility</a></li>
+                                                <li><a href="#">Patents</a></li>
+                                                <li><a href="#">Sitemaps</a></li>
+                                        </ul>
+                                </div>
+                                <div class="social-links">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                        <ion-icon name="logo-youtube"></ion-icon>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</body>
+</html>

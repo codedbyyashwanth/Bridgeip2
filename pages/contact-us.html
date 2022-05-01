@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bridge Ip2</title>
+        <link rel="stylesheet" href="../resources/styles/contact-us.css">
+        <script src="../resources/scripts/script.js" defer></script>
+
+        <!-- Ioniconic -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- Slick Js-->
+        <!-- <script src="../resources/scripts/slick.min.js"></script> -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="../resources/styles/slick.css">
+        <link rel="stylesheet" href="../resources/styles/slick-theme.css">
+
+        <!-- Swiper JS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+</head>
+<body>
+        <section class="head-section">
+                <header>
+                        <div class="user-acc">
+                                <div class="search-bar">
+                                        <button>
+                                                <ion-icon name="search-outline"></ion-icon>
+                                        </button>
+                                        <input type="text" placeholder="Search">
+                                </div>
+                                <div class="login-btn">
+                                        <a href="#">
+                                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                                <button>
+                                                        Login
+                                                </button>
+                                        </a>
+                                </div>
+                        </div>
+                        <div class="navbar">
+                            <div class="logo">
+                                <a href="../index.html"><img src="../resources/img/logo.png" alt=""></a>
+                                <img class="govt" src="../resources/img/govt.png" alt="">
+                            </div>
+                            <div id="menu" class="menu">
+                                <ion-icon id="menu-icon" name="menu"></ion-icon>
+                            </div>
+                            <nav id="nav">  
+                                <ul>
+                                    <li>
+                                            <a   id="products" href="#" class="nav-item" >
+                                                Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
+                                        </a>
+                                                <div id="product-items" class="nav-items">
+                                                        <div class="items-content">
+                                                                <div class="heading">
+                                                                        <h3>Bridge I2P</h3>
+                                                                        <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="links">
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 851.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="./pages/products.html">Business Phone System</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 852.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="#">Contact Centre</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="link">
+                                                                                <img src="../resources/img/Group 853.png" alt="">
+                                                                                <div class="text-content">
+                                                                                        <a href="#">IVR Broadcasting</a>
+                                                                                        <p>
+                                                                                                All the power of the enterprise phone, Now in your pocket
+                                                                                        </p>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="company-content">
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                        Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                                </p>
+                                                                <img src="../resources/img/logo.png" alt="">
+                                                        </div>
+                                                </div>
+                                        </li>
+                                    <li><a href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li><a href="./integration.html">Integration</a></li>
+                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <li><a href="./about.html">About us</a></li>
+                                    <li><a href="./contact-us.html" id="contact-us-btn">Contact us</a></li>
+                                </ul>
+                            </nav>
+                            <script>
+                                    const productsBtn = document.getElementById('products');
+                                    const productsItems = document.getElementById('product-items');
+                                    var clicked = false;
+                                    productsBtn.addEventListener('click', () => {
+                                        if (clicked) {
+                                                console.log("Clicked Again")
+                                                productsItems.style.visibility = "collapse";
+                                                productsItems.classList.remove("active-nav-items");
+                                                clicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "visible";
+                                                productsItems.classList.add("active-nav-items");
+                                                clicked = true;
+                                        }
+                                    })
+                            </script>
+                        </div>
+                </header>
+                <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>Contact Sales</h2>
+                                                <p>We're a company that focuses on establishing long-term <br> relationship with customers.</p>
+                                                <div class="btn-container">
+                                                        <button>Start Free Trail</button>
+                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/3d3.png" alt="">
+                                        </div>
+                                </div>
+                          </div>
+                          <div class="swiper-slide">
+                                <div class="header-container">
+                                        <div class="text-container">
+                                                <h2>Contact Sales</h2>
+                                                <p>We're a company that focuses on establishing long-term <br> relationship with customers.</p>
+                                                <div class="btn-container">
+                                                        <button>Start Free Trail</button>
+                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
+                                                </div>
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="../resources/img/3d3.png" alt="">
+                                        </div>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+        </section>
+
+        <section class="contact-sales-section">
+                <div class="section-heading">
+                        <h2>Contact Sales</h2>
+                        <p>We believe in a good first connection. <br>Call, Chat or book a meeting with our helpful experts to get started </p>
+                </div>
+                <div class="contact-sales-layout">
+                        <div class="cards">
+                                <p>Call us now</p>
+                                <ion-icon name="call"></ion-icon>
+                                <h2>+9100000000</h2>
+                        </div>
+                        <div class="cards">
+                                <p>Chat with us</p>
+                                <ion-icon name="chatbox-ellipses"></ion-icon>
+                                <button>Chat with Sales</button>
+                        </div>
+                        <div class="cards">
+                                <p>Book a meeting</p>
+                                <ion-icon name="calendar"></ion-icon>
+                                <button>Book Now</button>
+                        </div>
+                </div>
+        </section>
+
+        <section class="quote-section" style="background-color: rgb(226, 226, 226); text-align: center; padding: 60px 0;">
+                <h1 style="font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 600;">Looking for product support? Visit our Support Center.</h1>
+        </section>
+
+        <section class="contact-map-section">
+                <div class="contact-map-layout">
+                        <form action="" method="post" class="contact-form">
+                                <h3>Let's Connect with Us</h3>
+                                <div class="name-input">
+                                        <input type="text" placeholder="First Name"><input type="text" placeholder="Last Name">
+                                </div>
+                                <input class="text" type="text" placeholder="Phone No"><input  class="text" type="text" placeholder="Email Id"><textarea placeholder="Type your Question"></textarea>
+                                <input type="submit" value="Submit">
+                        </form>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34914.23973496872!2d77.51676609784921!3d12.963433941310214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f005bba7115%3A0xdbd7f2e00ddaf1ab!2sMysore%20Road%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1651428365208!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </section>
+      
+        <footer>
+                <div class="sitemap-links">
+                        <div class="sitemap">
+                                <h3>Plans</h3>
+                                <ul>
+                                        <li><a href="#"> US/Cannada Unlimited</a></li>
+                                        <li><a href="#"> Asia Pacific Unlimited</a></li>
+                                        <li><a href="#"> Europe Unlimited</a></li>
+                                        <li><a href="#"> Unlimited US/Cannada
+                                                <div>
+                                                        <p>+ 10 Selected Countries</p>
+                                                </div></a>
+                                        </li>
+                                        <li><a href="#"> World Unlimited + 63 Countries </a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="#"> Professional Services</a></li>
+                                        <li><a href="#"> Call Center</a></li>
+                                        <li><a href="#"> Healthcare</a></li>
+                                        <li><a href="#"> Financial Services</a></li>
+                                        <li><a href="#"> Retail</a></li>
+                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Integrations</h3>
+                                <ul>
+                                        <li><a href="#"> Salesforce</a></li>
+                                        <li><a href="#"> Zendesk</a></li>
+                                        <li><a href="#"> Zoho Crm </a></li>
+                                        <li><a href="#"> Bullhorn</a></li>
+                                        <li><a href="#"> HubSpot</a></li>
+                                        <li><a href="#"> SugarCRM & More</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Resources</h3>
+                                <ul>
+                                        <li><a href="#"> Press Release</a></li>
+                                        <li><a href="#"> Testimonials</a></li>
+                                        <li><a href="#"> Knowledge Base</a></li>
+                                        <li><a href="#"> Blogs</a></li>
+                                        <li><a href="#"> Gallery</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="links">
+                        <div class="legal-section">
+                                <div class="legal">
+                                        <h3>COPYRIGHTS DETAILS</h3>
+                                        <ul>
+                                                <li><a href="#">T&C</a></li>
+                                                <li><a href="#">Legal</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Cookie</a></li>
+                                                <li><a href="#">Preferances</a></li>
+                                                <li><a href="#">Accessibility</a></li>
+                                                <li><a href="#">Patents</a></li>
+                                                <li><a href="#">Sitemaps</a></li>
+                                        </ul>
+                                </div>
+                                <div class="social-links">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                        <ion-icon name="logo-youtube"></ion-icon>
+                                        <ion-icon name="logo-twitter"></ion-icon>
+                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</body>
+</html>

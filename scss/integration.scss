@@ -1,6 +1,5 @@
 @import './base';
 
-
 .head-section {
 
         background-color: #F2F2F2;
@@ -352,25 +351,20 @@ header {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        padding: 100px 0 0 0;
+        padding: 60px 0 60px 0;
 
         .text-container {
-
-                span {
-                        font-size: 0.95rem;
-                        margin-bottom: 20px;
-
-                }
                 
                 h2 {
-                        font-size: clamp(2.3rem, 5vw, 4rem);
+                        font-size: clamp(2.3rem, 5vw, 3rem);
                         font-weight: 700;
                         line-height: 1.2;
                         color: #000;
                 }
 
                 p {
-                        font-size: 1rem;
+                        font-family: $inter;
+                        font-size: 1.4rem;
                         font-weight: normal;
                         margin-top: 10px;
                         color: $primary-color;
@@ -416,9 +410,8 @@ header {
         }
 
         .img-container {
-                max-width: 450px;
+                max-width: 550px;
                 position: relative;
-                align-self: flex-end;
                 z-index: 1;
                 
                 
@@ -461,349 +454,303 @@ header {
         }
 }
 
-.business-phone-section {
+
+.features-section {
+        padding: 100px 0;
         .section-heading {
                 width: 94%;
-                max-width: 600px;
-                margin: 100px auto;
+                max-width: 650px;
+                margin: 60px auto;
                 padding: 0 10px;
                 text-align: center;
                 
                 h2 {
                         font-size: 2.4rem;
                         font-weight: 600;
-                        font-family: $poppins;
                 }
 
                 p {
-                        font-size: 0.9rem;
+                        font-size: 1.2rem;
                 }
         }
 
-        .business-phone-layout {
+        .features {
                 @include layout-width;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
 
-                [data-tab-content] {
-                        display: none;
-                }
-                      
-                .active[data-tab-content] {
-                        display: block;
+                @media (max-width: 1100px) {
+                        justify-content: center;
                 }
 
-                .tabs {
-                        li {
-                                display: inline-block;
-                                margin-right: 50px;
-                                margin-top: 15px;
-                                font-weight: 600;
-                                font-size: 1.3rem;
-                                cursor: pointer;
+                .features-card {
+                        text-align: center;
+                        margin: 40px 15px;
+
+                        img {
+                                width: 100px;
+                                margin: 10px auto;
                         }
 
-                        .active {
-                                padding-bottom: 3px;
-                                border-bottom: 3px solid $accent-color;
+                        h3 {
+                                font-size: 1.6rem;
+                                text-align: left;
                         }
-                }
 
-                .tab-content {
-                        margin: 30px 0;
-
-                        .active[data-tab-content] {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: flex-start;
-                                flex-wrap: wrap;
-
-                                .text-content {
-                                        width: 97%;
-                                        max-width: 600px;
-
-                                        h4 {
-                                                font-size: 1.6rem;
-                                                margin: 20px 0;
-                                        }
-
-                                        p {
-                                                font-size: 1.1rem;
-                                        }
-                                }
-
-                                .img-container {
-                                        position: relative;
-
-                                        img {
-                                                width: 97%;
-                                                max-width: 700px;
-                                        }
-
-                                        .circle-yellow, .circle-grey {
-                                                position: absolute;
-                                                top: -10%;
-                                                right: 5%;
-                                                width: 220px;
-                                                height: 220px;
-                                                background-color: $accent-color;
-                                                border-radius: 50%;
-                                                z-index: -1;
-                                                opacity: 0.8;
-                                        }
-                        
-                                        .circle-grey {
-                                                top: -15%;
-                                                right: -5%;
-                                                width: 250px;
-                                                height: 250px;
-                                                z-index: -2;
-                                                background-color: rgb(199, 199, 199);
-                                        }
-                                }
-                        }
-                }
-
-                @media (max-width:1400px) {
-                        .tab-content {
-                                .active[data-tab-content] {
-                                        .text-content {
-                                                max-width: 500px;
-                
-                                                h4 {
-                                                        font-size: 1.4rem;
-                                                }
-                
-                                                p {
-                                                        font-size: 1.05rem;
-                                                }
-                                        }
-
-                                        .img-container {
-        
-                                                img {
-                                                        max-width: 600px;
-                                                }
-        
-                                                .circle-yellow, .circle-grey {
-                                                        top: -10%;
-                                                        right: 5%;
-                                                        width: 220px;
-                                                        height: 220px;
-                                                }
-                                
-                                                .circle-grey {
-                                                        top: -15%;
-                                                        right: -5%;
-                                                        width: 250px;
-                                                        height: 250px;
-                                                }
-                                        }
-                                }
-                        }
-                }
-
-                @media (max-width:1200px) {
-                        .tab-content {
-                                .active[data-tab-content] {
-                                        justify-content: center;
-
-                                        .text-content {
-                                                max-width: 800px;
-                
-                                                h4 {
-                                                        font-size: 1.4rem;
-                                                }
-                
-                                                p {
-                                                        font-size: 1.05rem;
-                                                }
-                                        }
-
-                                        .img-container {
-                                                margin-top: 150px;
-        
-                                                img {
-                                                        max-width: 800px;
-                                                }
-        
-                                                .circle-yellow, .circle-grey {
-                                                        top: -10%;
-                                                        right: 5%;
-                                                        width: 220px;
-                                                        height: 220px;
-                                                }
-                                
-                                                .circle-grey {
-                                                        top: -15%;
-                                                        right: -5%;
-                                                        width: 250px;
-                                                        height: 250px;
-                                                }
-                                        }
-                                }
-                        }
-                }
-
-                @media (max-width:600px) {
-                        .tab-content {
-                                .active[data-tab-content] {
-
-                                        .img-container {
-                                                margin-top: 150px;
-        
-                                                img {
-                                                        max-width: 800px;
-                                                }
-        
-                                                .circle-yellow, .circle-grey {
-                                                        top: -10%;
-                                                        right: 5%;
-                                                        width: 150px;
-                                                        height: 150px;
-                                                }
-                                
-                                                .circle-grey {
-                                                        top: -15%;
-                                                        right: -2%;
-                                                        width: 150px;
-                                                        height: 150px;
-                                                }
-                                        }
-                                }
+                        p {
+                                text-align: left;
+                                max-width: 300px;
+                                font-size: 0.9rem;
                         }
                 }
         }
-}                  
+}
 
-.login-section {
-        background: rgb(34,111,162);
-        background: linear-gradient(0deg, rgba(34,111,162,1) 35%, rgba(10,163,187,1) 100%);
-        padding: 60px 0;
+.control-section {
+        padding: 20px 0;
+        background: rgb(10,163,187);
+        background: linear-gradient(174deg, rgba(10,163,187,1) 0%, rgba(34,111,162,1) 100%);
 
-        .login-layout {
+        .control-layout {
                 @include layout-width;
-
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
-                
-                .login-content {
-                        
-                        h3 {
-                                color: #fafafa;
-                                font-weight: 500;
-                                text-align: center;
-                                font-size: 1.4rem;
+
+                @media (max-width: 1310px) {
+                        justify-content: center;
+                }
+
+
+                .img-container {
+                        margin: 20px;
+
+                        @media (max-width: 1410px) {
+                                max-width:500px;
                         }
 
-                        .input-content {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                height: 45px;
-                                margin: 20px 0;
-
-
-                                input {
-                                        width: 300px;
-                                        border: none;
-                                        outline: none;
-                                        height: 100%;
-                                        padding: 0 10px;
-                                }
-
-                                ion-icon {
-                                        padding: 0 10px;
-                                        height: 100%;
-                                        font-size: 1.1rem;
-                                        color: #fff;
-                                        background-color: #549BEE;
-                                }
-                        }
-
-                        .check-box {
-                                display: flex;
-                                align-items: center;
-                                text-align: center;
-
-                                span {
-                                        margin: 0 5px;
-                                        color: #fafafa;
-                                }
-                        }
-
-                        a {
-                                text-decoration: none;
-                        }
-
-                        button {
-                                padding: 12px 45px;
-                                margin: 20px auto;
-                                background-color: $accent-color;
-                                color: #fafafa;
-                                border-radius: 50px;
-                                display: flex;
-                                align-items: center;
-                                outline: none;
-                                border: none;
-                                cursor: pointer;
-                                // box-shadow: $primary-shadow;
-                
-                                &:hover {
-                                        background-color: rgba($accent-color, 0.8);
-                                }
+                        img {
+                                width: 100%;
                         }
                 }
 
                 .text-content {
-                        width: 94%;
-                        max-width: 800px;
+                        margin: 20px;
+                        color: #fafafa;
 
-                        h2 {
-                                color: #fafafa;
-                                text-align: center;
-                                font-size: clamp(1.6rem, 4vw, 2.6rem); 
+                        h1 {    
                                 font-weight: 600;
+                                text-align: center;
+                                font-size: clamp(1.8rem, 3vw, 2.4rem);
                         }
 
-                        .btn-container {
+                        span {
+                                display: block;
+                                margin: 10px 0;
+                                font-size: clamp(1rem, 3vw, 1.4rem);
+                        }
+
+                        p {
+                                margin: 30px 0;
+                                text-align: center;
+                                max-width: 650px;
+                                margin-bottom: 80px;
+                        }
+
+                        .content-container {
                                 display: flex;
-                                justify-content: center;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                flex-wrap: wrap;
+                                margin: 20px;
 
-                                @media (max-width:600px) {
-                                        flex-wrap: wrap;
+                                @media (max-width: 810px) {
+                                        justify-content: center;
                                 }
 
-  
-                                button {
-                                        padding: 12px 35px;
-                                        margin: 20px 20px;
-                                        background-color: $accent-color;
-                                        color: #fafafa;
-                                        border-radius: 50px;
-                                        display: flex;
+                                h3 {
+                                        max-width: 300px;
+                                        font-weight: normal;
+                                        margin: 20px;
+                                }
+                        }
+                }
+        }
+}
+
+.market-section {
+        .global-market-layout {
+                @include layout-width;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 100px 0;
+
+                @media (max-width: 1452px) {
+                        justify-content: center;
+                        flex-direction: column;
+                }
+
+                .text-content {
+                        width: 100%;
+                        max-width: 650px;
+
+                        h1 {
+                                font-size: 2.4rem;
+                                font-size: clamp(1.8rem, 3vw, 2.4rem);
+                                text-align: center;
+
+                                @media (max-width: 1450px) {
+                                        margin-top: 100px;
+                                }
+                        }
+
+                        p {
+                                text-align: center;
+                                font-size: 1.2rem;
+                                font-size: clamp(1rem, 3vw, 1.2rem);
+                        }
+
+                        .contents {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                flex-wrap: wrap;
+                                margin: 80px 0;
+
+                                @media (max-width: 640px) {
+                                        justify-content: center;
                                         align-items: center;
-                                        outline: none;
-                                        border: none;
-                                        cursor: pointer;
-                                        
-                                        // box-shadow: $primary-shadow;
-
-                                        ion-icon {
-                                                margin-left: 10px;
-                                        }
-
-                                        &:hover {
-                                                background-color: rgba($accent-color, 0.8);
-                                        }
+                                        flex-direction: column;
                                 }
 
-                                button:nth-child(2) {
-                                        background-color: $primary-color;
+                                .content {
+                                        margin: 15px;
+                                        text-align: center;
 
-                                        @media (max-width:600px) {
-                                                margin-top: 5px;
+                                        @media (max-width: 640px) {
+                                                margin: 30px;
                                         }
+
+                                        img {
+                                                max-width: 80px;
+
+                                                @media (max-width: 640px) {
+                                                        max-width: 120px;
+                                                }
+                                        }
+
+                                        h2 {
+                                                font-size: 2rem;
+                                        }
+
+                                        p {
+                                                font-size: 0.8rem;
+
+                                                @media (max-width: 640px) {
+                                                        font-size: 0.95rem;
+                                                }
+                                        }
+                                }
+                        }
+                }
+
+                .img-container {        
+                        position: relative;
+
+                        @media (max-width: 780px) {
+                                width: 94%;
+                                max-width: 500px;
+                                margin:  20px auto;
+                        }
+
+                        .circle-container {
+                                position: absolute;
+                                bottom: -10%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                display: flex;
+                                align-items: center;
+
+                                @media (max-width:615px) {
+                                }
+
+                                .client-circle {
+                                        width: 140px;
+                                        height: 140px;
+                                        padding: 10px;
+                                        border-radius: 50%;
+                                        background-color: #BFA040;
+                                        display: flex;
+                                        justify-content: center;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        color: #fafafa;
+                                        margin: 0 30px;
+
+                                        @media (max-width: 615px) {
+                                                width: 120px;
+                                                height: 120px;
+                                                font-size: 0.8rem;
+                                        }
+
+                                        @media (max-width: 450px) {
+                                                width: 80px;
+                                                height: 80px;
+
+                                                p {
+                                                        font-size: 0.8rem;
+                                                }
+                                        }
+                                }
+                        }
+
+                        img {
+                                width: 100%;
+                        }
+                }
+        }
+}
+
+.integration-section {
+        background-color: #1A81AB;
+
+        .integration-layout {
+                @include layout-width;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                margin-top: 100px;
+                transform: translateY(-100px);
+
+                .cards {
+                        margin: 20px;
+                        
+                        .img-container {
+                                max-width: 380px;
+
+                                img {
+                                        width: 100%;
+                                }
+                        }
+
+                        .text-content {
+                                color: #fafafa;
+
+                                h3 {
+                                        font-size: 1.6rem;
+                                        margin: 10px 0;
+                                }
+
+                                p {
+                                        font-size: 0.9rem;
+                                        max-width: 380px;
+                                        line-height: 1.7;
                                 }
                         }
                 }
@@ -982,7 +929,7 @@ header {
         .quote-layout {
                 @include layout-width;
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
                 flex-wrap: wrap;
 
@@ -1023,91 +970,104 @@ header {
         }
 }
 
-.business-contain-section {
-        background-color: #BDF3F4;
-        padding: 50px 0;
-        overflow-x: hidden;
+.blog-section {
+        padding: 60px 0;
+        background-color: #FFD77B;
 
-        .business-contain-layout {
-                @include layout-width;
-
+        .section-heading {
+                width: 94%;
+                max-width: 650px;
+                margin: 10px auto;
+                padding: 0 10px;
                 text-align: center;
-
-                h3 {
-                        font-size: 1.8rem;
-                        margin: 50px 0;
-                }
-
-                .img-container {
-                        position: relative;
-                        margin-bottom: 200px;
-
-                        img {
-                                width: 94%;
-                                max-width: 700px;
-                        }
-
-                        img:nth-child(2) {
-                                position: absolute;
-                                width: 97%;
-                                top: 50%;
-                                left: 25%;
-                                max-width: 800px;
-                        }
+                
+                h2 {
+                        font-size: 2.4rem;
+                        font-weight: 600;
                 }
 
                 p {
-                        max-width: 1000px;
-                        margin: auto;
                         font-size: 1.2rem;
                 }
+        }       
 
-                button {
-                        padding: 12px 35px;
-                        margin: 30px auto;
-                        background-color: $accent-color;
-                        color: #fafafa;
-                        border-radius: 5px;
+        .blog-layout {
+                @include layout-width;
+
+                .blog-container {
                         display: flex;
-                        align-items: center;
-                        outline: none;
-                        border: none;
-                        cursor: pointer;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
 
-                        &:hover {
-                                background-color: rgba($accent-color, 0.8);
+                        @media (max-width: 725px) {
+                                justify-content: center;
                         }
-                }
-        }
-}
 
-.demo-section {
-        .header-container {
-                .img-container {
-                        width: 800px;
+                        .blog-card {
+                                width: 97%;
+                                max-width: 350px;
+                                margin: 50px 20px;
+                                background-color: #fff;
 
-                        img {
-                                width: 100%;
-                        }
-                }
+                                @media (max-width: 1400px) {
+                                        max-width: 340px;
+                                }
 
-                .text-container {
-                        .btn-container {
-                                margin-left: 50%; 
-                                transform: translateX(-50%);
-                        }
-                }
-        }
-}
+                                @media (max-width: 1400px) {
+                                        max-width: 340px;
+                                }
 
-@media (max-width:500px) {
-        .demo-section {
-                .header-container {
-        
-                        .text-container {
-                                .btn-container {
-                                        margin-left: 5%;
-                                        transform: none;
+                                @media (max-width: 810px) {
+                                        max-width: 300px;
+                                }
+
+                                @media (max-width: 710px) {
+                                        max-width: 380px;
+                                }
+
+                                .img-container {
+                                        width: 100%;
+                                        height: 200px;
+                                        display: flex;
+                                        align-items: center;
+                                        background-color: #3C3C3C;
+                                        overflow: hidden;
+
+                                        img {
+                                                width: 100%;
+                                        }
+                                }
+
+                                h3 {
+                                        font-size: 1.3rem;
+                                        margin: 10px 0;
+                                        padding: 0 20px;
+                                }
+
+                                p {
+                                        max-width: 350px;
+                                        margin: 10px 0;
+                                        font-size: 0.9rem;
+                                        padding: 0 20px;
+                                }
+
+                                button {
+                                        padding: 12px 35px;
+                                        margin: 30px auto;
+                                        background-color: $accent-color;
+                                        color: #fafafa;
+                                        border-radius: 5px;
+                                        outline: none;
+                                        border: none;
+                                        cursor: pointer;
+                                        display: flex;
+                                        justify-content: center;
+                                        // box-shadow: $primary-shadow;
+
+                                        &:hover {
+                                                background-color: rgba($accent-color, 0.8);
+                                        }
                                 }
                         }
                 }
@@ -1118,7 +1078,6 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
 
         @media (max-width: 800px) {
                 flex-direction: column;
@@ -1197,68 +1156,7 @@ header {
         }
 }
 
-.subscribe-section {
-        background-color: #BDF3F4;
-        padding: 50px 0;
-
-        .subscribe-layout {
-                @include layout-width;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-
-                .text-content {
-                        margin-top: 10px;
-
-                        h2 {
-                                font-size: 3rem;
-                                color: #162951;
-                                text-align: center;
-                        }
-
-                        p {
-                                font-size: 1.3rem;
-                                color: #162951;
-                                text-align: center;
-                        }
-                }
-
-                .input-content {
-                        width: 100%;
-                        height: 50px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-top: 10px;
-
-                        input {
-                                width: 300px;
-                                padding: 0 15px;
-                                height: 100%;
-                                border: none;
-                                outline: none;
-
-                                @media (max-width:600px) {
-                                        width: 100%;
-                                        min-width: 250px;
-                                }
-                        }
-
-                        ion-icon {
-                                padding: 0 20px;
-                                height: 100%;
-                                background-color: #AC1F25;
-                                outline: none;
-                                border: none;
-                                color: #fafafa;
-                                cursor: pointer;
-                        }
-                }
-        }
-}
-
-.integration-section {
+.integration-1-section {
         margin: 0 0 50px 0;
 
         .integration-heading {
