@@ -67,6 +67,7 @@ header .user-acc .search-bar input {
   width: 100%;
   outline: none;
   border: none;
+  display: none;
   padding: 10px 10px;
 }
 
@@ -565,6 +566,7 @@ header nav ul li .active-page {
   overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  position: relative;
 }
 
 .market-section .market-layout .market-posts .img-container img {
@@ -572,6 +574,32 @@ header nav ul li .active-page {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.market-section .market-layout .market-posts .img-container .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  background-color: rgba(235, 235, 235, 0.9);
+}
+
+.market-section .market-layout .market-posts:hover .content {
+  opacity: 1;
 }
 
 .market-section .market-layout .market-posts .text-content {

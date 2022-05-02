@@ -3,6 +3,15 @@ const nav = document.getElementById("nav");
 const icon = document.getElementById("menu-icon");
 var clicked = false;
 
+AOS.init();
+
+const btn = document.getElementById("search-btn");
+btn.addEventListener("click", () => {
+    const searchField = document.getElementById("search");
+    searchField.style.display = "block";
+})
+
+
 menu.addEventListener('click', () => {
     if (clicked) {
         nav.classList.remove("nav");

@@ -12,6 +12,10 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
         <!-- Slick Js-->
         <!-- <script src="./resources/scripts/slick.min.js"></script> -->
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -30,10 +34,10 @@
                 <header>
                         <div class="user-acc">
                                 <div class="search-bar">
-                                        <button>
+                                        <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
                                         </button>
-                                        <input type="text" placeholder="Search">
+                                        <input id="search" type="text" placeholder="Search">
                                 </div>
                                 <div class="login-btn">
                                         <a href="#">
@@ -143,7 +147,9 @@
                                                         <button>Play Video<ion-icon name="play"></ion-icon></button>
                                                 </div>
                                         </div>
-                                        <div class="img-container">
+                                        <div class="img-container" data-aos="fade-down"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="500">
                                                 <img src="./resources/img/header-img.png" alt="">
                                                 <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div>
@@ -172,12 +178,65 @@
                       </div>
         </section>
         <section class="market-section">
-                <div class="section-heading">
+                <div class="section-heading" data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Marketing Strategies</h2>
                         <p>Join 40,000+ other marketers and get proven strategies on email marketing</p>
                 </div>
-                <div class="market-layout">
+                <div class="market-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1500">
                         <div class="market-posts">
+                                <div class="img-container">
+                                        <img src="./resources/img/blog-image.png" alt="">
+                                        <div class="content">
+                                                <div class="text-content">
+                                                        <p>
+                                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.  dicta ratione rerum error labore.
+                                                        </p>
+                                                        <a href="#">Read More</a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="text-content">
+                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
+                                        <h3>Increasing Prosperity with Positive Thinking</h3>
+                                </div>
+                        </div>
+                        <div class="market-posts">
+                                <div class="img-container">
+                                        <img src="./resources/img/blog-image-2.png" alt="">
+                                        <div class="content">
+                                                <div class="text-content">
+                                                        <p>
+                                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.  dicta ratione rerum error labore.
+                                                        </p>
+                                                        <a href="#">Read More</a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="text-content">
+                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
+                                        <h3>Increasing Prosperity with Positive Thinking</h3>
+                                </div>
+                        </div>
+                        <div class="market-posts">
+                                <div class="img-container">
+                                        <img src="./resources/img/blog-image-3.png" alt="">
+                                        <div class="content">
+                                                <div class="text-content">
+                                                        <p>
+                                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.  dicta ratione rerum error labore.
+                                                        </p>
+                                                        <a href="#">Read More</a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="text-content">
+                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
+                                        <h3>Increasing Prosperity with Positive Thinking</h3>
+                                </div>
+                        </div>
+                        <!-- <div class="market-posts">
                                 <div class="img-container">
                                         <img src="./resources/img/blog-image.png" alt="">
                                 </div>
@@ -203,44 +262,19 @@
                                         <span>By <b>Abdullah</b> | 10 April 2022</span>
                                         <h3>Increasing Prosperity with Positive Thinking</h3>
                                 </div>
-                        </div>
-                        <div class="market-posts">
-                                <div class="img-container">
-                                        <img src="./resources/img/blog-image.png" alt="">
-                                </div>
-                                <div class="text-content">
-                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
-                                        <h3>Increasing Prosperity with Positive Thinking</h3>
-                                </div>
-                        </div>
-                        <div class="market-posts">
-                                <div class="img-container">
-                                        <img src="./resources/img/blog-image-2.png" alt="">
-                                </div>
-                                <div class="text-content">
-                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
-                                        <h3>Increasing Prosperity with Positive Thinking</h3>
-                                </div>
-                        </div>
-                        <div class="market-posts">
-                                <div class="img-container">
-                                        <img src="./resources/img/blog-image-3.png" alt="">
-                                </div>
-                                <div class="text-content">
-                                        <span>By <b>Abdullah</b> | 10 April 2022</span>
-                                        <h3>Increasing Prosperity with Positive Thinking</h3>
-                                </div>
-                        </div>
+                        </div> -->
                 </div>
         </section>
         <section class="quote-section">
                 <h1>Bring everyone and everything together on Bridge i2p</h1>
         </section>
         <section class="featured-section">
-                <div class="section-heading">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Featured Products</h2>
                 </div>
-                <div class="featured-layout">
+                <div class="featured-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1500">
                         <ul class="tabs">
                                 <li data-tab-target="#business" class="active tab">
                                         <img src="./resources/img/Group 851.png" alt="">Business Phone System
@@ -289,10 +323,12 @@
                 <h1>Bring everyone and everything together on Bridge i2p</h1>
         </section>
         <section class="integration-section">
-                <div class="integration-heading">
+                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Integration</h2>
                 </div>
-                <div class="integration-layout">
+                <div class="integration-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1500">
                         <div class="brand">
                                 <img src="https://www.orangewater.in/assets/img/brand/racold-logo.webp" alt="">
                         </div>
@@ -309,7 +345,8 @@
                 <button>View More</button>
         </section>
         <section class="notify-section">
-                <div class="notify-layout">
+                <div class="notify-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="text-content">
                                 <h2>Bring everyone and everything together on Bridge i2p</h2>
                                 <p>becomes exclusive UCaaS Partner  to Mitel for its 35 million users</p>
@@ -318,11 +355,13 @@
                 </div>
                 <div class="half-bg"></div>
         </section>
-        <section class="opinion-section">
-                <div class="opinion-heading">
+        <section class="opinion-section" >
+                <div class="opinion-heading" data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000" >
                         <h2>Here's what people say about us</h2>
                 </div>
-                <div class="opinion-layout">
+                <div class="opinion-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1500">
                         <div class="opinions">
                                 <p>"Typeform is a product-grade system for our entire growth funnel"</p>
                                 <div class="img-container">
@@ -437,14 +476,16 @@
         </section>
         <section class="demo-section">
                 <div class="header-container">
-                        <div class="text-container">
+                        <div class="text-container"  data-aos="fade-up" data-aos-easing="linear"
+                        data-aos-duration="1000">
                                 <h2 style="text-align: center; font-size: clamp(1.6rem, 4vw, 3rem); font-weight: 600;">Bring everyone and everything <br>together on Bridge i2p</h2>
                                 <div class="btn-container">
                                         <button>See Pricing</button>
                                         <button>View Demo<ion-icon name="play"></ion-icon></button>
                                 </div>
                         </div>
-                        <div class="img-container">
+                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                        data-aos-duration="1000">
                                 <img src="./resources/img/pricing.png" alt="">
                         </div>
                 </div>
@@ -452,7 +493,7 @@
         <section class="clients-section">
                 <div class="client">
                         <h2>Our Clients</h2>
-                        <div class="logo-section">
+                        <div class="logo-section" >
                                 <div class="logo-container">
                                         <div class="img-container">
                                                 <img src="./resources/img/logo-1.png" alt="">
@@ -491,10 +532,10 @@
                                 </div>
                         </div>
                 </div>
-                <div class="partner">
+                <div class="partner">   
                         <h2>Our Partners</h2>
                         <div class="logo-section">
-                                <div class="logo-container">
+                                <div class="logo-container"  >
                                         <div class="img-container">
                                                 <img src="./resources/img/logo-1.png" alt="">
                                                 <img src="./resources/img/logo-2.png" alt="">
