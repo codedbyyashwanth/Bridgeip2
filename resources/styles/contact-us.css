@@ -516,6 +516,12 @@ header nav ul li .active-page {
           align-items: flex-end;
 }
 
+@media (max-width: 600px) {
+  .header-container .img-container {
+    display: none;
+  }
+}
+
 .header-container .img-container img:nth-child(1) {
   width: 500px;
 }
@@ -831,9 +837,18 @@ header nav ul li .active-page {
   margin-bottom: -58px;
 }
 
+@media (max-width: 600px) {
+  .bottom-img-layout {
+    margin-top: 80px;
+    text-align: right;
+    margin-bottom: -40px;
+  }
+}
+
 .bottom-img-layout img {
-  width: 100%;
-  max-width: 500px;
+  width: 80%;
+  text-align: right;
+  max-width: 450px;
 }
 
 footer .sitemap-links {

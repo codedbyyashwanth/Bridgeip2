@@ -430,6 +430,10 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
+
+                @media (max-width:600px) {
+                        display: none;
+                }
                 
                 img:nth-child(1) {
                         width: 500px;
@@ -711,9 +715,16 @@ header {
         margin-top: -300px;
         margin-bottom: -58px;
 
+        @media (max-width:600px) {
+                margin-top: 80px;
+                text-align: right;
+                margin-bottom: -40px;
+        }
+
         img {
-                width: 100%;
-                max-width: 500px;
+                width: 80%;
+                text-align: right;
+                max-width: 450px;
         }
 }
 
