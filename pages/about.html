@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="../resources/styles/about.css">
         <script src="../resources/scripts/script.js" defer></script>
 
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
         <!-- Ioniconic -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -30,10 +34,10 @@
                 <header>
                         <div class="user-acc">
                                 <div class="search-bar">
-                                        <button>
+                                        <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
                                         </button>
-                                        <input type="text" placeholder="Search">
+                                        <input id="search" type="text" placeholder="Search">
                                 </div>
                                 <div class="login-btn">
                                         <a href="#">
@@ -79,7 +83,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 852.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="#">Contact Centre</a>
+                                                                                        <a href="./contact.html">Contact Centre</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -88,7 +92,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 853.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="#">IVR Broadcasting</a>
+                                                                                        <a href="./IVRBroadcast.html">IVR Broadcasting</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -143,7 +147,8 @@
                                                         <button>Play Video<ion-icon name="play"></ion-icon></button>
                                                 </div>
                                         </div>
-                                        <div class="img-container">
+                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                                        data-aos-duration="1000">
                                                 <img src="../resources/img/Group 945.png" alt="">
                                         </div>
                                 </div>
@@ -169,7 +174,8 @@
         </section>
 
         <section class="who-section">
-                <div class="who-layout">
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="who-heading">
                                 <h2>Who We Are And What We Do</h2>
                         </div>
@@ -184,7 +190,8 @@
         </section>
 
         <section class="world-wide-section">
-                <div class="world-wide-layout">
+                <div class="world-wide-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="text-content">
                                 <h1>
                                         We can and have deployed 
@@ -199,7 +206,8 @@
         </section>
 
         <section class="quote-section">
-                <div class="quote-layout">
+                <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h3>
                                 Make your business stand out with your own branding added to the PBXware.
                         </h3>
@@ -208,7 +216,8 @@
         </section>
 
         <section class="market-section">
-                <div class="global-market-layout">
+                <div class="global-market-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="text-content">
                                 <h1>The global market leader</h1>
                                 <p>
@@ -245,7 +254,8 @@
         </section>
 
         <section class="used-section">
-                <div class="used-layout">
+                <div class="used-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="text-content">
                                 <div class="options">
                                         <div class="option-content">
@@ -294,7 +304,8 @@
         </section>
 
         <section class="logo-container-section">
-                <div class="logo-container-layout">
+                <div class="logo-container-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <img src="../resources/img/logo.png" alt="">
                         <h1>Make your business stand out with your
                               <br>  own branding added to the PBXware.</h1>
@@ -302,7 +313,8 @@
         </section>
 
         <section class="blog-section">
-                <div class="blog-layout">
+                <div class="blog-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="blog-container">
                                 <div class="blog-card">
                                         <div class="img-container">
@@ -379,6 +391,31 @@
         <footer>
                 <div class="sitemap-links">
                         <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Products</h3>
+                                <ul>
+                                        <li><a href="#"> Business Phone System</a></li>
+                                        <li><a href="#"> Cloud Contact Centre Solution</a></li>
+                                        <li><a href="#"> Voice/VR Broadcasting</a></li>
+                                </ul>
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="#"> Professional Services</a></li>
+                                        <li><a href="#"> Call Center</a></li>
+                                        <li><a href="#"> Healthcare</a></li>
+                                        <li><a href="#"> Financial Services</a></li>
+                                        <li><a href="#"> Retail</a></li>
+                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
                                 <h3>Plans</h3>
                                 <ul>
                                         <li><a href="#"> US/Cannada Unlimited</a></li>
@@ -390,17 +427,6 @@
                                                 </div></a>
                                         </li>
                                         <li><a href="#"> World Unlimited + 63 Countries </a></li>
-                                </ul>
-                        </div>
-                        <div class="sitemap">
-                                <h3>Solutions</h3>
-                                <ul>
-                                        <li><a href="#"> Professional Services</a></li>
-                                        <li><a href="#"> Call Center</a></li>
-                                        <li><a href="#"> Healthcare</a></li>
-                                        <li><a href="#"> Financial Services</a></li>
-                                        <li><a href="#"> Retail</a></li>
-                                        <li><a href="#"> Industrial/Distribution</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
@@ -422,14 +448,6 @@
                                         <li><a href="#"> Knowledge Base</a></li>
                                         <li><a href="#"> Blogs</a></li>
                                         <li><a href="#"> Gallery</a></li>
-                                </ul>
-                        </div>
-                        <div class="sitemap">
-                                <h3>Company</h3>
-                                <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact Us </a></li>
-                                        <li><a href="#">Careers</a></li>
                                 </ul>
                         </div>
                 </div>

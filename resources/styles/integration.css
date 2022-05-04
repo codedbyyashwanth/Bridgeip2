@@ -67,6 +67,7 @@ header .user-acc .search-bar input {
   width: 100%;
   outline: none;
   border: none;
+  display: none;
   padding: 10px 10px;
 }
 

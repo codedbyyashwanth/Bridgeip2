@@ -3,7 +3,6 @@ const nav = document.getElementById("nav");
 const icon = document.getElementById("menu-icon");
 var clicked = false;
 
-AOS.init();
 
 const btn = document.getElementById("search-btn");
 btn.addEventListener("click", () => {
@@ -143,3 +142,5 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+AOS.init();

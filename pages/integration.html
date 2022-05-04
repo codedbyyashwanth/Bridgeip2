@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="../resources/styles/integration.css">
         <script src="../resources/scripts/script.js" defer></script>
 
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
         <!-- Ioniconic -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -30,10 +34,10 @@
                 <header>
                         <div class="user-acc">
                                 <div class="search-bar">
-                                        <button>
+                                        <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
                                         </button>
-                                        <input type="text" placeholder="Search">
+                                        <input id="search" type="text" placeholder="Search">
                                 </div>
                                 <div class="login-btn">
                                         <a href="#">
@@ -70,7 +74,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 851.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="./pages/products.html">Business Phone System</a>
+                                                                                        <a href="./products.html">Business Phone System</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -79,7 +83,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 852.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="#">Contact Centre</a>
+                                                                                        <a href="./contact.html">Contact Centre</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -88,7 +92,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 853.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="#">IVR Broadcasting</a>
+                                                                                        <a href="./IVRBroadcast.html">IVR Broadcasting</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -143,7 +147,8 @@
                                                         <button>Play Video<ion-icon name="play"></ion-icon></button>
                                                 </div>
                                         </div>
-                                        <div class="img-container">
+                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                                        data-aos-duration="1000">
                                                 <img src="../resources/img/Rectangle 485.png" alt="">
                                         </div>
                                 </div>
@@ -169,11 +174,13 @@
         </section>
 
         <section class="features-section">
-                <div class="section-heading">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Our Features</h2>
                         <p>The service we offer is specially designed to meet your needs</p>
                 </div>
-                <div class="features-layout">
+                <div class="features-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="features">
                                 <div class="features-card">
                                         <img src="../resources/img/Group 1001.png" alt="">
@@ -230,7 +237,8 @@
         </section>
         
         <section class="control-section">
-                <div class="control-layout">
+                <div class="control-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="img-container">
                                 <img src="../resources/img/Rectangle 556.png" alt="">
                         </div>
@@ -255,7 +263,8 @@
         </section>
 
         <section class="market-section">
-                <div class="global-market-layout">
+                <div class="global-market-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="img-container">
                                 <img src="../resources/img/Image 8.png" alt="">
                                 <div class="circle-container">
@@ -299,8 +308,9 @@
                 <h1 style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 600;">Checkout some of our awesome projects with <br> creative ideas and great design</h1>
         </section>
 
-        <section class="integration-section">
-                <div class="integration-layout">
+        <section class="integration-section" data-aos="fade-up" data-aos-easing="linear"
+        data-aos-duration="1000">
+                <div class="integration-layout"  >
                         <div class="cards">
                                 <div class="img-container">
                                         <img src="../resources/img/Rectangle 573.png" alt="">
@@ -341,7 +351,8 @@
         </section>
 
         <section class="business-edition-section">
-                <div class="business-edition-layout">
+                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="tab-content"  style="flex-direction: row-reverse;">
                                 <div class="img-container">
                                         <img src="../resources/img/Image-5.png" alt="">
@@ -358,7 +369,8 @@
         </section>
 
         <section class="quote-section">
-                <div class="quote-layout">
+                <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h3>
                                 Want to Integrate CRM Plus with Bridge
                         </h3>
@@ -367,7 +379,8 @@
         </section>
 
         <section class="business-edition-section">
-                <div class="business-edition-layout">
+                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="tab-content"  style="flex-direction: row-reverse;">
                                 <div class="text-content">
                                         <h4>Business Edition</h4>
@@ -384,10 +397,12 @@
         </section>
 
         <section class="blog-section">
-                <div class="section-heading">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Other Integration</h2>
                 </div>
-                <div class="blog-layout">
+                <div class="blog-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="blog-container">
                                 <div class="blog-card">
                                         <div class="img-container">
@@ -426,7 +441,8 @@
         <section class="clients-section">
                 <div class="client">
                         <h2>Our Clients</h2>
-                        <div class="logo-section">
+                        <div class="logo-section"  data-aos="fade-up" data-aos-easing="linear"
+                        data-aos-duration="1000">
                                 <div class="logo-container">
                                         <div class="img-container">
                                                 <img src="../resources/img/logo-1.png" alt="">
@@ -467,7 +483,8 @@
                 </div>
                 <div class="partner">
                         <h2>Our Partners</h2>
-                        <div class="logo-section">
+                        <div class="logo-section"  data-aos="fade-up" data-aos-easing="linear"
+                        data-aos-duration="1000">
                                 <div class="logo-container">
                                         <div class="img-container">
                                                 <img src="../resources/img/logo-1.png" alt="">
@@ -509,10 +526,12 @@
         </section>
 
         <section class="integration-1-section">
-                <div class="integration-heading">
+                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Integration</h2>
                 </div>
-                <div class="integration-layout">
+                <div class="integration-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="brand">
                                 <img src="https://www.orangewater.in/assets/img/brand/racold-logo.webp" alt="">
                         </div>
@@ -532,6 +551,31 @@
         <footer>
                 <div class="sitemap-links">
                         <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Products</h3>
+                                <ul>
+                                        <li><a href="#"> Business Phone System</a></li>
+                                        <li><a href="#"> Cloud Contact Centre Solution</a></li>
+                                        <li><a href="#"> Voice/VR Broadcasting</a></li>
+                                </ul>
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="#"> Professional Services</a></li>
+                                        <li><a href="#"> Call Center</a></li>
+                                        <li><a href="#"> Healthcare</a></li>
+                                        <li><a href="#"> Financial Services</a></li>
+                                        <li><a href="#"> Retail</a></li>
+                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
                                 <h3>Plans</h3>
                                 <ul>
                                         <li><a href="#"> US/Cannada Unlimited</a></li>
@@ -543,17 +587,6 @@
                                                 </div></a>
                                         </li>
                                         <li><a href="#"> World Unlimited + 63 Countries </a></li>
-                                </ul>
-                        </div>
-                        <div class="sitemap">
-                                <h3>Solutions</h3>
-                                <ul>
-                                        <li><a href="#"> Professional Services</a></li>
-                                        <li><a href="#"> Call Center</a></li>
-                                        <li><a href="#"> Healthcare</a></li>
-                                        <li><a href="#"> Financial Services</a></li>
-                                        <li><a href="#"> Retail</a></li>
-                                        <li><a href="#"> Industrial/Distribution</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
@@ -575,14 +608,6 @@
                                         <li><a href="#"> Knowledge Base</a></li>
                                         <li><a href="#"> Blogs</a></li>
                                         <li><a href="#"> Gallery</a></li>
-                                </ul>
-                        </div>
-                        <div class="sitemap">
-                                <h3>Company</h3>
-                                <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact Us </a></li>
-                                        <li><a href="#">Careers</a></li>
                                 </ul>
                         </div>
                 </div>

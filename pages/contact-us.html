@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="../resources/styles/contact-us.css">
         <script src="../resources/scripts/script.js" defer></script>
 
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
         <!-- Ioniconic -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -30,10 +34,10 @@
                 <header>
                         <div class="user-acc">
                                 <div class="search-bar">
-                                        <button>
+                                        <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
                                         </button>
-                                        <input type="text" placeholder="Search">
+                                        <input id="search" type="text" placeholder="Search">
                                 </div>
                                 <div class="login-btn">
                                         <a href="#">
@@ -70,7 +74,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 851.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="./pages/products.html">Business Phone System</a>
+                                                                                        <a href="./products.html">Business Phone System</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -79,7 +83,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 852.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="#">Contact Centre</a>
+                                                                                        <a href="./contact.html">Contact Centre</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -88,7 +92,7 @@
                                                                         <div class="link">
                                                                                 <img src="../resources/img/Group 853.png" alt="">
                                                                                 <div class="text-content">
-                                                                                        <a href="#">IVR Broadcasting</a>
+                                                                                        <a href="./IVRBroadcast.html">IVR Broadcasting</a>
                                                                                         <p>
                                                                                                 All the power of the enterprise phone, Now in your pocket
                                                                                         </p>
@@ -135,20 +139,19 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                                 <div class="header-container">
-                                        <div class="text-container">
-                                                <h2>Contact Sales</h2>
-                                                <p>We're a company that focuses on establishing long-term <br> relationship with customers.</p>
-                                                <div class="btn-container">
-                                                        <button>Start Free Trail</button>
-                                                        <button>Play Video<ion-icon name="play"></ion-icon></button>
-                                                </div>
+                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                                        data-aos-duration="1000">
+                                                <img src="../resources/img/calling.png" alt="">
+                                                <img src="https://d1sfco99flnudn.cloudfront.net/www.centurylinkquote.com/images/v2/customer-service-agent.svg" alt="">
                                         </div>
-                                        <div class="img-container">
-                                                <img src="../resources/img/3d3.png" alt="">
+                                        <div class="text-container">
+                                                <h2>Hello There!</h2>
+                                                <p>We appreciate your interest to contact us!</p>
+                                                <span>Speak to a specialist at Bridgei2p now</span>
                                         </div>
                                 </div>
                           </div>
-                          <div class="swiper-slide">
+                          <!-- <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
                                                 <h2>Contact Sales</h2>
@@ -162,18 +165,20 @@
                                                 <img src="../resources/img/3d3.png" alt="">
                                         </div>
                                 </div>
-                          </div>
+                          </div> -->
                         </div>
                         <div class="swiper-pagination"></div>
                       </div>
         </section>
 
         <section class="contact-sales-section">
-                <div class="section-heading">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <h2>Contact Sales</h2>
                         <p>We believe in a good first connection. <br>Call, Chat or book a meeting with our helpful experts to get started </p>
                 </div>
-                <div class="contact-sales-layout">
+                <div class="contact-sales-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
                         <div class="cards">
                                 <p>Call us now</p>
                                 <ion-icon name="call"></ion-icon>
@@ -192,11 +197,73 @@
                 </div>
         </section>
 
-        <section class="quote-section" style="background-color: rgb(226, 226, 226); text-align: center; padding: 60px 0;">
-                <h1 style="font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 600;">Looking for product support? Visit our Support Center.</h1>
+        <section class="contact-map-section">
+                <div class="contact-map-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
+                        <div class="locations">
+                                <h1>Our Offices</h1>
+                                <div class="loc">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p>#2, 27th Main Rd, Phase 3, Agara
+                                                Village, 1st Sector, HSR Layout,
+                                                Bengaluru, Karnataka 560102
+                                        </p>
+                                </div>
+                                <div class="loc">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p>#2, 27th Main Rd, Phase 3, Agara
+                                                Village, 1st Sector, HSR Layout,
+                                                Bengaluru, Karnataka 560102
+                                        </p>
+                                </div>
+                                <div class="loc">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p>#2, 27th Main Rd, Phase 3, Agara
+                                                Village, 1st Sector, HSR Layout,
+                                                Bengaluru, Karnataka 560102
+                                        </p>
+                                </div>
+                                <div class="loc">
+                                        <ion-icon name="location"></ion-icon>
+                                        <p>#2, 27th Main Rd, Phase 3, Agara
+                                                Village, 1st Sector, HSR Layout,
+                                                Bengaluru, Karnataka 560102
+                                        </p>
+                                </div>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7711229101865!2d77.64913741482152!3d12.922426790888139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae148051854383%3A0x78f1306c68234079!2s2%2C%2027th%20Main%20Rd%2C%20Phase%203%2C%20Agara%20Village%2C%201st%20Sector%2C%20HSR%20Layout%2C%20Bengaluru%2C%20Karnataka%20560102!5e0!3m2!1sen!2sin!4v1651526015264!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
         </section>
 
-        <section class="contact-map-section">
+        <section class="enquiry-form-section">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
+                        <h2>Enquiry Form</h2>
+                        <p>Please fill out the form below and we'll connect you with a specialized professional to answer your questions and provide more information about what Bridgei2p can do for your business.</p>
+                </div>
+                <div class="enquiry-form-layout"  data-aos="fade-up" data-aos-easing="linear"
+                data-aos-duration="1000">
+                        <form action="" method="post" class="contact-form">     
+                                <div class="name-input">
+                                        <input type="text" placeholder="First Name *"><input type="text" placeholder="Last Name *">
+                                </div>
+                                <input class="text" type="text" placeholder="Company Name *"><input  class="text" type="text" placeholder="Website *">
+                                <input  class="text" type="text" placeholder="Website *">
+                                <input  class="text" type="text" placeholder="Work Email *">
+                                <input  class="text" type="text" placeholder="Phone Number *">
+                                <textarea placeholder="Type your Query"></textarea>
+                                <div class="options">
+                                        <input type="checkbox" name="" id="option-in">
+                                        <label for="option-in">Opt-in: I'd like to learn more about Bridgei2p's plans & services</label>
+                                </div>
+                                <div class="submit-btn">
+                                        <input type="submit" value="Get in touch now">
+                                </div>
+                        </form>
+                </div>
+        </section>
+
+        <!-- <section class="contact-map-section">
                 <div class="contact-map-layout">
                         <form action="" method="post" class="contact-form">
                                 <h3>Let's Connect with Us</h3>
@@ -208,10 +275,39 @@
                         </form>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34914.23973496872!2d77.51676609784921!3d12.963433941310214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f005bba7115%3A0xdbd7f2e00ddaf1ab!2sMysore%20Road%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1651428365208!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-        </section>
+        </section> -->
+
+        <div class="bottom-img-layout">
+                <img src="../resources/img/working.png" alt="">
+        </div>
       
         <footer>
                 <div class="sitemap-links">
+                        <div class="sitemap">
+                                <h3>Company</h3>
+                                <ul>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="#">Careers</a></li>
+                                </ul>
+                        </div>
+                        <div class="sitemap">
+                                <h3>Products</h3>
+                                <ul>
+                                        <li><a href="#"> Business Phone System</a></li>
+                                        <li><a href="#"> Cloud Contact Centre Solution</a></li>
+                                        <li><a href="#"> Voice/VR Broadcasting</a></li>
+                                </ul>
+                                <h3>Solutions</h3>
+                                <ul>
+                                        <li><a href="#"> Professional Services</a></li>
+                                        <li><a href="#"> Call Center</a></li>
+                                        <li><a href="#"> Healthcare</a></li>
+                                        <li><a href="#"> Financial Services</a></li>
+                                        <li><a href="#"> Retail</a></li>
+                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                </ul>
+                        </div>
                         <div class="sitemap">
                                 <h3>Plans</h3>
                                 <ul>
@@ -224,17 +320,6 @@
                                                 </div></a>
                                         </li>
                                         <li><a href="#"> World Unlimited + 63 Countries </a></li>
-                                </ul>
-                        </div>
-                        <div class="sitemap">
-                                <h3>Solutions</h3>
-                                <ul>
-                                        <li><a href="#"> Professional Services</a></li>
-                                        <li><a href="#"> Call Center</a></li>
-                                        <li><a href="#"> Healthcare</a></li>
-                                        <li><a href="#"> Financial Services</a></li>
-                                        <li><a href="#"> Retail</a></li>
-                                        <li><a href="#"> Industrial/Distribution</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
@@ -256,14 +341,6 @@
                                         <li><a href="#"> Knowledge Base</a></li>
                                         <li><a href="#"> Blogs</a></li>
                                         <li><a href="#"> Gallery</a></li>
-                                </ul>
-                        </div>
-                        <div class="sitemap">
-                                <h3>Company</h3>
-                                <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact Us </a></li>
-                                        <li><a href="#">Careers</a></li>
                                 </ul>
                         </div>
                 </div>

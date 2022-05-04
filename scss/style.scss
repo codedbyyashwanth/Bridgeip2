@@ -462,7 +462,7 @@ header {
 
         .section-heading {
                 width: 94%;
-                max-width: 600px;
+                max-width: 1000px;
                 margin: 100px auto;
                 padding: 0 10px;
                 text-align: center;
@@ -673,7 +673,7 @@ header {
                                         max-width: 700px;
 
                                         p {
-                                                font-size: clamp(1.4rem, 3vw, 2.5rem);
+                                                font-size: clamp(1.2rem, 3vw, 1.9rem);
                                                 padding: 0 5px;
                                                 color: #fafafa;
                                         }
