@@ -137,12 +137,12 @@ header .navbar {
 }
 
 header .logo img {
-  width: 120px;
+  width: 150px;
   cursor: pointer;
 }
 
 header .logo .govt {
-  width: 250px;
+  width: 200px;
   margin-left: 20px;
 }
 
@@ -456,6 +456,11 @@ header nav ul li .active-page {
   cursor: pointer;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
+}
+
+.header-container .text-container .btn-container button a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header-container .text-container .btn-container button:hover {
@@ -1324,7 +1329,7 @@ header nav ul li .active-page {
 
 .clients-section .client, .clients-section .partner {
   width: calc(100% / 2);
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .clients-section .client h2, .clients-section .partner h2 {
@@ -1446,7 +1451,7 @@ footer .sitemap-links {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #20232A;
-  padding: 100px 10px;
+  padding: 40px 10px;
   color: #fafafa;
 }
 
@@ -1499,7 +1504,7 @@ footer .sitemap-links .sitemap ul li a:hover {
 
 footer .links {
   background-color: #000000;
-  padding: 50px 10px;
+  padding: 20px 10px;
 }
 
 footer .links .legal-section {

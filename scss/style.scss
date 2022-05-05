@@ -100,12 +100,12 @@ header {
     }
 
     .logo img {
-        width: 120px;
+        width: 150px;
         cursor: pointer;
     }
 
     .logo .govt {
-            width: 250px;
+            width: 200px;
             margin-left: 20px;
     }
 
@@ -375,7 +375,7 @@ header {
                         display: flex;
                         margin-top: 20px;       
 
-                        button {
+                        a {
                                 padding: 15px 25px;
                                 background-color: $accent-color;
                                 box-shadow: $primary-shadow;
@@ -386,13 +386,15 @@ header {
                                 margin: 20px 0;
                                 cursor: pointer;
                                 transition: ease 0.4s;
+                                text-decoration: none;
+                                color: #ffffff;
 
                                 &:hover {
                                         background-color: rgba($accent-color, 0.8);
                                 }
                         }
 
-                        button:nth-child(2) {
+                        a:nth-child(2) {
                                 margin-left: 20px;
                                 background-color: $primary-color;
                                 box-shadow: $secondary-shadow;
@@ -458,12 +460,12 @@ header {
 
 
 .market-section {
-        margin: 120px 0 50px 0;
+        margin: 0px 0 50px 0;
 
         .section-heading {
                 width: 94%;
                 max-width: 1000px;
-                margin: 100px auto;
+                margin: 60px auto;
                 padding: 0 10px;
                 text-align: center;
                 
@@ -483,6 +485,15 @@ header {
                 .market-posts {
                         margin: 20px;
                         cursor: pointer;
+                        position: relative;
+
+                        .heading {
+                                position: absolute;
+                                top: 20px;
+                                left: 20px;
+                                z-index: 100;
+                                transition: ease 0.4s;
+                        }
 
                         .img-container {
                                 width: 100%;
@@ -505,10 +516,8 @@ header {
                                         right: 0;
                                         bottom: 0;
                                         padding: 0 20px;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
                                         opacity: 0;
+                                        padding-top: 10px;
                                         transition: opacity 0.4s ease;
                                         background-color: rgba(235, 235, 235, 0.9);
                                 }
@@ -544,12 +553,12 @@ header {
 
 .quote-section {
         width: 100%;
-        margin: 120px 0;
-        padding: 100px 10px;
+        // margin: 120px 0;
+        padding: 60px 10px;
         background-color: #BDF3F4;
 
         h1 {
-                font-size: clamp(1.8rem, 4vw, 2.8rem);
+                font-size: clamp(1.8rem, 4vw, 2.6rem);
                 font-weight: 600;
                 text-align: center;
         }
@@ -959,7 +968,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
+        // margin-top: 100px;
 
         @media (max-width: 800px) {
                 flex-direction: column;
@@ -995,7 +1004,7 @@ header {
 
         .client, .partner {
                 width: calc(100% / 2);
-                padding: 100px 0;
+                padding: 30px 0;
 
                 
                 h2 {
@@ -1045,7 +1054,7 @@ footer {
                 align-items: flex-start;
                 flex-wrap: wrap;
                 background-color: #20232A;
-                padding: 100px 10px;
+                padding: 40px 10px;
                 color: #fafafa;
 
                 @media (max-width:600px) {
@@ -1093,7 +1102,7 @@ footer {
 
         .links {
                 background-color: #000000;
-                padding: 50px 10px;
+                padding: 20px 10px;
 
                 .legal-section {
                         width: 97%;

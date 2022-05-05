@@ -137,12 +137,12 @@ header .navbar {
 }
 
 header .logo img {
-  width: 120px;
+  width: 150px;
   cursor: pointer;
 }
 
 header .logo .govt {
-  width: 250px;
+  width: 200px;
   margin-left: 20px;
 }
 
@@ -472,6 +472,11 @@ header nav ul li .active-page {
   transition: ease 0.4s;
 }
 
+.header-container .text-container .btn-container button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .header-container .text-container .btn-container button:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
@@ -709,7 +714,7 @@ header nav ul li .active-page {
 }
 
 .enquiry-form-section {
-  padding-top: 100px;
+  padding: 100px 0;
   background-color: #fff;
 }
 
@@ -736,10 +741,27 @@ header nav ul li .active-page {
   width: 94%;
   max-width: 1500px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.enquiry-form-section .enquiry-form-layout img {
+  width: 94%;
+  max-width: 600px;
+  margin: 20px;
 }
 
 .enquiry-form-section .enquiry-form-layout form {
-  width: 94%;
+  width: 100%;
   padding: 50px 0px;
   max-width: 800px;
   margin: 30px 0;
@@ -831,26 +853,6 @@ header nav ul li .active-page {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
-.bottom-img-layout {
-  text-align: right;
-  margin-top: -300px;
-  margin-bottom: -58px;
-}
-
-@media (max-width: 600px) {
-  .bottom-img-layout {
-    margin-top: 80px;
-    text-align: right;
-    margin-bottom: -40px;
-  }
-}
-
-.bottom-img-layout img {
-  width: 80%;
-  text-align: right;
-  max-width: 450px;
-}
-
 footer .sitemap-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -864,7 +866,7 @@ footer .sitemap-links {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #20232A;
-  padding: 100px 10px;
+  padding: 40px 10px;
   color: #fafafa;
 }
 
@@ -917,7 +919,7 @@ footer .sitemap-links .sitemap ul li a:hover {
 
 footer .links {
   background-color: #000000;
-  padding: 50px 10px;
+  padding: 20px 10px;
 }
 
 footer .links .legal-section {

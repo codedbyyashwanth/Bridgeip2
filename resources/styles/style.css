@@ -137,12 +137,12 @@ header .navbar {
 }
 
 header .logo img {
-  width: 120px;
+  width: 150px;
   cursor: pointer;
 }
 
 header .logo .govt {
-  width: 250px;
+  width: 200px;
   margin-left: 20px;
 }
 
@@ -443,7 +443,7 @@ header nav ul li .active-page {
   margin-top: 20px;
 }
 
-.header-container .text-container .btn-container button {
+.header-container .text-container .btn-container a {
   padding: 15px 25px;
   background-color: #FF8303;
   -webkit-box-shadow: 0 0 20px rgba(255, 131, 3, 0.4);
@@ -456,13 +456,15 @@ header nav ul li .active-page {
   cursor: pointer;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.header-container .text-container .btn-container button:hover {
+.header-container .text-container .btn-container a:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
-.header-container .text-container .btn-container button:nth-child(2) {
+.header-container .text-container .btn-container a:nth-child(2) {
   margin-left: 20px;
   background-color: #191A19;
   -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
@@ -475,11 +477,11 @@ header nav ul li .active-page {
           align-items: center;
 }
 
-.header-container .text-container .btn-container button:nth-child(2):hover {
+.header-container .text-container .btn-container a:nth-child(2):hover {
   background-color: rgba(25, 26, 25, 0.8);
 }
 
-.header-container .text-container .btn-container button:nth-child(2) ion-icon {
+.header-container .text-container .btn-container a:nth-child(2) ion-icon {
   margin: 0 0 0 5px;
 }
 
@@ -529,13 +531,13 @@ header nav ul li .active-page {
 }
 
 .market-section {
-  margin: 120px 0 50px 0;
+  margin: 0px 0 50px 0;
 }
 
 .market-section .section-heading {
   width: 94%;
   max-width: 1000px;
-  margin: 100px auto;
+  margin: 60px auto;
   padding: 0 10px;
   text-align: center;
 }
@@ -558,6 +560,16 @@ header nav ul li .active-page {
 .market-section .market-layout .market-posts {
   margin: 20px;
   cursor: pointer;
+  position: relative;
+}
+
+.market-section .market-layout .market-posts .heading {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
 }
 
 .market-section .market-layout .market-posts .img-container {
@@ -583,16 +595,8 @@ header nav ul li .active-page {
   right: 0;
   bottom: 0;
   padding: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   opacity: 0;
+  padding-top: 10px;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
   background-color: rgba(235, 235, 235, 0.9);
@@ -623,13 +627,12 @@ header nav ul li .active-page {
 
 .quote-section {
   width: 100%;
-  margin: 120px 0;
-  padding: 100px 10px;
+  padding: 60px 10px;
   background-color: #BDF3F4;
 }
 
 .quote-section h1 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 600;
   text-align: center;
 }
@@ -1079,7 +1082,6 @@ header nav ul li .active-page {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 100px;
 }
 
 @media (max-width: 800px) {
@@ -1119,7 +1121,7 @@ header nav ul li .active-page {
 
 .clients-section .client, .clients-section .partner {
   width: calc(100% / 2);
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .clients-section .client h2, .clients-section .partner h2 {
@@ -1175,7 +1177,7 @@ footer .sitemap-links {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #20232A;
-  padding: 100px 10px;
+  padding: 40px 10px;
   color: #fafafa;
 }
 
@@ -1228,7 +1230,7 @@ footer .sitemap-links .sitemap ul li a:hover {
 
 footer .links {
   background-color: #000000;
-  padding: 50px 10px;
+  padding: 20px 10px;
 }
 
 footer .links .legal-section {

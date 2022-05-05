@@ -101,12 +101,12 @@ header {
     }
 
     .logo img {
-        width: 120px;
+        width: 150px;
         cursor: pointer;
     }
 
     .logo .govt {
-            width: 250px;
+            width: 200px;
             margin-left: 20px;
     }
 
@@ -392,6 +392,11 @@ header {
                                 margin: 20px 0;
                                 cursor: pointer;
                                 transition: ease 0.4s;
+
+                                a {
+                                        text-decoration: none;
+                                        color: #ffffff;
+                                }
 
                                 &:hover {
                                         background-color: rgba($accent-color, 0.8);
@@ -1155,7 +1160,7 @@ header {
 
         .client, .partner {
                 width: calc(100% / 2);
-                padding: 100px 0;
+                padding: 30px 0;
 
                 
                 h2 {
@@ -1320,7 +1325,7 @@ footer {
                 align-items: flex-start;
                 flex-wrap: wrap;
                 background-color: #20232A;
-                padding: 100px 10px;
+                padding: 40px 10px;
                 color: #fafafa;
 
                 @media (max-width:600px) {
@@ -1368,7 +1373,7 @@ footer {
 
         .links {
                 background-color: #000000;
-                padding: 50px 10px;
+                padding: 20px 10px;
 
                 .legal-section {
                         width: 97%;
