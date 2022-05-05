@@ -1064,6 +1064,48 @@ header nav ul li .active-page {
           transform: translateX(-50%);
 }
 
+.demo-section .header-container .text-container .btn-container a {
+  padding: 15px 25px;
+  background-color: #FF8303;
+  -webkit-box-shadow: 0 0 20px rgba(255, 131, 3, 0.4);
+          box-shadow: 0 0 20px rgba(255, 131, 3, 0.4);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  margin: 20px 0;
+  cursor: pointer;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.demo-section .header-container .text-container .btn-container a:hover {
+  background-color: rgba(255, 131, 3, 0.8);
+}
+
+.demo-section .header-container .text-container .btn-container a:nth-child(2) {
+  margin-left: 20px;
+  background-color: #191A19;
+  -webkit-box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+          box-shadow: 0 0 20px rgba(235, 235, 235, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demo-section .header-container .text-container .btn-container a:nth-child(2):hover {
+  background-color: rgba(25, 26, 25, 0.8);
+}
+
+.demo-section .header-container .text-container .btn-container a:nth-child(2) ion-icon {
+  margin: 0 0 0 5px;
+}
+
 @media (max-width: 500px) {
   .demo-section .header-container .text-container .btn-container {
     margin-left: 5%;
