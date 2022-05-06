@@ -427,17 +427,31 @@ header nav ul li .active-page {
 }
 
 .header-container .text-container h2 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.2;
   color: #000;
 }
 
+@media (max-width: 1450px) {
+  .header-container .text-container h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 600;
+  }
+}
+
 .header-container .text-container p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: normal;
   margin-top: 10px;
+  max-width: 800px;
   color: #191A19;
+}
+
+@media (max-width: 1450px) {
+  .header-container .text-container p {
+    max-width: 650px;
+  }
 }
 
 .header-container .text-container .btn-container {
@@ -526,7 +540,7 @@ header nav ul li .active-page {
   background-color: #c7c7c7;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1170px) {
   .header-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -540,7 +554,7 @@ header nav ul li .active-page {
 .business-phone-section .section-heading {
   width: 94%;
   max-width: 600px;
-  margin: 100px auto;
+  margin: 60px auto;
   padding: 0 10px;
   text-align: center;
 }
@@ -707,7 +721,7 @@ header nav ul li .active-page {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 870px) {
   .business-phone-section .business-phone-layout .tab-content .active[data-tab-content] .img-container {
     margin-top: 150px;
   }
@@ -732,7 +746,7 @@ header nav ul li .active-page {
   background: #226fa2;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #226fa2), to(#0aa3bb));
   background: linear-gradient(0deg, #226fa2 35%, #0aa3bb 100%);
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .login-section .login-layout {
@@ -811,6 +825,7 @@ header nav ul li .active-page {
 .login-section .login-layout .login-content button {
   padding: 12px 45px;
   margin: 20px auto;
+  margin-bottom: 0;
   background-color: #FF8303;
   color: #fafafa;
   border-radius: 50px;
@@ -831,14 +846,14 @@ header nav ul li .active-page {
 
 .login-section .login-layout .text-content {
   width: 94%;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .login-section .login-layout .text-content h2 {
   color: #fafafa;
   text-align: center;
-  font-size: clamp(1.6rem, 4vw, 2.6rem);
-  font-weight: 600;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 500;
 }
 
 .login-section .login-layout .text-content .btn-container {
@@ -857,7 +872,7 @@ header nav ul li .active-page {
   }
 }
 
-.login-section .login-layout .text-content .btn-container button {
+.login-section .login-layout .text-content .btn-container a {
   padding: 12px 35px;
   margin: 20px 20px;
   background-color: #FF8303;
@@ -872,22 +887,23 @@ header nav ul li .active-page {
   outline: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.login-section .login-layout .text-content .btn-container button ion-icon {
+.login-section .login-layout .text-content .btn-container a ion-icon {
   margin-left: 10px;
 }
 
-.login-section .login-layout .text-content .btn-container button:hover {
+.login-section .login-layout .text-content .btn-container a:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
-.login-section .login-layout .text-content .btn-container button:nth-child(2) {
+.login-section .login-layout .text-content .btn-container a:nth-child(2) {
   background-color: #191A19;
 }
 
 @media (max-width: 600px) {
-  .login-section .login-layout .text-content .btn-container button:nth-child(2) {
+  .login-section .login-layout .text-content .btn-container a:nth-child(2) {
     margin-top: 5px;
   }
 }
@@ -905,26 +921,37 @@ header nav ul li .active-page {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 150px 0;
+  margin: 40px 0;
 }
 
 .business-edition-section .business-edition-layout .tab-content .text-content {
   width: 97%;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .business-edition-section .business-edition-layout .tab-content .text-content h4 {
   font-size: 1.6rem;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .business-edition-section .business-edition-layout .tab-content .text-content p {
   font-size: 1.1rem;
+}
+
+.business-edition-section .business-edition-layout .tab-content .text-content span {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.business-edition-section .business-edition-layout .tab-content .text-content span a {
+  color: #FF8303;
 }
 
 .business-edition-section .business-edition-layout .tab-content .img-container {
@@ -933,7 +960,7 @@ header nav ul li .active-page {
 
 .business-edition-section .business-edition-layout .tab-content .img-container img {
   width: 97%;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .business-edition-section .business-edition-layout .tab-content .img-container .circle-yellow, .business-edition-section .business-edition-layout .tab-content .img-container .circle-grey {
@@ -1063,12 +1090,10 @@ header nav ul li .active-page {
 }
 
 .quote-section .quote-layout h3 {
-  font-size: 2rem;
   color: #fafafa;
-  font-weight: 600;
-  max-width: 700px;
+  font-weight: 500;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 auto;
   font-size: clamp(1.6rem, 4vw, 2rem);
 }
 
@@ -1105,6 +1130,70 @@ header nav ul li .active-page {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
+.linked-section {
+  background-color: #1A1694;
+  padding: 50px 0;
+}
+
+.linked-section .linked-layout {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.linked-section .linked-layout h3 {
+  color: #fafafa;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 20px;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+@media (max-width: 600px) {
+  .linked-section .linked-layout h3 {
+    margin: 0;
+  }
+}
+
+.linked-section .linked-layout a {
+  padding: 12px 35px;
+  margin: 20px 20px;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .linked-section .linked-layout a {
+    margin: 20px auto;
+  }
+}
+
+.linked-section .linked-layout a:hover {
+  background-color: rgba(255, 131, 3, 0.8);
+}
+
 .business-contain-section {
   background-color: #BDF3F4;
   padding: 50px 0;
@@ -1137,12 +1226,12 @@ header nav ul li .active-page {
   position: absolute;
   width: 97%;
   top: 50%;
-  left: 25%;
-  max-width: 800px;
+  left: 50%;
+  max-width: 600px;
 }
 
 .business-contain-section .business-contain-layout p {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   font-size: 1.2rem;
 }
@@ -1165,6 +1254,69 @@ header nav ul li .active-page {
 }
 
 .business-contain-section .business-contain-layout button:hover {
+  background-color: rgba(255, 131, 3, 0.8);
+}
+
+.benefit-business-contain-section {
+  background-color: #BDF3F4;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout h3 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout .img-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout .img-container img {
+  width: 94%;
+  max-width: 700px;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout .img-container img:nth-child(2) {
+  position: absolute;
+  width: 97%;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout p {
+  max-width: 1200px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout button {
+  padding: 12px 35px;
+  margin: 30px auto;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.benefit-business-contain-section .benefit-business-contain-layout button:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
@@ -1264,7 +1416,7 @@ header nav ul li .active-page {
 
 .clients-section .client .logo-container .img-container img, .clients-section .partner .logo-container .img-container img {
   width: 30%;
-  max-width: 200px;
+  max-width: 150px;
   min-width: 80px;
   margin: 0 20px;
 }
@@ -1426,6 +1578,96 @@ header nav ul li .active-page {
   background-color: rgba(255, 131, 3, 0.9);
 }
 
+.faq-section {
+  padding: 60px 0;
+}
+
+.faq-section .section-heading {
+  width: 94%;
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 0 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-section .section-heading h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-section .faq-layout {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.faq-section .faq-layout .accordation, .faq-section .faq-layout .answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 20px;
+  width: 97%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.faq-section .faq-layout .accordation h3, .faq-section .faq-layout .answer h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.faq-section .faq-layout .accordation {
+  border-left: 1px solid rgba(201, 201, 201, 0.5);
+  border-right: 1px solid rgba(201, 201, 201, 0.5);
+  border-top: 1px solid rgba(201, 201, 201, 0.5);
+  border-bottom: 1px solid rgba(201, 201, 201, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.faq-section .faq-layout .answer {
+  display: none;
+  margin-top: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #fafafa;
+  border-left: 1px solid rgba(201, 201, 201, 0.4);
+  border-right: 1px solid rgba(201, 201, 201, 0.4);
+  border-bottom: 1px solid rgba(201, 201, 201, 0.4);
+}
+
+.faq-section .faq-layout .answer p {
+  font-size: 0.95rem;
+  letter-spacing: 0.8px;
+}
+
+.faq-section .faq-layout .answer ul {
+  padding: 0 20px;
+}
+
+.faq-section .faq-layout .answer ul li {
+  font-size: 0.95rem;
+  letter-spacing: 0.8px;
+  margin-top: 5px;
+}
+
+#over-view-id {
+  display: block;
+}
+
+#features-id, #benefits-id, #pricing-id {
+  display: none;
+}
+
 footer .sitemap-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1513,6 +1755,16 @@ footer .links .legal-section {
   margin-top: 20px;
 }
 
+@media (max-width: 1275px) {
+  footer .links .legal-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+}
+
 footer .links .legal-section .legal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1575,6 +1827,12 @@ footer .links .legal-section ul li a {
   color: #fafafa;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
+}
+
+@media (max-width: 1336px) {
+  footer .links .legal-section ul li a {
+    font-size: 0.9rem;
+  }
 }
 
 footer .links .legal-section ul li a:hover {

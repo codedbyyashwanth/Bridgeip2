@@ -5,10 +5,42 @@ var clicked = false;
 
 
 const btn = document.getElementById("search-btn");
+let clickedSearch = false;
 btn.addEventListener("click", () => {
     const searchField = document.getElementById("search");
-    searchField.style.display = "block";
+
+    if (clickedSearch) {
+        searchField.style.display = "none";
+        clickedSearch = false;
+    } else {
+        searchField.style.display = "block";
+        clickedSearch = true;
+    }
 })
+
+
+const faqQuest = document.getElementsByClassName("accordation");
+const faqAns = document.getElementsByClassName("answer");
+const addBtn = document.getElementsByClassName("add-btn");
+
+for (let i = 0; i < faqQuest.length; i++) {
+    faqQuest[i].addEventListener("click", () => {
+
+        const name = addBtn[i].attributes.name.nodeValue;
+        console.log(name)
+
+        if (name === "add")
+            addBtn[i].attributes.name.nodeValue = "remove";
+        else
+            addBtn[i].attributes.name.nodeValue = "add";
+
+        if (faqAns[i].style.display === "block") {
+            faqAns[i].style.display = "none";
+        } else {
+            faqAns[i].style.display = "block";
+        }
+    });
+}
 
 
 menu.addEventListener('click', () => {
@@ -25,10 +57,43 @@ menu.addEventListener('click', () => {
 
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
+const overviewSection = document.getElementById("over-view-id");
+const featuresSection = document.getElementById("features-id");
+const benefitsSection = document.getElementById("benefits-id");
+const pricingSection = document.getElementById("pricing-id");
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const target = document.querySelector(tab.dataset.tabTarget)
+    
+    if (tab.dataset.tabTarget === "#overview") {
+      overviewSection.style.display = "block";
+      featuresSection.style.display = "none";
+      benefitsSection.style.display = "none";
+      pricingSection.style.display = "none";
+    }
+
+    if (tab.dataset.tabTarget === "#features") {
+      overviewSection.style.display = "none";
+      featuresSection.style.display = "block";
+      benefitsSection.style.display = "none";
+      pricingSection.style.display = "none";
+    }
+
+    if (tab.dataset.tabTarget === "#benefits") {
+      overviewSection.style.display = "none";
+      featuresSection.style.display = "none";
+      benefitsSection.style.display = "block";
+      pricingSection.style.display = "none";
+    }
+
+    if (tab.dataset.tabTarget === "#pricing") {
+      overviewSection.style.display = "none";
+      featuresSection.style.display = "none";
+      benefitsSection.style.display = "none";
+      pricingSection.style.display = "block";
+    }
+
     tabContents.forEach(tabContent => {
       tabContent.classList.remove('active')
     })

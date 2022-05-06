@@ -903,7 +903,7 @@ header nav ul li .active-page {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 .notify-section h2 {
@@ -1057,8 +1057,17 @@ header nav ul li .active-page {
   padding: 50px 20px;
 }
 
+.demo-section {
+  background-color: #bdbeff;
+  padding: 60px;
+}
+
+.demo-section .header-container {
+  padding-top: 0;
+}
+
 .demo-section .header-container .img-container {
-  width: 800px;
+  width: 700px;
 }
 
 .demo-section .header-container .img-container img {
@@ -1069,6 +1078,14 @@ header nav ul li .active-page {
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 600px) {
+  .demo-section .header-container .text-container .btn-container {
+    margin-left: 0%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 
 .demo-section .header-container .text-container .btn-container a {
@@ -1090,6 +1107,12 @@ header nav ul li .active-page {
 
 .demo-section .header-container .text-container .btn-container a:hover {
   background-color: rgba(255, 131, 3, 0.8);
+}
+
+@media (max-width: 600px) {
+  .demo-section .header-container .text-container .btn-container a {
+    padding: 15px 10px;
+  }
 }
 
 .demo-section .header-container .text-container .btn-container a:nth-child(2) {
@@ -1194,7 +1217,7 @@ header nav ul li .active-page {
 
 .clients-section .client .logo-container .img-container img, .clients-section .partner .logo-container .img-container img {
   width: 30%;
-  max-width: 200px;
+  max-width: 150px;
   min-width: 80px;
   margin: 0 20px;
 }
@@ -1300,6 +1323,16 @@ footer .links .legal-section {
   margin-top: 20px;
 }
 
+@media (max-width: 1275px) {
+  footer .links .legal-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+}
+
 footer .links .legal-section .legal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1362,6 +1395,12 @@ footer .links .legal-section ul li a {
   color: #fafafa;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
+}
+
+@media (max-width: 1336px) {
+  footer .links .legal-section ul li a {
+    font-size: 0.9rem;
+  }
 }
 
 footer .links .legal-section ul li a:hover {

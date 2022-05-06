@@ -952,6 +952,11 @@ footer {
                         flex-wrap: wrap;
                         margin-top: 20px;
 
+                        @media (max-width:1275px) {
+                                flex-direction: column;
+                                margin-top: 0;
+                        }
+
                         .legal {
                                 display: flex;
                                 
@@ -997,6 +1002,10 @@ footer {
                                 text-decoration: none;
                                 color: #fafafa;
                                 transition: ease 0.4s;
+
+                                @media (max-width: 1336px) {
+                                        font-size: 0.9rem;
+                                }
 
                                 &:hover {
                                         color: $accent-color;

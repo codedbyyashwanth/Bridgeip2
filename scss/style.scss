@@ -785,7 +785,7 @@ header {
                 align-items: center;
                 flex-wrap: wrap;
                 margin-top: 100px;
-                margin-bottom: 100px;
+                margin-bottom: 90px;
         }
 
         h2 {
@@ -937,9 +937,14 @@ header {
 }       
 
 .demo-section {
+        background-color: rgb(189, 190, 255);
+        padding: 60px;
+
         .header-container {
+                padding-top: 0;
+
                 .img-container {
-                        width: 800px;
+                        width: 700px;
 
                         img {
                                 width: 100%;
@@ -950,6 +955,11 @@ header {
                         .btn-container {
                                 margin-left: 50%; 
                                 transform: translateX(-50%);
+
+                                @media (max-width:600px) {
+                                        margin-left: 0%;
+                                        transform: translateX(0%);
+                                }
 
                                 a {
                                         padding: 15px 25px;
@@ -967,6 +977,10 @@ header {
         
                                         &:hover {
                                                 background-color: rgba($accent-color, 0.8);
+                                        }
+
+                                        @media (max-width:600px) {
+                                                padding: 15px 10px;
                                         }
                                 }
         
@@ -1063,7 +1077,7 @@ header {
 
                                 img {
                                         width: 30%;
-                                        max-width: 200px;
+                                        max-width: 150px;
                                         min-width: 80px;
                                         margin: 0 20px;
                                 }
@@ -1154,6 +1168,11 @@ footer {
                         flex-wrap: wrap;
                         margin-top: 20px;
 
+                        @media (max-width:1275px) {
+                                flex-direction: column;
+                                margin-top: 0;
+                        }
+
                         .legal {
                                 display: flex;
                                 
@@ -1200,6 +1219,10 @@ footer {
                                 color: #fafafa;
                                 transition: ease 0.4s;
 
+                                @media (max-width: 1336px) {
+                                        font-size: 0.9rem;
+                                }
+
                                 &:hover {
                                         color: $accent-color;
                                 }
@@ -1231,3 +1254,157 @@ footer {
                 }
         }
 }
+
+// footer {
+//         .sitemap-links {
+//                 display: flex;
+//                 justify-content: space-evenly;
+//                 align-items: flex-start;
+//                 flex-wrap: wrap;
+//                 background-color: #20232A;
+//                 padding: 40px 10px;
+//                 color: #fafafa;
+
+//                 @media (max-width:600px) {
+//                         justify-content: start;
+//                 }
+
+//                 .sitemap {
+//                         margin: 0 30px;
+
+//                         h3 {
+//                                 font-weight: 600;
+//                                 font-size: 1.6rem;
+//                                 margin-top: 20px;
+//                                 margin-bottom: 20px;
+//                                 position: relative;
+//                                 display: inline-block;
+//                         }
+
+//                         h3::before {
+//                                 content: "";
+//                                 position: absolute;
+//                                 top: 110%;
+//                                 left: 0;
+//                                 width: 60%;
+//                                 height: 2px;
+//                                 background-color: $accent-color;
+//                         }
+
+//                         ul li {
+//                                 list-style-type: none;
+//                                 margin: 10px 0;
+//                         }
+
+//                         ul li a{
+//                                 text-decoration: none;
+//                                 color: #fafafa;
+//                                 transition: ease 0.4s;
+
+//                                 &:hover {
+//                                         color: $accent-color;
+//                                 }
+//                         }
+//                 }
+//         }
+
+//         .links {
+//                 background-color: #000000;
+//                 padding: 20px 10px;
+
+//                 .legal-section {
+//                         width: 97%;
+//                         max-width: 1600px;
+//                         margin: auto;
+//                         display: flex;
+//                         justify-content: space-between;
+//                         align-items: center;
+//                         flex-wrap: wrap;
+//                         margin-top: 20px;
+
+//                         @media (max-width:1275px) {
+//                                 flex-direction: column;
+//                                 margin-top: 0;
+//                         }
+
+//                         .legal {
+//                                 display: flex;
+                                
+//                                 @media (max-width:600px) {
+//                                         display: block;
+//                                 }
+//                         }
+
+
+//                         h3 {
+//                                 color: #fafafa;
+//                                 display: inline;
+
+//                                 @media (max-width:600px) {
+//                                         text-align: center;
+//                                         display: block;
+//                                         margin-bottom: 20px;
+//                                 }
+//                         }
+
+//                         ul {
+//                                 display: flex;
+//                                 justify-content: space-around;
+//                                 align-items: center;
+//                                 flex-wrap: wrap;
+
+//                                 @media (max-width:600px) {
+                                        
+//                                 justify-content: center;
+//                                 }
+//                         }
+
+//                         ul li {
+//                                 display: inline-block;
+
+//                                 @media (max-width:600px) {
+//                                         margin: 5px 0;
+//                                 }
+//                         }
+
+//                         ul li a {
+//                                 margin: 0px 15px;
+//                                 text-decoration: none;
+//                                 color: #fafafa;
+//                                 transition: ease 0.4s;
+
+//                                 @media (max-width: 1336px) {
+//                                         font-size: 0.9rem;
+//                                 }
+
+//                                 &:hover {
+//                                         color: $accent-color;
+//                                 }
+//                         }
+
+//                         .social-links {
+//                                 display: flex;
+//                                 margin-top: 20px;
+//                                 justify-content: center;
+//                                 align-items: center;
+//                                 margin: auto;
+
+//                                 ion-icon {
+//                                         margin: 0 10px;
+//                                         color: #fafafa;
+//                                         font-size: 1.5rem;
+//                                         transition: ease 0.4s;
+//                                         cursor: pointer;
+
+//                                         @media (max-width:600px) {
+//                                                 margin-top: 30px;
+//                                         }
+
+//                                         &:hover {
+//                                                 color: $accent-color;
+//                                         }
+//                                 }
+//                         }
+//                 }
+//         }
+// }
