@@ -389,6 +389,11 @@ header {
                                 text-decoration: none;
                                 color: #ffffff;
 
+                                @media (max-width:600px) {
+                                        padding: 15px 15px;
+                                        font-size: 0.9rem;
+                                }
+
                                 &:hover {
                                         background-color: rgba($accent-color, 0.8);
                                 }

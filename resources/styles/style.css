@@ -460,6 +460,13 @@ header nav ul li .active-page {
   color: #ffffff;
 }
 
+@media (max-width: 600px) {
+  .header-container .text-container .btn-container a {
+    padding: 15px 15px;
+    font-size: 0.9rem;
+  }
+}
+
 .header-container .text-container .btn-container a:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
