@@ -1271,8 +1271,10 @@ header nav ul li .active-page {
 }
 
 .benefit-business-contain-section .benefit-business-contain-layout h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin: 20px 0;
+  font-weight: 600;
+  color: #FF8303;
 }
 
 .benefit-business-contain-section .benefit-business-contain-layout .img-container {

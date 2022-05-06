@@ -1167,8 +1167,10 @@ header {
                 text-align: center;
 
                 h3 {
-                        font-size: 1.8rem;
+                        font-size: clamp(1.6rem, 3vw, 2.2rem);
                         margin: 20px 0;
+                        font-weight: 600;
+                        color: $accent-color;
                 }
 
                 .img-container {
