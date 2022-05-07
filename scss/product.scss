@@ -1005,6 +1005,187 @@ header {
         }
 }
 
+.contact-business-edition-section {
+        .contact-business-edition-layout {
+                @include layout-width;
+
+                .tab-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 50px 0;
+
+                        .text-content {
+                                width: 97%;
+                                max-width: 600px;
+
+                                h4 {
+                                        font-size: 1.6rem;
+                                        margin-bottom: 20px;
+                                }
+
+                                p {
+                                        font-size: 1.1rem;
+                                }
+
+                                ul {
+                                        margin: 0 20px;
+                                }
+
+                                span {
+                                        display: block;
+                                        margin-top: 20px;
+                                        font-weight: 600;
+                                        font-size: 0.95rem;
+
+                                        a {
+                                                color: $accent-color;
+
+                                        }
+                                }
+                        }
+
+                        .img-container {
+                                position: relative;
+
+                                img {
+                                        width: 97%;
+                                        max-width: 700px;
+                                }
+
+                                .circle-yellow, .circle-grey {
+                                        position: absolute;
+                                        top: -10%;
+                                        right: 5%;
+                                        width: 220px;
+                                        height: 220px;
+                                        background-color: $accent-color;
+                                        border-radius: 50%;
+                                        z-index: -1;
+                                        opacity: 0.8;
+                                }
+                        
+                                .circle-grey {
+                                        top: -15%;
+                                        right: -5%;
+                                        width: 250px;
+                                        height: 250px;
+                                        z-index: -2;
+                                        background-color: rgb(199, 199, 199);
+                                }
+                        }
+                }
+
+                @media (max-width:1400px) {
+                        .tab-content {
+                                        .text-content {
+                                                max-width: 500px;
+                
+                                                h4 {
+                                                        font-size: 1.4rem;
+                                                }
+                
+                                                p {
+                                                        font-size: 1.05rem;
+                                                }
+                                        }
+
+                                        .img-container {
+        
+                                                img {
+                                                        max-width: 600px;
+                                                }
+        
+                                                .circle-yellow, .circle-grey {
+                                                        top: -10%;
+                                                        right: 5%;
+                                                        width: 220px;
+                                                        height: 220px;
+                                                }
+                                
+                                                .circle-grey {
+                                                        top: -15%;
+                                                        right: -5%;
+                                                        width: 250px;
+                                                        height: 250px;
+                                                }
+                                        }
+                        
+                        }
+                }
+
+                @media (max-width:1200px) {
+                        .tab-content {
+                                
+                                        justify-content: center;
+
+                                        .text-content {
+                                                max-width: 800px;
+                
+                                                h4 {
+                                                        font-size: 1.4rem;
+                                                }
+                
+                                                p {
+                                                        font-size: 1.05rem;
+                                                }
+                                        }
+
+                                        .img-container {
+                                                margin-top: 150px;
+        
+                                                img {
+                                                        max-width: 800px;
+                                                }
+        
+                                                .circle-yellow, .circle-grey {
+                                                        top: -10%;
+                                                        right: 5%;
+                                                        width: 220px;
+                                                        height: 220px;
+                                                }
+                                
+                                                .circle-grey {
+                                                        top: -15%;
+                                                        right: -5%;
+                                                        width: 250px;
+                                                        height: 250px;
+                                                }
+                                        }
+                        }
+                }
+
+                @media (max-width:600px) {
+                        .tab-content{
+
+                                .img-container {
+                                        margin-top: 150px;
+        
+                                        img {
+                                                max-width: 800px;
+                                        }
+        
+                                        .circle-yellow, .circle-grey {
+                                                top: -10%;
+                                                right: 5%;
+                                                width: 150px;
+                                                height: 150px;
+                                        }
+                                
+                                        .circle-grey {
+                                                top: -15%;
+                                                right: -2%;
+                                                width: 150px;
+                                                height: 150px;
+                                        }
+                                }
+                        }
+                        
+                }
+        }
+}
+
 .quote-section {
         background-color: #1A1694;
         padding: 50px 0;
@@ -1158,7 +1339,7 @@ header {
 
 .benefit-business-contain-section {
         background-color: #BDF3F4;
-        padding: 50px 0;
+        padding: 0px 0;
         overflow-x: hidden;
 
         .benefit-business-contain-layout {
