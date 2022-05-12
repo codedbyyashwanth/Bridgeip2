@@ -6,264 +6,276 @@
 }
 
 header {
-    width: 100%;
-    position: relative;
-
-    .user-acc {
-        width: 90%;
-        max-width: 1500px;
-        margin: auto;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-
-        @media (max-width: 600px) {
-                display: none;
-        }
-
-        .search-bar, .login-btn a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0px 15px;
-                margin-top: 10px;
-        }
-
-        .search-bar {
-                width: 200px;
-                height: 45px;
-                border-radius: 5px;
-                display: flex;
-                align-items:center;
-                                        
-                input{
-                        width: 100%;
-                        outline: none;
-                        border: none;
-                        display: none;
-                        padding: 10px 10px;
-                }
-
-                button {
-                        width: 60px;
-                        height: 40px;
-                        outline: none;
-                        border: none;
-                        background-color: #2980BF;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        cursor: pointer;
-
-                        ion-icon {
-                                font-size: 1.2rem;
-                                color: $secondary-color;
-                        }
-                }
-        }
-
-        .login-btn {
-                overflow: hidden;
-
-                a {
-                        cursor: pointer;
-                        text-decoration: none;
-                }
-
-                ion-icon {
-                        padding: 12px;
-                        color: #fafafa;
-                        background-color: #EACA1C;
-                }
-
-                button {
-                        width: 150px;
-                        height: 40px;
-                        background-color: #4C687F;
-                        border: none;
-                        outline: none;
-                        color: #fafafa;
-                        font-size: 1.1rem;
-                        cursor: pointer;
-                }
-        }
-    }
-
-    .navbar {
-        width: 90%;
-        padding: 10px 0px;
-        max-width: 1500px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 150px;
-        cursor: pointer;
-    }
-
-    .logo .govt {
-            width: 200px;
-            margin-left: 20px;
-    }
-
-    .menu {
-        display: none;
-
-        ion-icon {
-            font-size: 2rem;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-        }
-    }
-
-    nav {
-        display: block;
-
-        ul li {
-            display: inline-block;
-            margin: 5px 15px;
-            position: relative;
-            
-
-            #contact-us-btn {
-                padding: 8px 20px;
-                border: 1px solid rgb(92, 92, 92);
-                border-radius: 5px;
-                display: inline-block;
-
-                &:hover {
-                        background-color: $accent-color;
-                        color: #ffffff;
-                        border: 1px solid $accent-color;
-                }
+        width: 100%;
+        position: relative;
+        transition: ease 0.4s;
+        background-color: #F2F2F2;
+    
+        .user-acc {
+            width: 90%;
+            max-width: 1500px;
+            margin: auto;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+    
+            @media (max-width: 600px) {
+                    display: none;
             }
-
-            
-                .nav-items {
-                        width: 700px;
-                        position: absolute;
-                        top: 160%;
-                        left: -100%;
-                        z-index: 10;
-                        border-radius: 10px;
-                        box-shadow: $secondary-shadow;
-                        padding: 20px;
-                        visibility: collapse;
-                        background-color: #fff;
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-start;
-
-                        .items-content {
-                                width: 400px;
-                                margin: 0 15px;
-
-                                .heading {
-                                        margin-bottom: 20px;
-                                        p {
-                                                font-size: 0.9rem;
-                                                color: rgba($primary-color, 0.9);
-                                        }
-                                }
-
-                                .links {
-                                        .link {
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: flex-start;
-                                                margin: 15px 0;
-
-                                                img {
-                                                        margin: 0px 10px;
-                                                }
-
-                                                .text-content {
-                                                        a {
-                                                                font-weight: 600;
-                                                        }
-                                                        p {
-                                                                font-size: 0.7rem;
-                                                                color: rgba($primary-color, 0.95);
-                                                        }
-                                                }
-                                        }
-                                }
-                        }
-
-                        .company-content {
-                                width: 300px;
-                                margin: 0 15px;
-                                
-                                p {
-                                        font-size: 0.9rem;
-                                }
-
-                                img {
-                                        width: 60%;
-                                        margin-top: 20px;
-                                }
-                        }
-                }
-
-               .active-nav-items {
-                        animation: come-down ease 0.4s;
-                }
-
-                @keyframes come-down {
-                        0% {
-                                transform: translateY(-10px);
-                        }
-
-                        100% {
-                                transform: translateY(0px);
-                        }
-                }
-
-             a {
-                font-size: 0.95rem;
-                text-decoration: none;
-                font-weight: 500;
-                color: $primary-color;
-                cursor: pointer;
-
-                display: flex;
-                align-items: center;
-
-                ion-icon {
-                        font-size: 1.2rem;
-                        color: $primary-color;
-                        margin: 0 10px;
-                }
-
-
-                &:hover {
-                    color: $accent-color;
-                    transition: ease 0.4s;
-                }
-
-                &:focus, &:focus ion-icon {
-                        color: $accent-color;
+    
+            .search-bar, .login-btn a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0px 15px;
+                    margin-top: 10px;
+            }
+    
+            .search-bar {
+                    width: 200px;
+                    height: 45px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items:center;
+                                            
+                    input{
+                            width: 100%;
+                            outline: none;
+                            border: none;
+                            display: none;
+                            padding: 10px 10px;
                     }
-
-                &:hover ion-icon{
+    
+                    button {
+                            width: 60px;
+                            height: 40px;
+                            outline: none;
+                            border: none;
+                            background-color: #2980BF;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+    
+                            ion-icon {
+                                    font-size: 1.2rem;
+                                    color: $secondary-color;
+                            }
+                    }
+            }
+    
+            .login-btn {
+                    overflow: hidden;
+    
+                    a {
+                            cursor: pointer;
+                            text-decoration: none;
+                    }
+    
+                    ion-icon {
+                            padding: 12px;
+                            color: #fafafa;
+                            background-color: #EACA1C;
+                    }
+    
+                    button {
+                            width: 150px;
+                            height: 40px;
+                            background-color: #4C687F;
+                            border: none;
+                            outline: none;
+                            color: #fafafa;
+                            font-size: 1.1rem;
+                            cursor: pointer;
+                    }
+            }
+        }
+    
+        .navbar {
+            width: 90%;
+            padding: 10px 0px;
+            max-width: 1500px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+    
+    
+        .logo img {
+            width: 150px;
+            cursor: pointer;
+        }
+    
+        .logo .govt {
+                width: 200px;
+                margin-left: 20px;
+        }
+    
+        .menu {
+            display: none;
+    
+            ion-icon {
+                font-size: 2rem;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+        }
+    
+        nav {
+            display: block;
+    
+            ul li {
+                display: inline-block;
+                margin: 5px 15px;
+                position: relative;
+                
+    
+                #contact-us-btn {
+                    padding: 8px 20px;
+                    border: 1px solid rgb(92, 92, 92);
+                    border-radius: 5px;
+                    display: inline-block;
+    
+                    &:hover {
+                            background-color: $accent-color;
+                            color: #ffffff;
+                            border: 1px solid $accent-color;
+                    }
+                }
+    
+                
+                    .nav-items {
+                            max-width: 600px;
+                            position: absolute;
+                            top: 160%;
+                            left: -100%;
+                            z-index: 10;
+                            border-radius: 10px;
+                            box-shadow: $secondary-shadow;
+                            padding: 20px;
+                            visibility: collapse;
+                            background-color: #fff;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+    
+                            .items-content {
+                                    width: 400px;
+                                    margin: 0 15px;
+    
+                                    .heading {
+                                            margin-bottom: 20px;
+                                            p {
+                                                    font-size: 0.9rem;
+                                                    color: rgba($primary-color, 0.9);
+                                            }
+                                    }
+    
+                                    .links {
+                                            .link {
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: flex-start;
+                                                    margin: 15px 0;
+    
+                                                    img {
+                                                            margin: 0px 10px;
+                                                    }
+    
+                                                    .text-content {
+                                                            a {
+                                                                    font-weight: 600;
+                                                            }
+                                                            p {
+                                                                    font-size: 0.7rem;
+                                                                    color: rgba($primary-color, 0.95);
+                                                            }
+                                                    }
+                                            }
+                                    }
+                            }
+    
+                            .company-content {
+                                    width: 300px;
+                                    margin: 0 15px;
+                                    
+                                    p {
+                                            font-size: 0.9rem;
+                                    }
+    
+                                    img {
+                                            width: 60%;
+                                            margin-top: 20px;
+                                    }
+                            }
+                    }
+    
+                   .active-nav-items {
+                            animation: come-down ease 0.4s;
+                    }
+    
+                    @keyframes come-down {
+                            0% {
+                                    transform: translateY(-10px);
+                            }
+    
+                            100% {
+                                    transform: translateY(0px);
+                            }
+                    }
+    
+                 a {
+                    font-size: 0.95rem;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: $primary-color;
+                    cursor: pointer;
+    
+                    display: flex;
+                    align-items: center;
+    
+                    ion-icon {
+                            font-size: 1.2rem;
+                            color: $primary-color;
+                            margin: 0 10px;
+                    }
+    
+    
+                    &:hover {
                         color: $accent-color;
                         transition: ease 0.4s;
                     }
-            }
-
-            .active-page {
-                color: $accent-color;
+    
+                    &:focus, &:focus ion-icon {
+                            color: $accent-color;
+                        }
+    
+                    &:hover ion-icon{
+                            color: $accent-color;
+                            transition: ease 0.4s;
+                        }
+                }
+    
+                .active-page {
+                    color: $accent-color;
+                }
             }
         }
     }
-}
+    
+    .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+    }
 
 .swiper {
         .swiper-pagination-bullet-active {
@@ -460,18 +472,67 @@ header {
         }
 }
 
+.who-section {
+        // background-color: #1194B4;
+        padding: 100px 0;
+        // color: #fafafa;
+
+        .who-heading {
+                width: 94%;
+                max-width: 600px;
+                margin: 30px auto;
+                padding: 0 10px;
+                text-align: center;
+                
+                h2 {
+                        font-size: clamp(1.6rem, 3vw, 2.4rem);
+                        font-weight: 600;
+                }
+        }
+
+        .who-layout {
+                @include layout-width;
+
+                .text-content {
+                        p {
+                                font-size: clamp(0.9rem, 3vw, 1.2rem);
+                                letter-spacing: 0.8px;
+                                word-spacing: 1.4px;
+                                text-align: center;
+                        }
+                }
+        }
+}
+
+.section-heading {
+        width: 94%;
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 0 10px;
+        text-align: center;
+        
+        h2 {
+                font-size: clamp(1.4rem, 3vw, 2rem);
+                font-weight: 600;
+        }
+
+        p {
+                font-size: 1.2rem;
+        }
+}
+
 
 .features-section {
         padding: 100px 0;
         .section-heading {
                 width: 94%;
-                max-width: 650px;
+                max-width: 800px;
                 margin: 60px auto;
                 padding: 0 10px;
                 text-align: center;
                 
                 h2 {
-                        font-size: 2.4rem;
+                        font-size: clamp(1.4rem, 3vw, 2rem);
                         font-weight: 600;
                 }
 
@@ -494,6 +555,7 @@ header {
                 .features-card {
                         text-align: center;
                         margin: 40px 15px;
+                        max-width: 350px;
 
                         img {
                                 width: 100px;
@@ -501,14 +563,37 @@ header {
                         }
 
                         h3 {
-                                font-size: 1.6rem;
-                                text-align: left;
+                                font-size: 1.4rem;
+                                text-align: center;
                         }
 
                         p {
-                                text-align: left;
+                                text-align: center;
                                 max-width: 300px;
                                 font-size: 0.9rem;
+                                word-wrap:break-word;
+                        }
+
+                        .full-content {
+                                display: none;
+                        }
+
+                        button {
+                                padding: 12px 35px;
+                                margin: 30px auto;
+                                background-color: $accent-color;
+                                color: #fafafa;
+                                border-radius: 5px;
+                                outline: none;
+                                border: none;
+                                cursor: pointer;
+                                display: flex;
+                                justify-content: center;
+                                // box-shadow: $primary-shadow;
+
+                                &:hover {
+                                        background-color: rgba($accent-color, 0.8);
+                                }
                         }
                 }
         }
@@ -548,6 +633,7 @@ header {
                         color: #fafafa;
 
                         h1 {    
+                                margin-bottom: 20px;
                                 font-weight: 600;
                                 text-align: center;
                                 font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -560,10 +646,10 @@ header {
                         }
 
                         p {
-                                margin: 30px 0;
-                                text-align: center;
+                                margin: 10px 0;
+                                text-align: left;
                                 max-width: 650px;
-                                margin-bottom: 80px;
+                                margin-bottom: 30px;
                         }
 
                         .content-container {
@@ -717,6 +803,54 @@ header {
 
                         img {
                                 width: 100%;
+                        }
+                }
+        }
+}
+
+.linked-section {
+        background-color: #1A1694;
+        padding: 50px 0;
+
+        .linked-layout {
+                @include layout-width;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                h3 {
+                        color: #fafafa;
+                        font-weight: 500;
+                        text-align: center;
+                        max-width: 900px;
+                        margin: 0 20px; 
+                        font-size: clamp(1.6rem, 4vw, 2rem); 
+
+                        @media (max-width:600px) {
+                                margin: 0 ;
+                        }
+                }
+
+                a {
+                        padding: 12px 35px;
+                        margin: 20px 20px;
+                        background-color: $accent-color;
+                        color: #fafafa;
+                        border-radius: 50px;
+                        display: flex;
+                        align-items: center;
+                        outline: none;
+                        border: none;
+                        text-decoration: none;
+                        cursor: pointer;
+
+                        @media (max-width:600px) {
+                                margin: 20px auto;
+                        }
+
+                        &:hover {
+                                background-color: rgba($accent-color, 0.8);
                         }
                 }
         }
@@ -943,10 +1077,10 @@ header {
                         font-size: 2rem;
                         color: #fafafa;
                         font-weight: 600;
-                        max-width: 700px;
+                        max-width: 1200px;
                         text-align: center;
-                        margin: 0 20px; 
-                        font-size: clamp(1.6rem, 4vw, 2rem); 
+                        margin: 0 0px; 
+                        font-size: clamp(1.6rem, 3vw, 1.7rem); 
 
                         @media (max-width:600px) {
                                 margin: 0 ;
@@ -1167,7 +1301,7 @@ header {
 
         .integration-heading {
                 width: 94%;
-                max-width: 600px;
+                max-width: 500px;
                 margin: 80px auto;
                 margin-bottom: 50px;
                 padding: 0 10px;
@@ -1180,19 +1314,25 @@ header {
         }
 
 
-        .integration-layout {
+        .integration-layout-1 {
                 @include layout-width;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 flex-wrap: wrap;
+                max-width: 800px;
 
                 .brand {
                         margin: 5px 20px;
-                        width: 150px;
+                        max-height: 50px;
+                        object-fit: contain;
+                        display: flex;
+                        align-items: center;
 
                         img {
                                 width: 100%;
+                                max-height: 100%;
+                                aspect-ratio: auto 16/9;
                         }
                 }
         } 

@@ -31,8 +31,8 @@
 </head>
 <body>
         <section class="head-section">
-                <header>
-                        <div class="user-acc">
+                <header  id="header">
+                        <!-- <div class="user-acc">
                                 <div class="search-bar">
                                         <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
@@ -47,7 +47,7 @@
                                                 </button>
                                         </a>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="navbar">
                             <div class="logo">
                                 <a href="../index.html"><img src="../resources/img/logo.png" alt=""></a>
@@ -109,30 +109,139 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li><a href="./solutions.html">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li>
+                                            <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                                            <div id="solution-items" class="nav-items">
+                                                <div class="items-content">
+                                                        <div class="heading">
+                                                                <h3>Bridge I2P</h3>
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                </p>
+                                                        </div>
+                                                        <div class="links">
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/professional-services.html">Professional Services</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/call-center.html">Call Center</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/health.html">Health</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/retail.html">Retail</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/financial.html">Financial</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/industrial-distribution.html">Industrial Distribution</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="company-content">
+                                                        <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                        </p>
+                                                        <img src="../resources/img/logo.png" alt="">
+                                                </div>
+                                        </div>
+                                        </li>
                                     <li><a href="./integration.html">Integration</a></li>
-                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <!-- <li><a href="#">Plans & Pricing</a></li> -->
                                     <li><a href="./about.html">About us</a></li>
                                     <li><a href="./contact-us.html" id="contact-us-btn">Contact us</a></li>
                                 </ul>
                             </nav>
                             <script>
-                                    const productsBtn = document.getElementById('products');
-                                    const productsItems = document.getElementById('product-items');
-                                    var clicked = false;
-                                    productsBtn.addEventListener('click', () => {
-                                        if (clicked) {
-                                                console.log("Clicked Again")
-                                                productsItems.style.visibility = "collapse";
-                                                productsItems.classList.remove("active-nav-items");
-                                                clicked = false;
-                                        } else {
-                                                productsItems.style.visibility = "visible";
-                                                productsItems.classList.add("active-nav-items");
-                                                clicked = true;
-                                        }
-                                    })
-                            </script>
+                                const productsBtn = document.getElementById('products');
+                                const solutionsBtn = document.getElementById('solutions');
+                                const productsItems = document.getElementById('product-items');
+                                const solutionsItems = document.getElementById('solution-items');
+                                var productClicked = false,  solutionClicked = false;
+                                productsBtn.addEventListener('click', () => {
+                                    if (productClicked) {
+                                            productsItems.style.visibility = "collapse";
+                                            productsItems.classList.remove("active-nav-items");
+                                            productClicked = false;
+                                    } else {
+                                            productsItems.style.visibility = "visible";
+                                            productsItems.classList.add("active-nav-items");
+                                            solutionsItems.style.visibility = "collapse";
+                                            solutionClicked = false;
+                                            productClicked = true;
+                                    }
+                                })
+
+                                solutionsBtn.addEventListener('click', () => {
+                                    if (solutionClicked) {
+                                            solutionsItems.style.visibility = "collapse";
+                                            solutionsItems.classList.remove("active-nav-items");
+                                            solutionClicked = false;
+                                    } else {
+                                            productsItems.style.visibility = "collapse";
+                                            solutionsItems.style.visibility = "visible";
+                                            solutionsItems.classList.add("active-nav-items");
+                                            solutionClicked = true;
+                                            productClicked = false;
+                                    }
+                                })
+
+                            //     productsBtn.addEventListener("mouseout", () => {
+                            //         productsItems.style.visibility = "visible";
+                            //                 productsItems.classList.add("active-nav-items");
+                            //     })
+
+                            //     productsItems.addEventListener("mouseover", () => {
+                            //         productsItems.style.visibility = "visible";
+                            //                 productsItems.classList.add("active-nav-items");
+                            //                 productsBtn.removeEventListener("mouseleave", () => {
+                            //                         clearTimeout(time)
+                            //                 })
+                            //     })
+
+                            //     productsBtn.addEventListener("mouseleave", () => {
+                            //            time();
+                            //     });
+                        </script>
                         </div>
                 </header>
                 <div class="swiper mySwiper">
@@ -152,7 +261,8 @@
                                                         <button>Play Video<ion-icon name="play"></ion-icon></button>
                                                 </div>
                                         </div>
-                                        <div class="img-container" data-aos="fade-up" data-aos-easing="linear"
+                                        <div class="img-container" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                                         data-aos-duration="1000">
                                                 <img src="../resources/img/Group-850.png" alt="">
                                         </div>
@@ -181,11 +291,13 @@
         </section>
         
         <section class="business-phone-section">
-                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <!-- <h2>Business Phone System</h2> -->
                 </div>
-                <div class="business-phone-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="business-phone-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <ul class="tabs">
                                 <li data-tab-target="#overview" class="active tab">Overview</li>
@@ -194,7 +306,8 @@
                                 <li data-tab-target="#pricing" class="tab">Pricing</li>
                         </ul>
                             
-                        <div class="tab-content"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="tab-content"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div id="overview" data-tab-content class="active">
                                                 <div class="text-content">
@@ -258,7 +371,8 @@
 
         <section id="over-view-id" class="over-view-section">
                 <section class="quote-section">
-                        <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
                                         With A Comprehensive Voice and Virtual Channel Support, Intelligent Routing, And Proactive Self-service Tools, You Can Stay One Step Ahead of Evolving Customer Demands.
@@ -267,7 +381,8 @@
                         </div>
                 </section>
                 <section class="contact-business-edition-section">
-                        <div class="contact-business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="contact-business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -291,7 +406,8 @@
                         </div>
                 </section>
                 <section class="quote-section">
-                        <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
                                         When Your Company Faces Unique Challenges, And We Have the Expertise To Address Them.
@@ -301,11 +417,13 @@
                         </div>
                 </section>
                 <section class="faq-section">
-                        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h2>Frequently Asked Questions</h2>
                         </div>
-                        <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"
+                        <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="accordation">
                                         <h3>How does voice broadcasting work?</h3>
@@ -368,7 +486,8 @@
 
         <section id="features-id" class="features-section" style="margin-top: 0;">
                 <section class="benefit-business-contain-section" style="background-color: #fff;">
-                        <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="img-container">
                                         <img src="../resources/img/Image-5.png" alt="">
@@ -384,7 +503,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -403,7 +523,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -422,7 +543,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -441,7 +563,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -461,7 +584,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -481,7 +605,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -501,7 +626,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="linked-section">
-                        <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
                                         To learn more, schedule a free consultation with one of our VoIP experts.
@@ -511,11 +637,13 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="faq-section">
-                        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h2>Frequently Asked Questions</h2>
                         </div>
-                        <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"
+                        <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="accordation">
                                         <h3>How does voice broadcasting work?</h3>
@@ -578,7 +706,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
 
         <section id="benefits-id">
                 <section class="benefit-business-contain-section" style="background-color: #fff;">
-                        <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="img-container">
                                         <img src="../resources/img/Image-5.png" alt="">
@@ -594,7 +723,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -614,7 +744,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -634,7 +765,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -654,7 +786,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -673,7 +806,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -692,7 +826,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -712,7 +847,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -731,7 +867,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="text-content">
@@ -750,7 +887,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="business-edition-section">
-                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
@@ -769,7 +907,8 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="linked-section">
-                        <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h3>
                                         To learn more, schedule a free consultation with one of our VoIP experts.
@@ -779,11 +918,13 @@ It creates a win-win situation for both business owners and clients. We, at Brid
                 </section>
 
                 <section class="faq-section">
-                        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h2>Frequently Asked Questions</h2>
                         </div>
-                        <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"
+                        <div class="faq-layout" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="accordation">
                                         <h3>How does voice broadcasting work?</h3>

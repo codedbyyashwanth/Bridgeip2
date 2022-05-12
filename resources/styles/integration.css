@@ -14,6 +14,9 @@
 header {
   width: 100%;
   position: relative;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  background-color: #F2F2F2;
 }
 
 header .user-acc {
@@ -184,7 +187,7 @@ header nav ul li #contact-us-btn:hover {
 }
 
 header nav ul li .nav-items {
-  width: 700px;
+  max-width: 600px;
   position: absolute;
   top: 160%;
   left: -100%;
@@ -325,6 +328,14 @@ header nav ul li a:hover ion-icon {
 
 header nav ul li .active-page {
   color: #FF8303;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
 }
 
 .swiper .swiper-pagination-bullet-active {
@@ -531,20 +542,67 @@ header nav ul li .active-page {
   }
 }
 
+.who-section {
+  padding: 100px 0;
+}
+
+.who-section .who-heading {
+  width: 94%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.who-section .who-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
+}
+
+.who-section .who-layout {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.who-section .who-layout .text-content p {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  letter-spacing: 0.8px;
+  word-spacing: 1.4px;
+  text-align: center;
+}
+
+.section-heading {
+  width: 94%;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+.section-heading p {
+  font-size: 1.2rem;
+}
+
 .features-section {
   padding: 100px 0;
 }
 
 .features-section .section-heading {
   width: 94%;
-  max-width: 650px;
+  max-width: 800px;
   margin: 60px auto;
   padding: 0 10px;
   text-align: center;
 }
 
 .features-section .section-heading h2 {
-  font-size: 2.4rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 600;
 }
 
@@ -580,6 +638,7 @@ header nav ul li .active-page {
 .features-section .features .features-card {
   text-align: center;
   margin: 40px 15px;
+  max-width: 350px;
 }
 
 .features-section .features .features-card img {
@@ -588,14 +647,40 @@ header nav ul li .active-page {
 }
 
 .features-section .features .features-card h3 {
-  font-size: 1.6rem;
-  text-align: left;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .features-section .features .features-card p {
-  text-align: left;
+  text-align: center;
   max-width: 300px;
   font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.features-section .features .features-card .full-content {
+  display: none;
+}
+
+.features-section .features .features-card button {
+  padding: 12px 35px;
+  margin: 30px auto;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-section .features .features-card button:hover {
+  background-color: rgba(255, 131, 3, 0.8);
 }
 
 .control-section {
@@ -649,6 +734,7 @@ header nav ul li .active-page {
 }
 
 .control-section .control-layout .text-content h1 {
+  margin-bottom: 20px;
   font-weight: 600;
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -661,10 +747,10 @@ header nav ul li .active-page {
 }
 
 .control-section .control-layout .text-content p {
-  margin: 30px 0;
-  text-align: center;
+  margin: 10px 0;
+  text-align: left;
   max-width: 650px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .control-section .control-layout .text-content .content-container {
@@ -883,6 +969,71 @@ header nav ul li .active-page {
 
 .market-section .global-market-layout .img-container img {
   width: 100%;
+}
+
+.linked-section {
+  background-color: #1A1694;
+  padding: 50px 0;
+}
+
+.linked-section .linked-layout {
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.linked-section .linked-layout h3 {
+  color: #fafafa;
+  font-weight: 500;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 20px;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+@media (max-width: 600px) {
+  .linked-section .linked-layout h3 {
+    margin: 0;
+  }
+}
+
+.linked-section .linked-layout a {
+  padding: 12px 35px;
+  margin: 20px 20px;
+  background-color: #FF8303;
+  color: #fafafa;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .linked-section .linked-layout a {
+    margin: 20px auto;
+  }
+}
+
+.linked-section .linked-layout a:hover {
+  background-color: rgba(255, 131, 3, 0.8);
 }
 
 .integration-section {
@@ -1109,10 +1260,10 @@ header nav ul li .active-page {
   font-size: 2rem;
   color: #fafafa;
   font-weight: 600;
-  max-width: 700px;
+  max-width: 1200px;
   text-align: center;
-  margin: 0 20px;
-  font-size: clamp(1.6rem, 4vw, 2rem);
+  margin: 0 0px;
+  font-size: clamp(1.6rem, 3vw, 1.7rem);
 }
 
 @media (max-width: 600px) {
@@ -1378,7 +1529,7 @@ header nav ul li .active-page {
 
 .integration-1-section .integration-heading {
   width: 94%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 80px auto;
   margin-bottom: 50px;
   padding: 0 10px;
@@ -1390,7 +1541,7 @@ header nav ul li .active-page {
   font-weight: 600;
 }
 
-.integration-1-section .integration-layout {
+.integration-1-section .integration-layout-1 {
   width: 94%;
   max-width: 1500px;
   margin: 0 auto;
@@ -1404,15 +1555,26 @@ header nav ul li .active-page {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 800px;
 }
 
-.integration-1-section .integration-layout .brand {
+.integration-1-section .integration-layout-1 .brand {
   margin: 5px 20px;
-  width: 150px;
+  max-height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.integration-1-section .integration-layout .brand img {
+.integration-1-section .integration-layout-1 .brand img {
   width: 100%;
+  max-height: 100%;
+  aspect-ratio: auto 16/9;
 }
 
 .integration-1-section button {

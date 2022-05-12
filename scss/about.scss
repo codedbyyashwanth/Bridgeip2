@@ -6,264 +6,276 @@
 }
 
 header {
-    width: 100%;
-    position: relative;
-
-    .user-acc {
-        width: 90%;
-        max-width: 1500px;
-        margin: auto;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-
-        @media (max-width: 600px) {
-                display: none;
-        }
-
-        .search-bar, .login-btn a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0px 15px;
-                margin-top: 10px;
-        }
-
-        .search-bar {
-                width: 200px;
-                height: 45px;
-                border-radius: 5px;
-                display: flex;
-                align-items:center;
-                                        
-                input{
-                        width: 100%;
-                        outline: none;
-                        border: none;
-                        display: none;
-                        padding: 10px 10px;
-                }
-
-                button {
-                        width: 60px;
-                        height: 40px;
-                        outline: none;
-                        border: none;
-                        background-color: #2980BF;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        cursor: pointer;
-
-                        ion-icon {
-                                font-size: 1.2rem;
-                                color: $secondary-color;
-                        }
-                }
-        }
-
-        .login-btn {
-                overflow: hidden;
-
-                a {
-                        cursor: pointer;
-                        text-decoration: none;
-                }
-
-                ion-icon {
-                        padding: 12px;
-                        color: #fafafa;
-                        background-color: #EACA1C;
-                }
-
-                button {
-                        width: 150px;
-                        height: 40px;
-                        background-color: #4C687F;
-                        border: none;
-                        outline: none;
-                        color: #fafafa;
-                        font-size: 1.1rem;
-                        cursor: pointer;
-                }
-        }
-    }
-
-    .navbar {
-        width: 90%;
-        padding: 10px 0px;
-        max-width: 1500px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 150px;
-        cursor: pointer;
-    }
-
-    .logo .govt {
-            width: 200px;
-            margin-left: 20px;
-    }
-
-    .menu {
-        display: none;
-
-        ion-icon {
-            font-size: 2rem;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-        }
-    }
-
-    nav {
-        display: block;
-
-        ul li {
-            display: inline-block;
-            margin: 5px 15px;
-            position: relative;
-            
-
-            #contact-us-btn {
-                padding: 8px 20px;
-                border: 1px solid rgb(92, 92, 92);
-                border-radius: 5px;
-                display: inline-block;
-
-                &:hover {
-                        background-color: $accent-color;
-                        color: #ffffff;
-                        border: 1px solid $accent-color;
-                }
+        width: 100%;
+        position: relative;
+        transition: ease 0.4s;
+        background-color: #F2F2F2;
+    
+        .user-acc {
+            width: 90%;
+            max-width: 1500px;
+            margin: auto;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+    
+            @media (max-width: 600px) {
+                    display: none;
             }
-
-            
-                .nav-items {
-                        width: 700px;
-                        position: absolute;
-                        top: 160%;
-                        left: -100%;
-                        z-index: 10;
-                        border-radius: 10px;
-                        box-shadow: $secondary-shadow;
-                        padding: 20px;
-                        visibility: collapse;
-                        background-color: #fff;
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-start;
-
-                        .items-content {
-                                width: 400px;
-                                margin: 0 15px;
-
-                                .heading {
-                                        margin-bottom: 20px;
-                                        p {
-                                                font-size: 0.9rem;
-                                                color: rgba($primary-color, 0.9);
-                                        }
-                                }
-
-                                .links {
-                                        .link {
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: flex-start;
-                                                margin: 15px 0;
-
-                                                img {
-                                                        margin: 0px 10px;
-                                                }
-
-                                                .text-content {
-                                                        a {
-                                                                font-weight: 600;
-                                                        }
-                                                        p {
-                                                                font-size: 0.7rem;
-                                                                color: rgba($primary-color, 0.95);
-                                                        }
-                                                }
-                                        }
-                                }
-                        }
-
-                        .company-content {
-                                width: 300px;
-                                margin: 0 15px;
-                                
-                                p {
-                                        font-size: 0.9rem;
-                                }
-
-                                img {
-                                        width: 60%;
-                                        margin-top: 20px;
-                                }
-                        }
-                }
-
-               .active-nav-items {
-                        animation: come-down ease 0.4s;
-                }
-
-                @keyframes come-down {
-                        0% {
-                                transform: translateY(-10px);
-                        }
-
-                        100% {
-                                transform: translateY(0px);
-                        }
-                }
-
-             a {
-                font-size: 0.95rem;
-                text-decoration: none;
-                font-weight: 500;
-                color: $primary-color;
-                cursor: pointer;
-
-                display: flex;
-                align-items: center;
-
-                ion-icon {
-                        font-size: 1.2rem;
-                        color: $primary-color;
-                        margin: 0 10px;
-                }
-
-
-                &:hover {
-                    color: $accent-color;
-                    transition: ease 0.4s;
-                }
-
-                &:focus, &:focus ion-icon {
-                        color: $accent-color;
+    
+            .search-bar, .login-btn a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0px 15px;
+                    margin-top: 10px;
+            }
+    
+            .search-bar {
+                    width: 200px;
+                    height: 45px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items:center;
+                                            
+                    input{
+                            width: 100%;
+                            outline: none;
+                            border: none;
+                            display: none;
+                            padding: 10px 10px;
                     }
-
-                &:hover ion-icon{
+    
+                    button {
+                            width: 60px;
+                            height: 40px;
+                            outline: none;
+                            border: none;
+                            background-color: #2980BF;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+    
+                            ion-icon {
+                                    font-size: 1.2rem;
+                                    color: $secondary-color;
+                            }
+                    }
+            }
+    
+            .login-btn {
+                    overflow: hidden;
+    
+                    a {
+                            cursor: pointer;
+                            text-decoration: none;
+                    }
+    
+                    ion-icon {
+                            padding: 12px;
+                            color: #fafafa;
+                            background-color: #EACA1C;
+                    }
+    
+                    button {
+                            width: 150px;
+                            height: 40px;
+                            background-color: #4C687F;
+                            border: none;
+                            outline: none;
+                            color: #fafafa;
+                            font-size: 1.1rem;
+                            cursor: pointer;
+                    }
+            }
+        }
+    
+        .navbar {
+            width: 90%;
+            padding: 10px 0px;
+            max-width: 1500px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+    
+    
+        .logo img {
+            width: 150px;
+            cursor: pointer;
+        }
+    
+        .logo .govt {
+                width: 200px;
+                margin-left: 20px;
+        }
+    
+        .menu {
+            display: none;
+    
+            ion-icon {
+                font-size: 2rem;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+        }
+    
+        nav {
+            display: block;
+    
+            ul li {
+                display: inline-block;
+                margin: 5px 15px;
+                position: relative;
+                
+    
+                #contact-us-btn {
+                    padding: 8px 20px;
+                    border: 1px solid rgb(92, 92, 92);
+                    border-radius: 5px;
+                    display: inline-block;
+    
+                    &:hover {
+                            background-color: $accent-color;
+                            color: #ffffff;
+                            border: 1px solid $accent-color;
+                    }
+                }
+    
+                
+                    .nav-items {
+                            max-width: 600px;
+                            position: absolute;
+                            top: 160%;
+                            left: -100%;
+                            z-index: 10;
+                            border-radius: 10px;
+                            box-shadow: $secondary-shadow;
+                            padding: 20px;
+                            visibility: collapse;
+                            background-color: #fff;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+    
+                            .items-content {
+                                    width: 400px;
+                                    margin: 0 15px;
+    
+                                    .heading {
+                                            margin-bottom: 20px;
+                                            p {
+                                                    font-size: 0.9rem;
+                                                    color: rgba($primary-color, 0.9);
+                                            }
+                                    }
+    
+                                    .links {
+                                            .link {
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: flex-start;
+                                                    margin: 15px 0;
+    
+                                                    img {
+                                                            margin: 0px 10px;
+                                                    }
+    
+                                                    .text-content {
+                                                            a {
+                                                                    font-weight: 600;
+                                                            }
+                                                            p {
+                                                                    font-size: 0.7rem;
+                                                                    color: rgba($primary-color, 0.95);
+                                                            }
+                                                    }
+                                            }
+                                    }
+                            }
+    
+                            .company-content {
+                                    width: 300px;
+                                    margin: 0 15px;
+                                    
+                                    p {
+                                            font-size: 0.9rem;
+                                    }
+    
+                                    img {
+                                            width: 60%;
+                                            margin-top: 20px;
+                                    }
+                            }
+                    }
+    
+                   .active-nav-items {
+                            animation: come-down ease 0.4s;
+                    }
+    
+                    @keyframes come-down {
+                            0% {
+                                    transform: translateY(-10px);
+                            }
+    
+                            100% {
+                                    transform: translateY(0px);
+                            }
+                    }
+    
+                 a {
+                    font-size: 0.95rem;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: $primary-color;
+                    cursor: pointer;
+    
+                    display: flex;
+                    align-items: center;
+    
+                    ion-icon {
+                            font-size: 1.2rem;
+                            color: $primary-color;
+                            margin: 0 10px;
+                    }
+    
+    
+                    &:hover {
                         color: $accent-color;
                         transition: ease 0.4s;
                     }
-            }
-
-            .active-page {
-                color: $accent-color;
+    
+                    &:focus, &:focus ion-icon {
+                            color: $accent-color;
+                        }
+    
+                    &:hover ion-icon{
+                            color: $accent-color;
+                            transition: ease 0.4s;
+                        }
+                }
+    
+                .active-page {
+                    color: $accent-color;
+                }
             }
         }
     }
-}
+    
+    .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+    }
 
 .swiper {
         .swiper-pagination-bullet-active {
@@ -463,13 +475,14 @@ header {
 
 .who-section {
         background-color: #1194B4;
-        padding: 100px 0;
+        padding: 60px 0;
         color: #fafafa;
 
         .who-heading {
                 width: 94%;
                 max-width: 600px;
-                margin: 30px auto;
+                margin: 0px auto;
+                margin-bottom: 30px;
                 padding: 0 10px;
                 text-align: center;
                 
@@ -578,6 +591,441 @@ header {
                 }
         }
 }
+
+.business-edition-section {
+        .business-edition-layout {
+                @include layout-width;
+
+                .tab-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 40px 0;
+
+                        @media (max-width: 600px) {
+                                justify-content: center;
+                        }
+
+                        .text-content {
+                                width: 97%;
+                                max-width: 800px;
+
+                                h4 {
+                                        font-size: 1.6rem;
+                                        margin-bottom: 20px;
+                                }
+
+                                p {
+                                        font-size: 1.1rem;
+                                        margin: 15px 0;
+                                }
+
+                                ion-icon {
+                                        margin-right: 5px;
+                                }
+
+                                span {
+                                        display: block;
+                                        margin-top: 20px;
+                                        font-weight: 600;
+                                        font-size: 0.95rem;
+
+                                        a {
+                                                color: $accent-color;
+
+                                        }
+                                }
+                        }
+
+                        .img-container {
+                                position: relative;
+
+                                img {
+                                        width: 97%;
+                                        max-width: 650px;
+                                }
+
+                                .circle-yellow, .circle-grey {
+                                        position: absolute;
+                                        top: -10%;
+                                        right: 5%;
+                                        width: 220px;
+                                        height: 220px;
+                                        background-color: $accent-color;
+                                        border-radius: 50%;
+                                        z-index: -1;
+                                        opacity: 0.8;
+                                }
+                        
+                                .circle-grey {
+                                        top: -15%;
+                                        right: -5%;
+                                        width: 250px;
+                                        height: 250px;
+                                        z-index: -2;
+                                        background-color: rgb(199, 199, 199);
+                                }
+                        }
+                }
+
+                @media (max-width:1400px) {
+                        .tab-content {
+                                        .text-content {
+                                                max-width: 500px;
+                
+                                                h4 {
+                                                        font-size: 1.4rem;
+                                                }
+                
+                                                p {
+                                                        font-size: 1.05rem;
+                                                }
+                                        }
+
+                                        .img-container {
+        
+                                                img {
+                                                        max-width: 600px;
+                                                }
+        
+                                                .circle-yellow, .circle-grey {
+                                                        top: -10%;
+                                                        right: 5%;
+                                                        width: 220px;
+                                                        height: 220px;
+                                                }
+                                
+                                                .circle-grey {
+                                                        top: -15%;
+                                                        right: -5%;
+                                                        width: 250px;
+                                                        height: 250px;
+                                                }
+                                        }
+                        
+                        }
+                }
+
+                @media (max-width:1200px) {
+                        .tab-content {
+                                
+                                        justify-content: center;
+
+                                        .text-content {
+                                                max-width: 800px;
+                
+                                                h4 {
+                                                        font-size: 1.4rem;
+                                                }
+                
+                                                p {
+                                                        font-size: 1.05rem;
+                                                }
+                                        }
+
+                                        .img-container {
+                                                margin-top: 150px;
+        
+                                                img {
+                                                        max-width: 800px;
+                                                }
+        
+                                                .circle-yellow, .circle-grey {
+                                                        top: -10%;
+                                                        right: 5%;
+                                                        width: 220px;
+                                                        height: 220px;
+                                                }
+                                
+                                                .circle-grey {
+                                                        top: -15%;
+                                                        right: -5%;
+                                                        width: 250px;
+                                                        height: 250px;
+                                                }
+                                        }
+                        }
+                }
+
+                @media (max-width:600px) {
+                        .tab-content{
+
+                                .img-container {
+                                        margin-top: 10px;
+        
+                                        img {
+                                                max-width: 800px;
+                                        }
+        
+                                        .circle-yellow, .circle-grey {
+                                                top: -10%;
+                                                right: 5%;
+                                                width: 150px;
+                                                height: 150px;
+                                        }
+                                
+                                        .circle-grey {
+                                                top: -15%;
+                                                right: -2%;
+                                                width: 150px;
+                                                height: 150px;
+                                        }
+                                }
+                        }
+                        
+                }
+        }
+}
+
+.map-business-edition-section {
+        // background: rgb(10,163,187);
+        // background: linear-gradient(174deg, rgba(10,163,187,1) 0%, rgba(34,111,162,1) 100%);
+        padding: 60px 0;
+        background-color: #1A1694;
+
+        .business-edition-layout {
+                @include layout-width;
+
+                .tab-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 0px 0;
+                        color: #fafafa;
+
+                        @media (max-width: 600px) {
+                                justify-content: center;
+                        }
+
+                        .text-content {
+                                width: 97%;
+                                max-width: 600px;
+
+                                h4 {
+                                        font-size: 1.6rem;
+                                        margin-bottom: 10px;
+                                }
+
+                                h5 {
+                                        font-size: 1.2rem;
+                                        font-weight: 600;
+                                }
+
+                                p {
+                                        font-size: 0.9rem;
+                                        margin-bottom: 10px;
+                                }
+
+                                span {
+                                        display: block;
+                                        margin-top: 20px;
+                                        font-weight: 600;
+                                        font-size: 0.95rem;
+
+                                        a {
+                                                color: $accent-color;
+
+                                        }
+                                }
+                        }
+
+                        .img-container {
+                                position: relative;
+
+                                img {
+                                        width: 97%;
+                                        max-width: 800px;
+                                }
+
+                                .circle-yellow, .circle-grey {
+                                        position: absolute;
+                                        top: -10%;
+                                        right: 5%;
+                                        width: 220px;
+                                        height: 220px;
+                                        background-color: $accent-color;
+                                        border-radius: 50%;
+                                        z-index: -1;
+                                        opacity: 0.8;
+                                }
+                        
+                                .circle-grey {
+                                        top: -15%;
+                                        right: -5%;
+                                        width: 250px;
+                                        height: 250px;
+                                        z-index: -2;
+                                        background-color: rgb(199, 199, 199);
+                                }
+                        }
+                }
+
+                @media (max-width:1400px) {
+                        .tab-content {
+                                        .text-content {
+                                                max-width: 500px;
+                
+                                                h4 {
+                                                        font-size: 1.4rem;
+                                                }
+                
+                                                p {
+                                                        font-size: 1.05rem;
+                                                }
+                                        }
+
+                                        .img-container {
+        
+                                                img {
+                                                        max-width: 600px;
+                                                }
+        
+                                                .circle-yellow, .circle-grey {
+                                                        top: -10%;
+                                                        right: 5%;
+                                                        width: 220px;
+                                                        height: 220px;
+                                                }
+                                
+                                                .circle-grey {
+                                                        top: -15%;
+                                                        right: -5%;
+                                                        width: 250px;
+                                                        height: 250px;
+                                                }
+                                        }
+                        
+                        }
+                }
+
+                @media (max-width:1200px) {
+                        .tab-content {
+                                
+                                        justify-content: center;
+
+                                        .text-content {
+                                                max-width: 800px;
+                
+                                                h4 {
+                                                        font-size: 1.4rem;
+                                                }
+                
+                                                p {
+                                                        font-size: 1.05rem;
+                                                }
+                                        }
+
+                                        .img-container {
+                                                margin-top: 150px;
+        
+                                                img {
+                                                        max-width: 800px;
+                                                }
+        
+                                                .circle-yellow, .circle-grey {
+                                                        top: -10%;
+                                                        right: 5%;
+                                                        width: 220px;
+                                                        height: 220px;
+                                                }
+                                
+                                                .circle-grey {
+                                                        top: -15%;
+                                                        right: -5%;
+                                                        width: 250px;
+                                                        height: 250px;
+                                                }
+                                        }
+                        }
+                }
+
+                @media (max-width:600px) {
+                        .tab-content{
+
+                                .img-container {
+                                        margin-top: 10px;
+        
+                                        img {
+                                                max-width: 800px;
+                                        }
+        
+                                        .circle-yellow, .circle-grey {
+                                                top: -10%;
+                                                right: 5%;
+                                                width: 150px;
+                                                height: 150px;
+                                        }
+                                
+                                        .circle-grey {
+                                                top: -15%;
+                                                right: -2%;
+                                                width: 150px;
+                                                height: 150px;
+                                        }
+                                }
+                        }
+                        
+                }
+        }
+}
+
+.products-used-section {
+        @include layout-width;
+        padding: 100px 0;
+
+        .products-used-heading {
+                width: 94%;
+                max-width: 900px;
+                margin: 80px auto;
+                margin-bottom: 50px;
+                padding: 0 10px;
+                text-align: center;
+                
+                h2 {
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                }
+        }
+
+        .product-used-layout {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .products {
+                        margin: 0 20px;
+                        text-align: center;
+
+                        .img-container {
+                                width: 100px;
+                                height: 100px;
+                                margin: 15px auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                background-color: #2d28b1;
+
+                                ion-icon {
+                                        font-size: 2rem;
+                                        color: #fafafa;
+                                }
+                        }
+
+                        h4 {
+                                font-size: 1.3rem;
+                        }
+                }
+
+                @media (max-width:600px) {
+                        justify-content: center;
+                }
+        }
+}
+
 
 .market-section {
         .global-market-layout {

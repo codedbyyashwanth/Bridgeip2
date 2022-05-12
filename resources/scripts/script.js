@@ -4,19 +4,55 @@ const icon = document.getElementById("menu-icon");
 var clicked = false;
 
 
-const btn = document.getElementById("search-btn");
-let clickedSearch = false;
-btn.addEventListener("click", () => {
-    const searchField = document.getElementById("search");
+// const btn = document.getElementById("search-btn");
+// let clickedSearch = false;
+// btn.addEventListener("click", () => {
+//     const searchField = document.getElementById("search");
 
-    if (clickedSearch) {
-        searchField.style.display = "none";
-        clickedSearch = false;
-    } else {
-        searchField.style.display = "block";
-        clickedSearch = true;
-    }
-})
+//     if (clickedSearch) {
+//         searchField.style.display = "none";
+//         clickedSearch = false;
+//     } else {
+//         searchField.style.display = "block";
+//         clickedSearch = true;
+//     }
+// })
+
+const ViewMore = document.getElementsByClassName("ViewMore");
+const FullContent = document.getElementsByClassName("full-content");
+const HalfContent = document.getElementsByClassName("half-content");
+let FullContentClicked = false;
+for (let i = 0; i < ViewMore.length; i++) {
+    ViewMore[i].addEventListener("click", () => {   
+        if (FullContentClicked) {
+            FullContent[i].style.display = "none";
+            HalfContent[i].style.display = "block";
+            FullContentClicked = false;
+        } else {
+            FullContent[i].style.display = "block";
+            HalfContent[i].style.display = "none";
+            FullContentClicked = true;
+        }
+    })
+}
+
+window.onscroll = function() {stickNav()};
+
+// Get the navbar
+var navbar = document.getElementById("header");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickNav() {
+  console.log(sticky);
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 
 const faqQuest = document.getElementsByClassName("accordation");
@@ -105,6 +141,52 @@ tabs.forEach(tab => {
   })
 })
 
+$('.integration-layout-1').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: true,
+      }
+    },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          centerMode: false,
+
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          centerMode: false,
+        }
+      }
+    ]
+});
+
 $('.market-layout').slick({
     infinite: true,
     slidesToShow: 3,
@@ -139,6 +221,7 @@ $('.market-layout').slick({
         }
       ]
 });
+
 
 
 $('.opinion-layout').slick({
@@ -189,6 +272,8 @@ $('.opinion-layout').slick({
         }
       ]
 });
+
+
 
 $('.logo-section').slick({
   dots: true,

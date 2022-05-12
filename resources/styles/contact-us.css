@@ -14,6 +14,9 @@
 header {
   width: 100%;
   position: relative;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  background-color: #F2F2F2;
 }
 
 header .user-acc {
@@ -184,7 +187,7 @@ header nav ul li #contact-us-btn:hover {
 }
 
 header nav ul li .nav-items {
-  width: 700px;
+  max-width: 600px;
   position: absolute;
   top: 160%;
   left: -100%;
@@ -325,6 +328,14 @@ header nav ul li a:hover ion-icon {
 
 header nav ul li .active-page {
   color: #FF8303;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
 }
 
 .swiper .swiper-pagination-bullet-active {

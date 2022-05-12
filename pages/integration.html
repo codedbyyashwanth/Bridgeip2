@@ -31,8 +31,8 @@
 </head>
 <body>
         <section class="head-section">
-                <header>
-                        <div class="user-acc">
+                <header  id="header">
+                        <!-- <div class="user-acc">
                                 <div class="search-bar">
                                         <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
@@ -47,7 +47,7 @@
                                                 </button>
                                         </a>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="navbar">
                             <div class="logo">
                                 <a href="../index.html"><img src="../resources/img/logo.png" alt=""></a>
@@ -109,30 +109,139 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li><a href="./solutions.html">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li>
+                                            <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>      
+                                            <div id="solution-items" class="nav-items">
+                                                <div class="items-content">
+                                                        <div class="heading">
+                                                                <h3>Bridge I2P</h3>
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                </p>
+                                                        </div>
+                                                        <div class="links">
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/professional-services.html">Professional Services</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/call-center.html">Call Center</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/health.html">Health</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/retail.html">Retail</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/financial.html">Financial</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/industrial-distribution.html">Industrial Distribution</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="company-content">
+                                                        <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                        </p>
+                                                        <img src="../resources/img/logo.png" alt="">
+                                                </div>
+                                        </div>
+                                        </li>
                                     <li><a href="./integration.html">Integration</a></li>
-                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <!-- <li><a href="#">Plans & Pricing</a></li> -->
                                     <li><a href="./about.html">About us</a></li>
                                     <li><a href="./contact-us.html" id="contact-us-btn">Contact us</a></li>
                                 </ul>
                             </nav>
                             <script>
-                                    const productsBtn = document.getElementById('products');
-                                    const productsItems = document.getElementById('product-items');
-                                    var clicked = false;
-                                    productsBtn.addEventListener('click', () => {
-                                        if (clicked) {
-                                                console.log("Clicked Again")
-                                                productsItems.style.visibility = "collapse";
-                                                productsItems.classList.remove("active-nav-items");
-                                                clicked = false;
-                                        } else {
-                                                productsItems.style.visibility = "visible";
-                                                productsItems.classList.add("active-nav-items");
-                                                clicked = true;
-                                        }
-                                    })
-                            </script>
+                                const productsBtn = document.getElementById('products');
+                                const solutionsBtn = document.getElementById('solutions');
+                                const productsItems = document.getElementById('product-items');
+                                const solutionsItems = document.getElementById('solution-items');
+                                var productClicked = false,  solutionClicked = false;
+                                productsBtn.addEventListener('click', () => {
+                                    if (productClicked) {
+                                            productsItems.style.visibility = "collapse";
+                                            productsItems.classList.remove("active-nav-items");
+                                            productClicked = false;
+                                    } else {
+                                            productsItems.style.visibility = "visible";
+                                            productsItems.classList.add("active-nav-items");
+                                            solutionsItems.style.visibility = "collapse";
+                                            solutionClicked = false;
+                                            productClicked = true;
+                                    }
+                                })
+
+                                solutionsBtn.addEventListener('click', () => {
+                                    if (solutionClicked) {
+                                            solutionsItems.style.visibility = "collapse";
+                                            solutionsItems.classList.remove("active-nav-items");
+                                            solutionClicked = false;
+                                    } else {
+                                            productsItems.style.visibility = "collapse";
+                                            solutionsItems.style.visibility = "visible";
+                                            solutionsItems.classList.add("active-nav-items");
+                                            solutionClicked = true;
+                                            productClicked = false;
+                                    }
+                                })
+
+                            //     productsBtn.addEventListener("mouseout", () => {
+                            //         productsItems.style.visibility = "visible";
+                            //                 productsItems.classList.add("active-nav-items");
+                            //     })
+
+                            //     productsItems.addEventListener("mouseover", () => {
+                            //         productsItems.style.visibility = "visible";
+                            //                 productsItems.classList.add("active-nav-items");
+                            //                 productsBtn.removeEventListener("mouseleave", () => {
+                            //                         clearTimeout(time)
+                            //                 })
+                            //     })
+
+                            //     productsBtn.addEventListener("mouseleave", () => {
+                            //            time();
+                            //     });
+                        </script>
                         </div>
                 </header>
                 <div class="swiper mySwiper">
@@ -140,14 +249,16 @@
                           <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <h2>Networking solutions for <br> worldwide communication</h2>
-                                                <p>We're a company that focuses on establishing long-term <br> relationship with customers.</p>
+                                                <h2>Locate Out Who is Calling, <br> Before You Pick the Call.
+                                                        </h2>
+                                                <p>Integrate With Popular Cloud-based Applications with Ease.</p>
                                                 <div class="btn-container">
                                                         <button>Start Free Trail</button>
                                                         <button>Play Video<ion-icon name="play"></ion-icon></button>
                                                 </div>
                                         </div>
-                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                                         data-aos-duration="1000">
                                                 <img src="../resources/img/Rectangle 485.png" alt="">
                                         </div>
@@ -173,97 +284,168 @@
                       </div>
         </section>
 
-        <section class="features-section">
-                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+        <section class="who-section">
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
-                        <h2>Our Features</h2>
-                        <p>The service we offer is specially designed to meet your needs</p>
-                </div>
-                <div class="features-layout"  data-aos="fade-up" data-aos-easing="linear"
-                data-aos-duration="1000">
-                        <div class="features">
-                                <div class="features-card">
-                                        <img src="../resources/img/Group 1001.png" alt="">
-                                        <h3>Software & Integration</h3>
-                                        <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit hic necessitatibus quaerat nihil 
-                                                optio sequi, officiis numquam minima suscipit, quasi delectus vel id velit aspernatur alias soluta quisquam quis?
-                                        </p>
-                                </div>
-                                <div class="features-card">
-                                        <img src="../resources/img/Group 1001.png" alt="">
-                                        <h3>Software & Integration</h3>
-                                        <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit hic necessitatibus quaerat nihil 
-                                                optio sequi, officiis numquam minima suscipit, quasi delectus vel id velit aspernatur alias soluta quisquam quis?
-                                        </p>
-                                </div>
-                                <div class="features-card">
-                                        <img src="../resources/img/Group 1001.png" alt="">
-                                        <h3>Software & Integration</h3>
-                                        <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit hic necessitatibus quaerat nihil 
-                                                optio sequi, officiis numquam minima suscipit, quasi delectus vel id velit aspernatur alias soluta quisquam quis?
-                                        </p>
-                                </div>
-                        </div>
-                        <div class="features">
-                                <div class="features-card">
-                                        <img src="../resources/img/Group 1001.png" alt="">
-                                        <h3>Software & Integration</h3>
-                                        <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit hic necessitatibus quaerat nihil 
-                                                optio sequi, officiis numquam minima suscipit, quasi delectus vel id velit aspernatur alias soluta quisquam quis?
-                                        </p>
-                                </div>
-                                <div class="features-card">
-                                        <img src="../resources/img/Group 1001.png" alt="">
-                                        <h3>Software & Integration</h3>
-                                        <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit hic necessitatibus quaerat nihil 
-                                                optio sequi, officiis numquam minima suscipit, quasi delectus vel id velit aspernatur alias soluta quisquam quis?
-                                        </p>
-                                </div>
-                                <div class="features-card">
-                                        <img src="../resources/img/Group 1001.png" alt="">
-                                        <h3>Software & Integration</h3>
-                                        <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugit hic necessitatibus quaerat nihil 
-                                                optio sequi, officiis numquam minima suscipit, quasi delectus vel id velit aspernatur alias soluta quisquam quis?
-                                        </p>
-                                </div>
+                        <div class="text-content">
+                                <p>
+                                        It's critical that your phone system communicate with your Customer Relationship Management (CRM) in order to maximize efficiency and production, with elegance. CRM solutions gives you the needed extra edge that drives processes to boost productivity for your sales, marketing, and support teams.
+                                        <br> <br>
+                                        Coordination of marketing efforts, sales promotions, pipelines, and attempting to understand your customers' demands may eat up at your valuable time and be a bit of a juggling act, regardless of the size of your firm. We acknowledge that every situation is unique and thus, situations vary. Here is where our customized software and integrations come in to assist you and your organization receive first-rate support.
+                                </p>
                         </div>
                 </div>
         </section>
-        
+
         <section class="control-section">
-                <div class="control-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="control-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="img-container">
                                 <img src="../resources/img/Rectangle 556.png" alt="">
                         </div>
                         <div class="text-content">
                                 <h1>HAVE PERFECT CONTROL</h1>
-                                <span>We bring solutions to make life easier of our's customers.</span>
+                                <!-- <span>We bring solutions to make life easier of our's customers.</span> -->
                                 <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam, 
-                                        cupiditate commodi sequi ducimus itaque quisquam 
-                                        autem perspiciatis, nihil quae tempora adipisci vitae inventore saepe, aspernatur error! Dolor, ea in?
+                                        Customer relationship management (CRM) refers to the methods, tactics, and technology that businesses employ to manage and analyze customer interactions and data throughout the lifespan of their customers.
                                 </p>
-                                <div class="content-container">
+                                <p>
+                                        CRM aims to strengthen corporate connections, aid in customer retention, and drive sales growth - all while evaluating consumers' personal data, purchase history, purchasing preferences, and concerns.
+                                </p>
+                                <p>
+                                        CRM systems collect information on customers from various mediums – or points of contact between the consumer and the firm – such as the firm's website, social networks, live chat, direct mail, marketing materials, and telephone.
+                                </p>
+                                <!-- <div class="content-container">
                                         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                                         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                                 </div>
                                 <div class="content-container">
                                         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                                         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                                </div> -->
+                        </div>
+                </div>
+        </section>
+
+        <section class="features-section">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <h2>The most trending integrated app ecosystem in the communications industry</h2>
+                        <!-- <p>The service we offer is specially designed to meet your needs</p> -->
+                </div>
+                <div class="features-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="features">
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>In-house developer teams</h3>
+                                        <p class="half-content">
+                                                We have an in-house team of highly competent and committed developers who meticulously coordinate, design, and deploy remarkable integrations to create solutions that enhance the work flow and communications...
+                                        </p>
+                                        <p class="full-content">
+                                                We have an in-house team of highly competent and committed developers who meticulously coordinate, design, and deploy remarkable integrations to create solutions that enhance the work flow and communications. Together, we can develop strategies to boost productivity and enhance overall workflow to attain success. 
+                                                Integrations are only one of many methods we may employ to help your organization function more smoothly.
+                                        </p>
+                                        <button class="ViewMore">View More</button>
+                                </div>
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>Customer-centric approach</h3>
+                                        <p class="half-content">
+                                                CRM software may provide you with a 360-degree picture of your customers, allowing you to see the most appropriate customer insights and information, allowing you to target relevant content and answer any customer...
+                                        </p>
+                                        <p  class="full-content">
+                                                CRM software may provide you with a 360-degree picture of your customers, allowing you to see the most appropriate customer insights and information, allowing you to target relevant content and answer any customer issues quickly. Imagine being able to watch your customer's whole journey with the press of a mouse, no matter where you are in the globe. Every conversation, discussion, email, and transaction are logged in one platform, providing you with all the information you need to make the 
+                                                client feel special and give them with personalized marketing, customized sales opportunities, and the assistance they deserve.
+                                        </p>
+                                        <button class="ViewMore">View More</button>
+                                </div>
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>Seamless integrations</h3>
+                                        <p class="half-content">
+                                                Systems integration is a terrific approach to creatively interconnect your numerous distinct subsystems or applications, which without integrations might mean performing the same operation several times....
+                                        </p>
+                                        <p  class="full-content">
+                                                Systems integration is a terrific approach to creatively interconnect your numerous distinct subsystems or applications, which without integrations might mean performing the same operation several times. It could be your financial software integrating with your Customer Relationship Management (CRM), providing you automated data entry or it could be your marketing automated solutions. Having an experienced, dedicated staff behind you will help smooth out any wrinkles or possible hazards that may arise as a result of either not having integrations or attempting to employ fussy out-of-the-box solutions. Don't forget that
+                                                 when your company demands grow and expand, we can be there to help you make your life simpler and less stressful.
+                                        </p>
+                                        <button class="ViewMore">View More</button>
+                                </div>
+                        </div>
+                        <div class="features">
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>Click-to-dial</h3>
+                                        <p class="half-content">
+                                                From within the CRM, you may initiate a call whenever a phone number is available. Click-to-dial saves between 15 and 30 seconds
+                                                 while eliminating typical
+                                        </p>
+                                        <p  class="full-content">
+                                                From within the CRM, you may initiate a call whenever a phone number is available. Click-to-dial saves between 15 and 30 seconds
+                                                 while eliminating typical blunders. Less time spent calling equals more time spent on key operations.
+                                        </p>
+                                        <button class="ViewMore">View More</button>
+                                </div>
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>Increase efficiency</h3>
+                                        <p class="half-content">
+                                                We'll be able to break down those work barriers and establish a considerably more holistic method of working without hurdles with a well-developed, planned, bespoke integrated platform for your organization professionally...
+                                        </p>
+                                        <p  class="full-content">
+                                                We'll be able to break down those work barriers and establish a considerably more holistic method of working without hurdles with a well-developed, planned, bespoke integrated platform for your organization professionally administered by Bridgei2p. 
+                                                We will create systems that interact with one another in order to boost efficiency within your departments and organization.
+                                        </p>
+                                        <button class="ViewMore">View More</button>
+                                </div>
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>Call manager  </h3>
+                                        <p class="half-content">
+                                                Call Manager integrates with your CRM, providing you with real-time visibility into inbound and outbound calls. It will connect the call to your CRM data, allowing you to navigate directly to the contact or account...
+                                        </p>
+                                        <p  class="full-content">
+                                                Call Manager integrates with your CRM, providing you with real-time visibility into inbound and outbound calls. It will connect the call to your CRM data, allowing you to navigate directly to the contact or account - ensuring that your staff is always prepared. 
+                                        </p>
+                                        <button class="ViewMore">View More</button>
+                                </div>
+                        </div>
+                        <div class="features">
+                                <div class="features-card">
+                                        <img src="../resources/img/Group 1001.png" alt="">
+                                        <h3>Accurate reporting </h3>
+                                        <p class="half-content">
+                                                This feature will provide you with a comprehensive perspective of company activities as well as a deeper understanding of analytics. It will also assist you in making strategic decisions based on the information...
+                                        </p>
+                                        <p  class="full-content">
+                                                This feature will provide you with a comprehensive perspective of company activities as well as a deeper understanding of analytics. It will also assist you in making strategic decisions based on the information presented by the CRM connection. Details such as the time and date of the call, its length, and the 
+                                                contacts involved are automatically displayed. You may then add remarks to this to ensure complete free flow of information.
+                                        </p>
+                                        <button class="ViewMore">View More</button>
                                 </div>
                         </div>
                 </div>
         </section>
 
-        <section class="market-section">
-                <div class="global-market-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <section class="linked-section">
+                <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <h3>
+                                Book a free appointment to see our CRM integration with VoIP in action.
+                        </h3>
+                        <a href="./contact-us.html">Book an Appointment</a>
+                </div>
+        </section>
+        
+        <!-- <section class="market-section">
+                <div class="global-market-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="img-container">
                                 <img src="../resources/img/Image 8.png" alt="">
@@ -302,13 +484,14 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="quote-section" style="background-color: #fff; text-align: center; padding: 50px 0;">
+        <!-- <section class="quote-section" style="background-color: #fff; text-align: center; padding: 50px 0;">
                 <h1 style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 600;">Checkout some of our awesome projects with <br> creative ideas and great design</h1>
         </section>
 
-        <section class="integration-section" data-aos="fade-up" data-aos-easing="linear"
+        <section class="integration-section" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
         data-aos-duration="1000">
                 <div class="integration-layout"  >
                         <div class="cards">
@@ -348,20 +531,21 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+        </section> -->
 
         <section class="business-edition-section">
-                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
-                        <div class="tab-content"  style="flex-direction: row-reverse;">
+                        <div class="tab-content"  style="flex-direction: row-reverse; align-items: center;" >
                                 <div class="img-container">
-                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <img src="../resources/img/Image-5.png" alt="" style="max-width: 600px;">
                                 </div>
                                 <div class="text-content">
-                                        <h4>Business Edition</h4>
+                                        <h4 style="margin-top: 0;">Did you know?</h4>
                                         <p>
-                                                Business Edition of PBXware is our extensive and fully customizable VoIP solution providing you with a comprehensive set of features and capabilities of the enterprise phone system. Together with the Contact Center and Multi-Tenant Editions Business PBX enables you to transform the way you conduct business and increase efficiency in the workplace, with each edition supporting specific features maximizing performance, reliability, and expandability. 
-                                                <br><br> It offers greater flexibility and customization capability allowing you more control over the final product, with unique deployment options ranging from on-premise softswitch deployments based on bespoke units and custom hardware to Hosted PBX solutions served using SERVERware in the Cloud.
+                                                “A strong <b>Customer Relationship Management (CRM)</b>  system enables your marketing, revenue, IT, and operations teams to collaborate throughout the whole consumer lifecycle, resulting in more engaging, long-lasting interactions. 
+                                                You will not only succeed at client grooming, but your relationships with individual coworkers, service users, and suppliers will also improve.”
                                         </p>
                                 </div>
                         </div>
@@ -369,17 +553,41 @@
         </section>
 
         <section class="quote-section">
-                <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <h3>
-                                Want to Integrate CRM Plus with Bridge
+                                Streamline Your Business & Boost Productivity by Integrating with Your CRM Applications.
+                                Invest in a CRM System & expect a greater return on investment (ROI).
                         </h3>
-                        <button>Schedule a Free Demo</button>
+                        <!-- <button>See Pricing</button> -->
                 </div>
         </section>
 
-        <section class="business-edition-section">
-                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <section class="who-section">
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="text-content">
+                                <p>
+                                        Integrating Bridgei2p's cloud communications system and hosted call centre platform into other CRM systems unlocks new productivity and business analytics possibilities, hence bringing data together and improves functioning. If App Switching has been a nuisance, just skip it! Stop jumping between applications to send a message, make a call, or join a video meeting. Can you imagine fully automating your manual business activities? 
+                                        <br> <br>
+                                        Bridgei2p Cloud Telephony, integrates with Salesforce, ZOHO, MS Dynamics, SugarCRM, Zendesk, Bullhorn, vTiger, Pipedrive, SuiteCRM, Hubspot using their REST or SOAP API. Proprietary CRMs can be integrated with Bridgei2p Cloud Telephony as well using our CRM SDK. Embed all the features and capabilities inside your CRM or Browser, providing access to CRM contacts and leads, Caller ID detection, support for uploading Call logs and Recordings, etc. 
+                                </p>
+                        </div>
+                </div>
+        </section>
+
+        <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <h2>Have a look at the most popular business apps PBXware integrates with </h2>
+                        <!-- <p>The service we offer is specially designed to meet your needs</p> -->
+                </div>
+
+        <!-- <section class="business-edition-section">
+                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="tab-content"  style="flex-direction: row-reverse;">
                                 <div class="text-content">
@@ -394,14 +602,16 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="blog-section">
-                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+        <!-- <section class="blog-section">
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <h2>Other Integration</h2>
                 </div>
-                <div class="blog-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="blog-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="blog-container">
                                 <div class="blog-card">
@@ -436,12 +646,13 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="clients-section">
+        <!-- <section class="clients-section">
                 <div class="client">
                         <h2>Our Clients</h2>
-                        <div class="logo-section"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="logo-section"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="logo-container">
                                         <div class="img-container">
@@ -483,7 +694,8 @@
                 </div>
                 <div class="partner">
                         <h2>Our Partners</h2>
-                        <div class="logo-section"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="logo-section"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="logo-container">
                                         <div class="img-container">
@@ -523,29 +735,87 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+        </section> -->
 
         <section class="integration-1-section">
-                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
-                        <h2>Integration</h2>
+                        <!-- <h2>Integration</h2> -->
                 </div>
-                <div class="integration-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="integration-layout-1"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="brand">
-                                <img src="https://www.orangewater.in/assets/img/brand/racold-logo.webp" alt="">
+                                <img src="../resources/img/Clients/aayuja.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="../resources/img/brand.png" alt="">
+                                <img src="../resources/img/Clients/BDS-Serv-Final-1.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="https://www.orangewater.in/assets/img/brand/aosmith.webp" alt="">
+                                <img src="../resources/img/Clients/boston.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="https://www.orangewater.in/assets/img/brand/brand5.webp" alt="">
+                                <img src="../resources/img/Clients/callabes.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/eclinical.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/freshdesk.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/genisys.jpg" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/hackerearth.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/iquanti.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/JMR.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/nqa.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/opteamix.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/PFS-Logo.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/progility.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/suntechno.jpg" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/tavant.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/techaspect.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/walmart-india.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="../resources/img/Clients/welspun.png" alt="">
                         </div>
                 </div>
-                <button>View More</button>
+                <!-- <button>View More</button> -->
+        </section>
+
+        <section class="linked-section" style="padding: 20px 0;">
+                <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000" style="justify-content: space-around;">
+                        <h3>
+                                Speak with an Integrations Expert
+                        </h3>
+                        <a href="./contact-us.html">Contact Us</a>
+                </div>
         </section>
 
         <footer>

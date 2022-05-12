@@ -31,8 +31,8 @@
 </head>
 <body>
         <section class="head-section">
-                <header>
-                        <div class="user-acc">
+                <header  id="header">
+                        <!-- <div class="user-acc">
                                 <div class="search-bar">
                                         <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
@@ -47,7 +47,7 @@
                                                 </button>
                                         </a>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="navbar">
                             <div class="logo">
                                 <a href="../index.html"><img src="../resources/img/logo.png" alt=""></a>
@@ -109,30 +109,139 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li><a href="./solutions.html">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li>
+                                            <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                                            <div id="solution-items" class="nav-items">
+                                                <div class="items-content">
+                                                        <div class="heading">
+                                                                <h3>Bridge I2P</h3>
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                </p>
+                                                        </div>
+                                                        <div class="links">
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/professional-services.html">Professional Services</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/call-center.html">Call Center</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/health.html">Health</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/retail.html">Retail</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/financial.html">Financial</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./solutions/industrial-distribution.html">Industrial Distribution</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="company-content">
+                                                        <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                        </p>
+                                                        <img src="../resources/img/logo.png" alt="">
+                                                </div>
+                                        </div>
+                                        </li>
                                     <li><a href="./integration.html">Integration</a></li>
-                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <!-- <li><a href="#">Plans & Pricing</a></li> -->
                                     <li><a href="./about.html">About us</a></li>
                                     <li><a href="./contact-us.html" id="contact-us-btn">Contact us</a></li>
                                 </ul>
                             </nav>
                             <script>
-                                    const productsBtn = document.getElementById('products');
-                                    const productsItems = document.getElementById('product-items');
-                                    var clicked = false;
-                                    productsBtn.addEventListener('click', () => {
-                                        if (clicked) {
-                                                console.log("Clicked Again")
-                                                productsItems.style.visibility = "collapse";
-                                                productsItems.classList.remove("active-nav-items");
-                                                clicked = false;
-                                        } else {
-                                                productsItems.style.visibility = "visible";
-                                                productsItems.classList.add("active-nav-items");
-                                                clicked = true;
-                                        }
-                                    })
-                            </script>
+                                const productsBtn = document.getElementById('products');
+                                const solutionsBtn = document.getElementById('solutions');
+                                const productsItems = document.getElementById('product-items');
+                                const solutionsItems = document.getElementById('solution-items');
+                                var productClicked = false,  solutionClicked = false;
+                                productsBtn.addEventListener('click', () => {
+                                    if (productClicked) {
+                                            productsItems.style.visibility = "collapse";
+                                            productsItems.classList.remove("active-nav-items");
+                                            productClicked = false;
+                                    } else {
+                                            productsItems.style.visibility = "visible";
+                                            productsItems.classList.add("active-nav-items");
+                                            solutionsItems.style.visibility = "collapse";
+                                            solutionClicked = false;
+                                            productClicked = true;
+                                    }
+                                })
+
+                                solutionsBtn.addEventListener('click', () => {
+                                    if (solutionClicked) {
+                                            solutionsItems.style.visibility = "collapse";
+                                            solutionsItems.classList.remove("active-nav-items");
+                                            solutionClicked = false;
+                                    } else {
+                                            productsItems.style.visibility = "collapse";
+                                            solutionsItems.style.visibility = "visible";
+                                            solutionsItems.classList.add("active-nav-items");
+                                            solutionClicked = true;
+                                            productClicked = false;
+                                    }
+                                })
+
+                            //     productsBtn.addEventListener("mouseout", () => {
+                            //         productsItems.style.visibility = "visible";
+                            //                 productsItems.classList.add("active-nav-items");
+                            //     })
+
+                            //     productsItems.addEventListener("mouseover", () => {
+                            //         productsItems.style.visibility = "visible";
+                            //                 productsItems.classList.add("active-nav-items");
+                            //                 productsBtn.removeEventListener("mouseleave", () => {
+                            //                         clearTimeout(time)
+                            //                 })
+                            //     })
+
+                            //     productsBtn.addEventListener("mouseleave", () => {
+                            //            time();
+                            //     });
+                        </script>
                         </div>
                 </header>
                 <div class="swiper mySwiper">
@@ -140,14 +249,15 @@
                           <div class="swiper-slide">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <h2>About Our Company</h2>
-                                                <p>Get To Know Us Better</p>
+                                                <h2>About Bridgei2p</h2>
+                                                <p><b>Technology Powering Advanced Business Communication</b></p>
                                                 <div class="btn-container">
                                                         <button>Start Free Trail</button>
                                                         <button>Play Video<ion-icon name="play"></ion-icon></button>
                                                 </div>
                                         </div>
-                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                                         data-aos-duration="1000">
                                                 <img src="../resources/img/Group 945.png" alt="">
                                         </div>
@@ -174,23 +284,76 @@
         </section>
 
         <section class="who-section">
-                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="who-heading">
                                 <h2>Who We Are And What We Do</h2>
                         </div>
                         <div class="text-content">
                                 <p>
-                                        Bridge is an on-demand Voice-over-Internet Protocol (VoIP) Service Providers. Bridge allows startups and businesses to buy instant local support numbers from over 50+ countries around the world. 
-                                        With our easy to use interface and robust backend architecture any business can setup their call center within less than 3 minutes. CallHippo implements cloud computing into the world of telephony. 
-                                        Our platform allows deployment of a flexible telephony network, wherever an internet connection is available. We aim to replace the desk phones with soft phones, eliminating the complexity of setting up a support center.
+                                        Bridgei2p delivers SMBs, Enterprises, and Contact Centers with turnkey solutions that take into consideration clients' unique needs within a very cost-effective framework by combining the finest of open standards telephony and a suite of Telecoms Management Software. 
+                                        <br><br>
+                                        This blend combines the finest of royalty-free software, thriving open-source communities, and readily available bespoke development, all backed by responsible and professional support services, with commercially programmed management tools. It's both justified and supported, so it's a safe bet for any company.
                                 </p>
                         </div>
                 </div>
         </section>
 
-        <section class="world-wide-section">
-                <div class="world-wide-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <section class="who-section" style="background-color: #fff; color: black; padding-bottom: 10px;">
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="who-heading">
+                                <h2>Our Values</h2>
+                        </div>
+                        <div class="text-content" style="margin: 0 auto; max-width: 1100px;">
+                                <p style="text-align: left;">
+                                       <b>Customer Centricity</b>  - Fulfill clients’ needs while making their experience as simple as possible. <br>
+                                       <b>Excellence</b>  - Keep learning and progressing. Always ask for feedback and strive for better results. <br>
+                                       <b>Integrity</b>  -  Keep our promises, be responsible for our actions. <br>
+                                </p>
+                        </div>
+                </div>
+        </section>
+
+        <section class="who-section" style="background-color: #fff; color: black; padding-bottom: 10px; padding-top: 10px;">
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="who-heading">
+                                <h2>Where We Started</h2>
+                        </div>
+                        <div class="text-content">
+                                <p>
+                                        It all started with our founder Sajid Hasnain & Satyendar Singh’s passion for the power of telecommunication technology and how it can transform voice systems to meet 
+                                        the evolving business needs. In 2016, backed by ten years of telecom industry experience, he started Bridgei2p - and the rest is history. 
+                                </p>
+                        </div>
+                </div>
+        </section>
+
+        <section class="who-section" style="background-color: #fff; color: black; padding-top: 10px;">
+                <div class="who-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="who-heading">
+                                <h2>What Happened Next</h2>
+                        </div>
+                        <div class="text-content">
+                                <p>
+                                        Since 2016, Bridgei2p has been helping companies upgrade their business communication systems. Our goals have stood unwavering since then - To free the world from the constraints of traditional communication systems.
+                                        We started with a small office in Bangalore and are steadily expanding our presence across major cities in India. 
+                                </p>
+                        </div>
+                </div>
+        </section>
+
+        
+
+        <!-- <section class="world-wide-section">
+                <div class="world-wide-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="text-content">
                                 <h1>
@@ -203,20 +366,24 @@
                                 <img src="../resources/img/global-reach.png" alt="">
                         </div>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="quote-section">
-                <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <!-- <section class="quote-section">
+                <div class="quote-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <h3>
                                 Make your business stand out with your own branding added to the PBXware.
                         </h3>
                         <button>See Pricing</button>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="market-section">
-                <div class="global-market-layout"  data-aos="fade-up" data-aos-easing="linear"
+
+
+        <!-- <section class="market-section">
+                <div class="global-market-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="text-content">
                                 <h1>The global market leader</h1>
@@ -247,14 +414,45 @@
                                 </div>
                         </div>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="quote-section" style="background-color: #fff; text-align: center; ">
-                <h1 style="font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 600;">Our products are used daily by</h1>
-        </section>
+        <!-- <section class="quote-section" style="background-color: #fff; text-align: center; ">
+                <h1 style="font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 600;"></h1>
+        </section> -->
 
-        <section class="used-section">
-                <div class="used-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <section class="products-used-section">
+                <div class="products-used-heading" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <h2>Our Products Are Used Every Day By</h2>
+                </div>
+                <div class="product-used-layout" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="products">
+                                <div class="img-container">
+                                        <ion-icon name="business-outline"></ion-icon>
+                                </div>
+                                <h4>Small and Medium Businesses </h4>
+                        </div>
+                        <div class="products">
+                                <div class="img-container">
+                                        <ion-icon name="briefcase-outline"></ion-icon>
+                                </div>
+                                <h4> Enterprises</h4>
+                        </div>
+                        <div class="products">
+                                <div class="img-container">
+                                        <ion-icon name="call-outline"></ion-icon>
+                                </div>
+                                <h4>Call Centers</h4>
+                        </div>
+                </div>
+        </section> 
+
+        <!-- <section class="used-section">
+                <div class="used-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="text-content">
                                 <div class="options">
@@ -301,19 +499,21 @@
                                 <img src="../resources/img/Image-5.png" alt=""><img src="../resources/img/Image-6.png" alt="">
                         </div>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="logo-container-section">
-                <div class="logo-container-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <!-- <section class="logo-container-section">
+                <div class="logo-container-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <img src="../resources/img/logo.png" alt="">
                         <h1>Make your business stand out with your
                               <br>  own branding added to the PBXware.</h1>
                 </div>
-        </section>
+        </section> -->
 
-        <section class="blog-section">
-                <div class="blog-layout"  data-aos="fade-up" data-aos-easing="linear"
+        <!-- <section class="blog-section">
+                <div class="blog-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="blog-container">
                                 <div class="blog-card">
@@ -383,6 +583,95 @@
                                                 Since 2003 Bridge has been researching and integrating innovative Open Source Telephony Projects to commercialize by unifying it with its suite of Telecoms Management Softwares. In September 2004 Bicom Systems launched its PBXware software and became the first company to deliver an Open Standards Turnkey Telephony System.
                                         </p>
                                         <button>View More</button>
+                                </div>
+                        </div>
+                </div>
+        </section> -->
+
+        <section class="map-business-edition-section">
+                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="tab-content" >
+                                <div class="text-content">
+                                        <h4>Our Offices</h4>
+                                        <h5>Registered Office - Bangalore</h5>
+                                        <p>
+                                                #2, 27th Main Road, 2nd Floor
+                                                1st Sector, HSR Layout,
+                                                Bengaluru, Karnataka 560102
+                                                <br>
+                                                Phone1: +91 80 4814 7467
+                                                <br>
+                                                Phone2: +91 78292 22200
+                                                <br>
+                                                Email: sales@bridgei2p.com
+                                        </p>
+                                        <h5>Regional Office - Pune</h5>
+                                        <p>
+                                                Regus Business Centre, 3rd
+                                                Floor, Prabhavee Tech Park,
+                                                Pune – 411001
+                                                <br>
+                                                Phone: +91 81979 81971
+                                                <br>
+                                                Email: sales@bridgei2p.com
+                                        </p>
+                                        <h5>Regional Office - Mumbai</h5>
+                                        <p>
+                                                Regus Suburbs Centre, Level 2,
+                                                Andheri Kurla Road, Andheri East,
+                                                Mumbai – 400072
+                                                <br>
+                                                Phone: +91 77605 44443
+                                                <br>
+                                                Email: sales@bridgei2p.com
+                                        </p>
+                                        <h5>Regional Office - Hyderabad</h5>
+                                        <p>
+                                                Regus Business Center,
+                                                Rajbhavan Road, 3rd Floor,
+                                                Belvedere, Somajiguda,
+                                                Hyderabad – 500082
+                                                <br>
+                                                Phone:  +91 78292 22200
+                                                <br>
+                                                Email: sales@bridgei2p.com
+                                        </p>
+                                </div>
+                                <div class="img-container">
+                                        <img src="../resources/img/global-reach.png" alt="">
+                                        <!-- <div class="circle-yellow"></div>
+                                        <div class="circle-grey"></div> -->
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+        <section class="business-edition-section">
+                <div class="business-edition-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
+                data-aos-duration="1000">
+                        <div class="tab-content" >
+                                <div class="text-content">
+                                        <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom:20px;">Why Bridgei2p</h2>
+                                        <p>
+                                                <ion-icon name="caret-forward"></ion-icon><b>Intuitive</b> - Establish, set up and manage your online phone system in a user-friendly interface and in real-time. 
+                                        </p>
+                                        <p>
+                                                <ion-icon name="caret-forward"></ion-icon><b>Flexible and Affordable Price</b>  - We offer a scalable solution according to your needs. Pay-as-you-go products are offered at very flexible terms.
+                                        </p>
+                                        <p>
+                                                <ion-icon name="caret-forward"></ion-icon><b>24/7 Support</b>  - Customer service is the heart of our mission. Whenever, wherever.
+                                        </p>
+                                        <p>
+                                                <ion-icon name="caret-forward"></ion-icon><b>Professional Services</b>  - Without undermining any quality, we retain our clients. So, expect no less than the best.
+                                        </p>
+                                </div>
+                                <div class="img-container">
+                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <!-- <div class="circle-yellow"></div>
+                                        <div class="circle-grey"></div> -->
                                 </div>
                         </div>
                 </div>

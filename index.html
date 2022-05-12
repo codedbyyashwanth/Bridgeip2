@@ -31,8 +31,8 @@
 </head>
 <body>
         <section class="head-section">
-                <header>
-                        <div class="user-acc">
+                <header id="header">
+                        <!-- <div class="user-acc">
                                 <div class="search-bar">
                                         <button id="search-btn">
                                                 <ion-icon name="search-outline"></ion-icon>
@@ -47,7 +47,7 @@
                                                 </button>
                                         </a>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="navbar">
                             <div class="logo">
                                 <a href="./index.html"><img src="./resources/img/logo.png" alt=""></a>
@@ -109,27 +109,119 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li><a href="./pages/solutions.html">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a></li>
+                                    <li>
+                                            <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                                            <div id="solution-items" class="nav-items">
+                                                <div class="items-content">
+                                                        <div class="heading">
+                                                                <h3>Bridge I2P</h3>
+                                                                <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                </p>
+                                                        </div>
+                                                        <div class="links">
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/professional-services.html">Professional Services</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/call-center.html">Call Center</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/health.html">Health</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 851.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/retail.html">Retail</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 852.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/financial.html">Financial</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="link">
+                                                                        <img src="../resources/img/Group 853.png" alt="">
+                                                                        <div class="text-content">
+                                                                                <a href="./pages/solutions/industrial-distribution.html">Industrial Distribution</a>
+                                                                                <p>
+                                                                                        All the power of the enterprise phone, Now in your pocket
+                                                                                </p>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="company-content">
+                                                        <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
+                                                                Aliquam tempus nibh eros, ac consequat nisl condimentum non.
+                                                        </p>
+                                                        <img src="../resources/img/logo.png" alt="">
+                                                </div>
+                                        </div>
+                                        </li>
                                     <li><a href="./pages/integration.html">Integration</a></li>
-                                    <li><a href="#">Plans & Pricing</a></li>
+                                    <!-- <li><a href="#">Plans & Pricing</a></li> -->
                                     <li><a href="./pages/about.html">About us</a></li>
                                     <li><a href="./pages/contact-us.html" id="contact-us-btn">Contact us</a></li>
                                 </ul>
                             </nav>
                             <script>
                                     const productsBtn = document.getElementById('products');
+                                    const solutionsBtn = document.getElementById('solutions');
                                     const productsItems = document.getElementById('product-items');
-                                    var clicked = false;
+                                    const solutionsItems = document.getElementById('solution-items');
+                                    var productClicked = false,  solutionClicked = false;
                                     productsBtn.addEventListener('click', () => {
-                                        if (clicked) {
-                                                console.log("Clicked Again")
+                                        if (productClicked) {
                                                 productsItems.style.visibility = "collapse";
                                                 productsItems.classList.remove("active-nav-items");
-                                                clicked = false;
+                                                productClicked = false;
                                         } else {
                                                 productsItems.style.visibility = "visible";
                                                 productsItems.classList.add("active-nav-items");
-                                                clicked = true;
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionClicked = false;
+                                                productClicked = true;
+                                        }
+                                    })
+
+                                    solutionsBtn.addEventListener('click', () => {
+                                        if (solutionClicked) {
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionsItems.classList.remove("active-nav-items");
+                                                solutionClicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "collapse";
+                                                solutionsItems.style.visibility = "visible";
+                                                solutionsItems.classList.add("active-nav-items");
+                                                solutionClicked = true;
+                                                productClicked = false;
                                         }
                                     })
 
@@ -165,7 +257,8 @@
                                                 </div>
                                         </div>
                                         <div class="img-container" data-aos="fade-down"
-                                        data-aos-easing="linear"
+                                        data-aos-easing="linear"  
+                data-aos-once="true"
                                         data-aos-duration="500">
                                                 <img src="./resources/img/header-img.png" alt="">
                                                 <div class="circle-yellow"></div>
@@ -212,14 +305,16 @@
                       </div>
         </section>
         <section class="market-section">
-                <div class="section-heading" data-aos="fade-up" data-aos-easing="linear"
+                <div class="section-heading" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true" 
                 data-aos-duration="1000">
                         <h2>Designed to Meet the Needs of Today's Businesses</h2><br>
                         <p>
                                 Businesses are constantly evolving. A current and prevalent scenario is the need to be reachable from anywhere and allow your team members to communicate from multiple locations. VoIP solution from Bridgei2p is tailored to your needs.
                         </p>
                 </div>
-                <div class="market-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="market-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1500">
                         <div class="market-posts">
                                 <h3 class="heading">Boost Productivity</h3>
@@ -311,11 +406,13 @@
                 <h1>Bring everyone and everything together on Bridge i2p</h1>
         </section>
         <section class="featured-section">
-                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="section-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <h2>Featured Products</h2>
                 </div>
-                <div class="featured-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="featured-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1500">
                         <ul class="tabs">
                                 <li data-tab-target="#business" class="active tab">
@@ -363,7 +460,8 @@
         </section>
         <section class="demo-section">
                 <div class="header-container">
-                        <div class="text-container"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="text-container"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <h2 style="text-align: center; font-size: clamp(1.6rem, 4vw, 3rem); font-weight: 600;">Bring everyone and everything <br>together on Bridge i2p</h2>
                                 <div class="btn-container">
@@ -371,18 +469,21 @@
                                         <a href="#">View Demo<ion-icon name="play"></ion-icon></a>
                                 </div>
                         </div>
-                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"
+                        <div class="img-container"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                         data-aos-duration="1000">
                                 <img src="./resources/img/pricing.png" alt="">
                         </div>
                 </div>
         </section>
         <section class="integration-section">
-                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="integration-heading"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <h2>Integration</h2>
                 </div>
-                <div class="integration-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="integration-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1500">
                         <div class="brand">
                                 <img src="./resources/img/int-1.png" alt="">
@@ -400,7 +501,8 @@
                 <button>View More</button>
         </section>
         <section class="notify-section">
-                <div class="notify-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="notify-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000">
                         <div class="text-content">
                                 <h2>Get Started with Bridgei2p Today</h2>
@@ -411,11 +513,13 @@
                 <div class="half-bg"></div>
         </section>
         <section class="opinion-section" >
-                <div class="opinion-heading" data-aos="fade-up" data-aos-easing="linear"
+                <div class="opinion-heading" data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1000" >
                         <h2>What Our Clients Are Saying</h2>
                 </div>
-                <div class="opinion-layout"  data-aos="fade-up" data-aos-easing="linear"
+                <div class="opinion-layout"  data-aos="fade-up" data-aos-easing="linear"  
+                data-aos-once="true"
                 data-aos-duration="1500">
                         <div class="opinions">
                                 <p>"Typeform is a product-grade system for our entire growth funnel"</p>
