@@ -731,6 +731,7 @@ header {
 
 .integration-section {
         margin: 0 0 50px 0;
+        text-align: center;
 
         .integration-heading {
                 width: 94%;
@@ -764,21 +765,26 @@ header {
                 }
         } 
 
-        button {
+        a {
                 padding: 12px 35px;
                 margin: 20px auto;
                 background-color: $accent-color;
                 color: #fafafa;
-                display: flex;
+                border-radius: 50px;
+                display: inline-block;
                 justify-content: center;
-                border-radius: 5px;
                 outline: none;
                 border: none;
+                text-align: center;
+                text-decoration: none;
                 cursor: pointer;
-                box-shadow: $primary-shadow;
+
+                @media (max-width:600px) {
+                        margin: 20px auto;
+                }
 
                 &:hover {
-                        background-color: rgba($accent-color, 0.9);
+                        background-color: rgba($accent-color, 0.8);
                 }
         }
 }

@@ -827,6 +827,7 @@ header nav ul li .active-page {
 
 .integration-section {
   margin: 0 0 50px 0;
+  text-align: center;
 }
 
 .integration-section .integration-heading {
@@ -868,27 +869,31 @@ header nav ul li .active-page {
   width: 100%;
 }
 
-.integration-section button {
+.integration-section a {
   padding: 12px 35px;
   margin: 20px auto;
   background-color: #FF8303;
   color: #fafafa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  border-radius: 50px;
+  display: inline-block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
   outline: none;
   border: none;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  -webkit-box-shadow: 0 0 20px rgba(255, 131, 3, 0.4);
-          box-shadow: 0 0 20px rgba(255, 131, 3, 0.4);
 }
 
-.integration-section button:hover {
-  background-color: rgba(255, 131, 3, 0.9);
+@media (max-width: 600px) {
+  .integration-section a {
+    margin: 20px auto;
+  }
+}
+
+.integration-section a:hover {
+  background-color: rgba(255, 131, 3, 0.8);
 }
 
 .notify-section {

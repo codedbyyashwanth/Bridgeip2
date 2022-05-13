@@ -720,7 +720,7 @@ header nav ul li .active-page {
 
 @media (max-width: 1410px) {
   .control-section .control-layout .img-container {
-    max-width: 500px;
+    max-width: 400px;
   }
 }
 

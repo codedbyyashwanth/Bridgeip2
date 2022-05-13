@@ -1905,6 +1905,27 @@ header {
                                 word-spacing: 1.4px;
                                 text-align: center;
                         }
+
+                        a {
+                                padding: 12px 35px;
+                        margin: 20px 0;
+                        background-color: $accent-color;
+                        color: #fafafa;
+                        border-radius: 50px;
+                        display: inline-block;
+                        outline: none;
+                        border: none;
+                        text-decoration: none;
+                        cursor: pointer;
+
+                        @media (max-width:600px) {
+                                margin: 20px auto;
+                        }
+
+                        &:hover {
+                                background-color: rgba($accent-color, 0.8);
+                        }
+                        }
                 }
         }
 }

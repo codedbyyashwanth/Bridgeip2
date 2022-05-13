@@ -2048,29 +2048,6 @@ header nav ul li .active-page {
   text-align: center;
 }
 
-.who-section .who-layout .text-content a {
-  padding: 12px 35px;
-  margin: 20px 0;
-  background-color: #FF8303;
-  color: #fafafa;
-  border-radius: 50px;
-  display: inline-block;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .who-section .who-layout .text-content a {
-    margin: 20px auto;
-  }
-}
-
-.who-section .who-layout .text-content a:hover {
-  background-color: rgba(255, 131, 3, 0.8);
-}
-
 footer .sitemap-links {
   display: -webkit-box;
   display: -ms-flexbox;
