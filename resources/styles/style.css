@@ -834,6 +834,7 @@ header nav ul li .active-page {
   width: 94%;
   max-width: 600px;
   margin: 80px auto;
+  margin-bottom: 10px;
   margin-bottom: 50px;
   padding: 0 10px;
   text-align: center;
@@ -861,12 +862,23 @@ header nav ul li .active-page {
 }
 
 .integration-section .integration-layout .brand {
+  width: 80px;
+  height: 100px;
   margin: 5px 20px;
-  width: 150px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .integration-section .integration-layout .brand img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .integration-section a {
@@ -874,7 +886,7 @@ header nav ul li .active-page {
   margin: 20px auto;
   background-color: #FF8303;
   color: #fafafa;
-  border-radius: 50px;
+  border-radius: 6px;
   display: inline-block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1228,14 +1240,15 @@ header nav ul li .active-page {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 .clients-section .client .logo-container .img-container img, .clients-section .partner .logo-container .img-container img {
-  width: 30%;
-  max-width: 150px;
-  min-width: 80px;
+  width: 100px;
+  height: 100px;
   margin: 0 20px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 @media (max-width: 800px) {

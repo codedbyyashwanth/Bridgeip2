@@ -58,7 +58,7 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li>
+                                    <li  id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
                                                 Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
                                         </a>
@@ -109,7 +109,7 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li>
+                                    <li  id="solution-parent">
                                             <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
                                             <div id="solution-items" class="nav-items">
                                                 <div class="items-content">
@@ -197,6 +197,7 @@
                                 const productsItems = document.getElementById('product-items');
                                 const solutionsItems = document.getElementById('solution-items');
                                 var productClicked = false,  solutionClicked = false;
+
                                 productsBtn.addEventListener('click', () => {
                                     if (productClicked) {
                                             productsItems.style.visibility = "collapse";
@@ -211,6 +212,33 @@
                                     }
                                 })
 
+                                addEventListener("click", (e) => {
+                                    var values = e.path;
+                                    console.log(e.target.parentNode)
+
+                                    if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "products") {
+                                                if (productClicked) {
+                                                    productsItems.style.visibility = "collapse";
+                                                    productsItems.classList.remove("active-nav-items");
+                                                    productClicked = false;
+                                                }
+                                        }
+                                    }
+
+                                    if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "solutions") {
+                                                if (solutionClicked) {
+                                                    solutionsItems.style.visibility = "collapse";
+                                                    solutionsItems.classList.remove("active-nav-items");
+                                                    solutionClicked = false;
+                                                }
+                                        }
+                                    }
+                                })
+
+                                
+
                                 solutionsBtn.addEventListener('click', () => {
                                     if (solutionClicked) {
                                             solutionsItems.style.visibility = "collapse";
@@ -224,6 +252,8 @@
                                             productClicked = false;
                                     }
                                 })
+
+
 
                             //     productsBtn.addEventListener("mouseout", () => {
                             //         productsItems.style.visibility = "visible";
@@ -299,7 +329,7 @@
                                                         </p>
                                                 </div>
                                                 <div class="img-container">
-                                                        <img src="../resources/img/Image-5.png" alt="">
+                                                        <img src="../resources/img/Business phone system/Images/Overview/multiline-telephone-system.png" alt="">
                                                         <div class="circle-yellow"></div>
                                                         <div class="circle-grey"></div>
                                                 </div>
@@ -313,7 +343,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt=""  style="max-width: 500px;">
+                                                <img src="../resources/img/Business phone system/Images/Features/Features---telecommunication-systems.png" alt=""  style="max-width: 700px; border-radius: 10px;">
                                                 <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div>
                                         </div>
@@ -341,9 +371,9 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
-                                                <div class="circle-yellow"></div>
-                                                <div class="circle-grey"></div>
+                                                <img src="../resources/img/Business phone system/Images/Pricing/Business-Pricing.png" alt="">
+                                                <!-- <div class="circle-yellow"></div>
+                                                <div class="circle-grey"></div> -->
                                         </div>
                                 </div>
                         </div>
@@ -397,7 +427,8 @@
                         data-aos-duration="1000">
                                 <!-- <h3>Bring everyone and everything together on Bridge i2p </h3> -->
                                 <div class="img-container">
-                                        <img src="../resources/img/Image-5.png" alt=""><img src="../resources/img/Image-6.png" alt="">
+                                        <img src="../resources/img/Business phone system/Images/Overview/Business-phone-system-1.png" alt="">
+                                        <img src="../resources/img/Business phone system/Images/Overview/Business-phone-system-2.png" alt="">
                                 </div>
                                 <div class="text-content">
                                         <!-- <h3>Business Edition</h3> -->
@@ -426,7 +457,8 @@
                         data-aos-duration="1000">
                                 <h3>Complete Integration, possible? YES! </h3>
                                 <div class="img-container">
-                                        <img src="../resources/img/Image-5.png" alt=""><img src="../resources/img/Image-6.png" alt="">
+                                        <img src="../resources/img/Business phone system/Images/Overview/Business-phone-system-1.png" alt="">
+                                        <img src="../resources/img/Business phone system/Images/Overview/Business-phone-system-2.png" alt="">
                                 </div>
                                 <div class="text-content">
                                         <!-- <h3>Business Edition</h3> -->
@@ -528,7 +560,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Dial-like-never-before.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -542,7 +574,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Toggle-power-play.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -570,7 +602,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Worldwide-link-up.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -584,7 +616,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-forwarding.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -612,7 +644,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-transfer.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -626,7 +658,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-conference.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -653,7 +685,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-queuing.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -667,7 +699,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-barging.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -694,7 +726,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-recording.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -708,7 +740,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Voice-mail.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -736,7 +768,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/Call-analytics.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -750,7 +782,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/On-hold-music.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -778,7 +810,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/API.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -792,7 +824,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Features/CRM-and-VoIP-integration.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -901,7 +933,7 @@
                 data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="img-container">
-                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <img src="../resources/img/Business phone system/Images/Benefits/Benefits-1.png" alt="">
                                 </div>
                                 <div class="text-content">
                                         <h3>REASONS WHY BUSINESSES NEED A VOIP PHONE SYSTEM </h3>
@@ -919,7 +951,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Budget-friendly-and-surprisingly-affordable.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -947,7 +979,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Safe-network.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -961,7 +993,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Customized-for-all-industries.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -989,7 +1021,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Innovation-to-security.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -1003,7 +1035,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Amazing-and-reliable-service.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -1031,7 +1063,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/HD-quality-guaranteed.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -1045,7 +1077,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/LCR.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -1073,7 +1105,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Simple-to-apply.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -1087,7 +1119,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Business phone system/Images/Benefits/Price-transparency.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>

@@ -765,10 +765,36 @@ header nav ul li .active-page {
       flex-wrap: wrap;
 }
 
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .enquiry-form-section .enquiry-form-layout img {
   width: 94%;
   max-width: 600px;
   margin: 20px;
+}
+
+@media (max-width: 1552px) {
+  .enquiry-form-section .enquiry-form-layout img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1324px) {
+  .enquiry-form-section .enquiry-form-layout img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout img {
+    margin-bottom: 0;
+  }
 }
 
 .enquiry-form-section .enquiry-form-layout form {
@@ -778,6 +804,24 @@ header nav ul li .active-page {
   margin: 30px 0;
   border-radius: 10px;
   background-color: #D6F9FF;
+}
+
+@media (max-width: 1430px) {
+  .enquiry-form-section .enquiry-form-layout form {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1324px) {
+  .enquiry-form-section .enquiry-form-layout form {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout form {
+    max-width: 100%;
+  }
 }
 
 .enquiry-form-section .enquiry-form-layout form h3 {
@@ -800,10 +844,22 @@ header nav ul li .active-page {
   border-radius: 6px;
 }
 
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout form .text, .enquiry-form-section .enquiry-form-layout form textarea {
+    max-width: 100%;
+  }
+}
+
 .enquiry-form-section .enquiry-form-layout form .options {
   margin: 20px auto;
   width: 90%;
   max-width: 750px;
+}
+
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout form .options {
+    max-width: 100%;
+  }
 }
 
 .enquiry-form-section .enquiry-form-layout form .options input {
@@ -826,6 +882,12 @@ header nav ul li .active-page {
   outline: none;
   background-color: white;
   border-radius: 6px;
+}
+
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout form .name-input {
+    max-width: 100%;
+  }
 }
 
 .enquiry-form-section .enquiry-form-layout form textarea {
@@ -852,6 +914,12 @@ header nav ul li .active-page {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 1161px) {
+  .enquiry-form-section .enquiry-form-layout form .submit-btn input[type=submit] {
+    margin-right: 50px;
+  }
 }
 
 @media (max-width: 600px) {

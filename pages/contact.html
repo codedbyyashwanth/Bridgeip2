@@ -58,7 +58,7 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li>
+                                    <li  id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
                                                 Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
                                         </a>
@@ -109,7 +109,7 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li>
+                                    <li  id="solution-parent">
                                             <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
                                             <div id="solution-items" class="nav-items">
                                                 <div class="items-content">
@@ -197,6 +197,7 @@
                                 const productsItems = document.getElementById('product-items');
                                 const solutionsItems = document.getElementById('solution-items');
                                 var productClicked = false,  solutionClicked = false;
+
                                 productsBtn.addEventListener('click', () => {
                                     if (productClicked) {
                                             productsItems.style.visibility = "collapse";
@@ -211,6 +212,33 @@
                                     }
                                 })
 
+                                addEventListener("click", (e) => {
+                                    var values = e.path;
+                                    console.log(e.target.parentNode)
+
+                                    if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "products") {
+                                                if (productClicked) {
+                                                    productsItems.style.visibility = "collapse";
+                                                    productsItems.classList.remove("active-nav-items");
+                                                    productClicked = false;
+                                                }
+                                        }
+                                    }
+
+                                    if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "solutions") {
+                                                if (solutionClicked) {
+                                                    solutionsItems.style.visibility = "collapse";
+                                                    solutionsItems.classList.remove("active-nav-items");
+                                                    solutionClicked = false;
+                                                }
+                                        }
+                                    }
+                                })
+
+                                
+
                                 solutionsBtn.addEventListener('click', () => {
                                     if (solutionClicked) {
                                             solutionsItems.style.visibility = "collapse";
@@ -224,6 +252,8 @@
                                             productClicked = false;
                                     }
                                 })
+
+
 
                             //     productsBtn.addEventListener("mouseout", () => {
                             //         productsItems.style.visibility = "visible";
@@ -318,7 +348,7 @@
                                                         </p>
                                                 </div>
                                                 <div class="img-container">
-                                                        <img src="../resources/img/Image-5.png" alt="">
+                                                        <img src="../resources/img/Contact Centre/Overview/Cloud-Contact-Center.png" alt="">
                                                         <div class="circle-yellow"></div>
                                                         <div class="circle-grey"></div>
                                                 </div>
@@ -387,7 +417,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content"  style="flex-direction: row-reverse;">
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Overview/platform-with-Bridgei2p.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -458,7 +488,7 @@
                 data-aos-once="true"
                         data-aos-duration="1000">
                                 <div class="img-container">
-                                        <img src="../resources/img/Image-5.png" alt="">
+                                        <img src="../resources/img/Contact Centre/Features/Features--1.png" alt="">
                                 </div>
                                 <div class="text-content">
                                         <h3 style="font-size: clamp(1.4rem, 3vw, 1.6rem); max-width: 1100px; margin: 10px auto;">An omni-channel contact center with a broad feature set that provides a consistent agent experience from any point.</h3>
@@ -476,7 +506,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/Agent-&-Supervisor-Application.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -504,7 +534,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/Dialer.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -518,7 +548,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/Workforce-Engagement-Management-(WEM).png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -546,7 +576,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/Agent-Monitoring-in-Real-Time.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -560,7 +590,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/PBX-Wallboard-for-Contact-Centers.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -588,7 +618,7 @@
                                                 </p>
                                         </div>
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/ACD-(Unlimited-Queues).png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>
@@ -602,7 +632,7 @@
                         data-aos-duration="1000">
                                 <div class="tab-content" >
                                         <div class="img-container">
-                                                <img src="../resources/img/Image-5.png" alt="">
+                                                <img src="../resources/img/Contact Centre/Features/Agent-Monitoring-in-Real-Time.png" alt="">
                                                 <!-- <div class="circle-yellow"></div>
                                                 <div class="circle-grey"></div> -->
                                         </div>

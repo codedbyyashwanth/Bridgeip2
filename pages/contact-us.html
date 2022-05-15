@@ -58,7 +58,7 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li>
+                                    <li  id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
                                                 Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
                                         </a>
@@ -109,7 +109,7 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li>
+                                    <li  id="solution-parent">
                                             <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
                                             <div id="solution-items" class="nav-items">
                                                 <div class="items-content">
@@ -197,6 +197,7 @@
                                 const productsItems = document.getElementById('product-items');
                                 const solutionsItems = document.getElementById('solution-items');
                                 var productClicked = false,  solutionClicked = false;
+
                                 productsBtn.addEventListener('click', () => {
                                     if (productClicked) {
                                             productsItems.style.visibility = "collapse";
@@ -211,6 +212,33 @@
                                     }
                                 })
 
+                                addEventListener("click", (e) => {
+                                    var values = e.path;
+                                    console.log(e.target.parentNode)
+
+                                    if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "products") {
+                                                if (productClicked) {
+                                                    productsItems.style.visibility = "collapse";
+                                                    productsItems.classList.remove("active-nav-items");
+                                                    productClicked = false;
+                                                }
+                                        }
+                                    }
+
+                                    if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "solutions") {
+                                                if (solutionClicked) {
+                                                    solutionsItems.style.visibility = "collapse";
+                                                    solutionsItems.classList.remove("active-nav-items");
+                                                    solutionClicked = false;
+                                                }
+                                        }
+                                    }
+                                })
+
+                                
+
                                 solutionsBtn.addEventListener('click', () => {
                                     if (solutionClicked) {
                                             solutionsItems.style.visibility = "collapse";
@@ -224,6 +252,8 @@
                                             productClicked = false;
                                     }
                                 })
+
+
 
                             //     productsBtn.addEventListener("mouseout", () => {
                             //         productsItems.style.visibility = "visible";
@@ -298,12 +328,12 @@
                         </div>
                         <div class="cards">
                                 <p>Email us Now</p>
-                                <ion-icon name="chatbox-ellipses"></ion-icon>
+                                <ion-icon name="mail"></ion-icon>
                                 <button>Chat with Sales</button>
                         </div>
                         <div class="cards">
                                 <p>Ask for a Demo</p>
-                                <ion-icon name="calendar"></ion-icon>
+                                <ion-icon name="help-circle"></ion-icon>
                                 <button>Book Now</button>
                         </div>
                 </div>
@@ -324,23 +354,17 @@
                                 </div>
                                 <div class="loc">
                                         <ion-icon name="location"></ion-icon>
-                                        <p>#2, 27th Main Rd, Phase 3, Agara
-                                                Village, 1st Sector, HSR Layout,
-                                                Bengaluru, Karnataka 560102
+                                        <p>Regus Business Centre, 3rd Floor, Prabhavee Tech Park, Pune – 411001
                                         </p>
                                 </div>
                                 <div class="loc">
                                         <ion-icon name="location"></ion-icon>
-                                        <p>#2, 27th Main Rd, Phase 3, Agara
-                                                Village, 1st Sector, HSR Layout,
-                                                Bengaluru, Karnataka 560102
+                                        <p>Regus Suburbs Centre, Level 2, Andheri Kurla Road, Andheri East, Mumbai – 400072
                                         </p>
                                 </div>
                                 <div class="loc">
                                         <ion-icon name="location"></ion-icon>
-                                        <p>#2, 27th Main Rd, Phase 3, Agara
-                                                Village, 1st Sector, HSR Layout,
-                                                Bengaluru, Karnataka 560102
+                                        <p>Regus Business Center, Rajbhavan Road, 3rd Floor, Belvedere, Somajiguda, Hyderabad – 500082
                                         </p>
                                 </div>
                         </div>
@@ -363,7 +387,6 @@
                                         <input type="text" placeholder="First Name *"><input type="text" placeholder="Last Name *">
                                 </div>
                                 <input class="text" type="text" placeholder="Company Name *"><input  class="text" type="text" placeholder="Website *">
-                                <input  class="text" type="text" placeholder="Website *">
                                 <input  class="text" type="text" placeholder="Work Email *">
                                 <input  class="text" type="text" placeholder="Phone Number *">
                                 <textarea placeholder="Type your Query"></textarea>

@@ -58,7 +58,7 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li>
+                                    <li  id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
                                                 Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
                                         </a>
@@ -109,7 +109,7 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li>
+                                    <li  id="solution-parent">
                                             <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>      
                                             <div id="solution-items" class="nav-items">
                                                 <div class="items-content">
@@ -197,6 +197,7 @@
                                 const productsItems = document.getElementById('product-items');
                                 const solutionsItems = document.getElementById('solution-items');
                                 var productClicked = false,  solutionClicked = false;
+
                                 productsBtn.addEventListener('click', () => {
                                     if (productClicked) {
                                             productsItems.style.visibility = "collapse";
@@ -211,6 +212,33 @@
                                     }
                                 })
 
+                                addEventListener("click", (e) => {
+                                    var values = e.path;
+                                    console.log(e.target.parentNode)
+
+                                    if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "products") {
+                                                if (productClicked) {
+                                                    productsItems.style.visibility = "collapse";
+                                                    productsItems.classList.remove("active-nav-items");
+                                                    productClicked = false;
+                                                }
+                                        }
+                                    }
+
+                                    if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "solutions") {
+                                                if (solutionClicked) {
+                                                    solutionsItems.style.visibility = "collapse";
+                                                    solutionsItems.classList.remove("active-nav-items");
+                                                    solutionClicked = false;
+                                                }
+                                        }
+                                    }
+                                })
+
+                                
+
                                 solutionsBtn.addEventListener('click', () => {
                                     if (solutionClicked) {
                                             solutionsItems.style.visibility = "collapse";
@@ -224,6 +252,8 @@
                                             productClicked = false;
                                     }
                                 })
+
+
 
                             //     productsBtn.addEventListener("mouseout", () => {
                             //         productsItems.style.visibility = "visible";
@@ -431,6 +461,43 @@
                         </div>
                 </div>
         </section>
+
+        <script>
+                const ViewMore = document.getElementsByClassName("ViewMore");
+                const FullContent = document.getElementsByClassName("full-content");
+                const HalfContent = document.getElementsByClassName("half-content");
+                var FullContentClicked = [];
+
+                addEventListener("click", (e) => {
+
+                        if (e.target.nodeName !== "BUTTON") {
+                                for (let i = 0; i < ViewMore.length; i++) {
+                                        FullContent[i].style.display = "none";
+                                        HalfContent[i].style.display = "block";
+                                        ViewMore[i].textContent = "View More";
+                                        FullContentClicked[i] = false;
+                                }
+                        }
+                })
+
+                for (let i = 0; i < ViewMore.length; i++) {
+                        FullContentClicked[i] = false;
+
+                        ViewMore[i].addEventListener("click", () => {
+                                if (FullContentClicked[i]) {
+                                        FullContent[i].style.display = "none";
+                                        HalfContent[i].style.display = "block";
+                                        ViewMore[i].textContent = "View More";
+                                        FullContentClicked[i] = false;
+                                } else {
+                                        FullContent[i].style.display = "block";
+                                        HalfContent[i].style.display = "none";
+                                        ViewMore[i].textContent = "View Less";
+                                        FullContentClicked[i] = true;
+                                }
+                        })
+                }
+        </script>
 
         <section class="linked-section">
                 <div class="linked-layout"  data-aos="fade-up" data-aos-easing="linear"  

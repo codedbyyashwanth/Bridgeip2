@@ -50,7 +50,7 @@
                         </div> -->
                         <div class="navbar">
                             <div class="logo">
-                                <a href="../index.html"><img src="../../resources/img/logo.png" alt=""></a>
+                                <a href="../../index.html"><img src="../../resources/img/logo.png" alt=""></a>
                                 <img class="govt" src="../../resources/img/govt.png" alt="">
                             </div>
                             <div id="menu" class="menu">
@@ -58,7 +58,7 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li>
+                                    <li  id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
                                                 Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
                                         </a>
@@ -109,7 +109,7 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li>
+                                    <li  id="solution-parent">
                                             <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
                                             <div id="solution-items" class="nav-items">
                                                 <div class="items-content">
@@ -197,6 +197,7 @@
                                 const productsItems = document.getElementById('product-items');
                                 const solutionsItems = document.getElementById('solution-items');
                                 var productClicked = false,  solutionClicked = false;
+
                                 productsBtn.addEventListener('click', () => {
                                     if (productClicked) {
                                             productsItems.style.visibility = "collapse";
@@ -211,6 +212,33 @@
                                     }
                                 })
 
+                                addEventListener("click", (e) => {
+                                    var values = e.path;
+                                    console.log(e.target.parentNode)
+
+                                    if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "products") {
+                                                if (productClicked) {
+                                                    productsItems.style.visibility = "collapse";
+                                                    productsItems.classList.remove("active-nav-items");
+                                                    productClicked = false;
+                                                }
+                                        }
+                                    }
+
+                                    if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                            if (e.target.id !== "solutions") {
+                                                if (solutionClicked) {
+                                                    solutionsItems.style.visibility = "collapse";
+                                                    solutionsItems.classList.remove("active-nav-items");
+                                                    solutionClicked = false;
+                                                }
+                                        }
+                                    }
+                                })
+
+                                
+
                                 solutionsBtn.addEventListener('click', () => {
                                     if (solutionClicked) {
                                             solutionsItems.style.visibility = "collapse";
@@ -224,6 +252,8 @@
                                             productClicked = false;
                                     }
                                 })
+
+
 
                             //     productsBtn.addEventListener("mouseout", () => {
                             //         productsItems.style.visibility = "visible";
@@ -370,7 +400,7 @@
                 </div>
         </section>
 
-        <section class="benefit-business-contain-section" style="background-color: #1A1694; padding: 30px;">
+        <section class="benefit-business-contain-section" style="background-color: #BDF3F4; padding: 30px;">
                 <div class="benefit-business-contain-layout"  data-aos="fade-up" data-aos-easing="linear"  
         data-aos-once="true"
                 data-aos-duration="1000">
@@ -378,8 +408,8 @@
                                 <!-- <img src="../../resources/img/Image-5.png" alt=""> -->
                         </div>
                         <div class="text-content">
-                                <h3 style="font-size: clamp(1.6rem, 3vw, 2rem); color: #fafafa;">Food & Beverage</h3>
-                                <p style=" color: #fafafa;">
+                                <h3 style="font-size: clamp(1.6rem, 3vw, 2rem); color: #000;">Food & Beverage</h3>
+                                <p style=" color: #000;">
                                         With phone, video, chat, SMS, and contact centre integrated into one, versatile, and dynamic platform, your teams will be able to connect, interact, and acquire skills at scale.       
                                 </p> 
                                 <!-- <a href="#">Request a Demo</a> -->
@@ -457,61 +487,13 @@
                 </div>
                 <div class="integration-layout-1" >
                         <div class="brand">
-                                <img src="../../resources/img/Clients/aayuja.png" alt="">
+                                <img src="../../resources/img/Solutions-logos/Retail/Futurism.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="../../resources/img/Clients/BDS-Serv-Final-1.png" alt="">
+                                <img src="../../resources/img/Solutions-logos/Retail/m-panels-logo (1).png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="../../resources/img/Clients/boston.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/callabes.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/eclinical.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/freshdesk.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/genisys.jpg" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/hackerearth.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/iquanti.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/JMR.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/nqa.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/opteamix.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/PFS-Logo.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/progility.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/suntechno.jpg" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/tavant.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/techaspect.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/walmart-india.png" alt="">
-                        </div>
-                        <div class="brand">
-                                <img src="../../resources/img/Clients/welspun.png" alt="">
+                                <img src="../../resources/img/Solutions-logos/Retail/Nuware.png" alt="">
                         </div>
                 </div>
                 <!-- <button>View More</button> -->

@@ -58,19 +58,19 @@
                             </div>
                             <nav id="nav">  
                                 <ul>
-                                    <li>
+                                    <li id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
                                                 Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
                                         </a>
                                                 <div id="product-items" class="nav-items">
                                                         <div class="items-content">
-                                                                <div class="heading">
+                                                                <div id="heading" class="heading">
                                                                         <h3>Bridge I2P</h3>
                                                                         <p>
                                                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                         </p>
                                                                 </div>
-                                                                <div class="links">
+                                                                <div id="links" class="links">
                                                                         <div class="link">
                                                                                 <img src="./resources/img/Group 851.png" alt="">
                                                                                 <div class="text-content">
@@ -100,7 +100,7 @@
                                                                         </div>
                                                                 </div>
                                                         </div>
-                                                        <div class="company-content">
+                                                        <div id="company-content" class="company-content">
                                                                 <p>
                                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices tempus massa et vehicula.
                                                                         Aliquam tempus nibh eros, ac consequat nisl condimentum non.
@@ -109,10 +109,10 @@
                                                         </div>
                                                 </div>
                                         </li>
-                                    <li>
+                                    <li id="solution-parent">
                                             <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
                                             <div id="solution-items" class="nav-items">
-                                                <div class="items-content">
+                                                <div id="items-content" class="items-content">
                                                         <div class="heading">
                                                                 <h3>Bridge I2P</h3>
                                                                 <p>
@@ -197,6 +197,7 @@
                                     const productsItems = document.getElementById('product-items');
                                     const solutionsItems = document.getElementById('solution-items');
                                     var productClicked = false,  solutionClicked = false;
+
                                     productsBtn.addEventListener('click', () => {
                                         if (productClicked) {
                                                 productsItems.style.visibility = "collapse";
@@ -210,6 +211,33 @@
                                                 productClicked = true;
                                         }
                                     })
+
+                                    addEventListener("click", (e) => {
+                                        var values = e.path;
+                                        console.log(e.target.parentNode)
+
+                                        if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
+                                                if (e.target.id !== "products") {
+                                                    if (productClicked) {
+                                                        productsItems.style.visibility = "collapse";
+                                                        productsItems.classList.remove("active-nav-items");
+                                                        productClicked = false;
+                                                    }
+                                            }
+                                        }
+
+                                        if (e.target.parentNode.id !== "solution-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links"  && e.target.parentNode.className !== "text-content") {
+                                                if (e.target.id !== "solutions") {
+                                                    if (solutionClicked) {
+                                                        solutionsItems.style.visibility = "collapse";
+                                                        solutionsItems.classList.remove("active-nav-items");
+                                                        solutionClicked = false;
+                                                    }
+                                            }
+                                        }
+                                    })
+
+                                    
 
                                     solutionsBtn.addEventListener('click', () => {
                                         if (solutionClicked) {
@@ -488,16 +516,34 @@
                 data-aos-once="true"
                 data-aos-duration="1500">
                         <div class="brand">
-                                <img src="./resources/img/int-1.png" alt="">
+                                <img src="./resources/img/Integrations/bullhorn.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="./resources/img/int-2.png" alt="">
+                                <img src="./resources/img/Integrations/hubspot.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="./resources/img/int-3.png" alt="">
+                                <img src="./resources/img/Integrations/int-1.png" alt="">
                         </div>
                         <div class="brand">
-                                <img src="./resources/img/int-4.png" alt="">
+                                <img src="./resources/img/Integrations/int-2.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/int-3.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/int-4.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/salesforce.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/skype.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/teams.png" alt="">
+                        </div>
+                        <div class="brand">
+                                <img src="./resources/img/Integrations/zoho.png" alt="">
                         </div>
                 </div>
                 <a   data-aos="fade-up" data-aos-easing="linear"  
@@ -525,17 +571,18 @@
                 <div class="opinion-layout"  data-aos="fade-up" data-aos-easing="linear"  
                 data-aos-once="true"
                 data-aos-duration="1500">
-                        <div class="opinions">
-                                <p>"Typeform is a product-grade system for our entire growth funnel"</p>
+                        <!-- <div class="opinions">
+                                <p>"BridgeCubex Solutions is a very valuable partner in our business; their lines have a 100% up-time and a very prompt support team. Whenever I have any questions, 
+                                        they’ve always been cleared on priority. We’re very happy with the service and will openly recommend them to all."</p>
                                 <div class="img-container">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                        <img src="https://www.bridgei2p.com/wp-content/uploads/2015/02/shantanu.jpg" alt="">
                                 </div>
-                                <h4>Gaurav Vohra</h4>
+                                <h4> Mr. Shantanu</h4>
                                 <span>Head of growth</span>
                                 <div class="logo-container">
                                         <img src="./resources/img/brand.png" alt="">
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="opinions">
                                 <p>"Typeform is a product-grade system for our entire growth funnel"</p>
                                 <div class="img-container">
@@ -646,38 +693,39 @@
                         <div class="logo-section" >
                                 <div class="logo-container">
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-1.png" alt="">
-                                                <img src="./resources/img/logo-2.png" alt="">
-                                                <img src="./resources/img/logo-3.png" alt="">
+                                                <img src="./resources/img/Clients/aayuja.png" alt="">
+                                                <img src="./resources/img/Clients/BDS-Serv-Final-1.png" alt="">
+                                                <img src="./resources/img/Clients/boston.png" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-4.png" alt="">
-                                                <img src="./resources/img/logo-5.png" alt="">
-                                                <img src="./resources/img/logo-6.png" alt="">
-                                        </div>
-                                </div>
-                                <div class="logo-container">
-                                        <div class="img-container">
-                                                <img src="./resources/img/logo-1.png" alt="">
-                                                <img src="./resources/img/logo-2.png" alt="">
-                                                <img src="./resources/img/logo-3.png" alt="">
-                                        </div>
-                                        <div class="img-container">
-                                                <img src="./resources/img/logo-4.png" alt="">
-                                                <img src="./resources/img/logo-5.png" alt="">
-                                                <img src="./resources/img/logo-6.png" alt="">
+                                                <img src="./resources/img/Clients/callabes.png" alt="">
+                                                <img src="./resources/img/Clients/eclinical.png" alt="">
+                                                <img src="./resources/img/Clients/freshdesk.png" alt="">
                                         </div>
                                 </div>
                                 <div class="logo-container">
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-1.png" alt="">
-                                                <img src="./resources/img/logo-2.png" alt="">
-                                                <img src="./resources/img/logo-3.png" alt="">
+                                                <img src="./resources/img/Clients/genisys.jpg" alt="">
+                                                <img src="./resources/img/Clients/hackerearth.png" alt="">
+                                                <img src="./resources/img/Clients/iquanti.png" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-4.png" alt="">
-                                                <img src="./resources/img/logo-5.png" alt="">
-                                                <img src="./resources/img/logo-6.png" alt="">
+                                                <img src="./resources/img/Clients/JMR.png" alt="">
+                                                <img src="./resources/img/Clients/nqa.png" alt="">
+                                                <img src="./resources/img/Clients/opteamix.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="./resources/img/Clients/PFS-Logo.png" alt="">
+                                                <img src="./resources/img/Clients/welspun.png" alt="">
+                                                <img src="./resources/img/Clients/walmart-india.png" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Clients/techaspect.png" alt="">
+                                                <img src="./resources/img/Clients/tavant.png" alt="">
+                                                <img src="./resources/img/Clients/suntechno.jpg" alt="">
+                                                <img src="./resources/img/Clients/progility.png" alt="">
                                         </div>
                                 </div>
                         </div>
@@ -687,38 +735,26 @@
                         <div class="logo-section">
                                 <div class="logo-container"  >
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-1.png" alt="">
-                                                <img src="./resources/img/logo-2.png" alt="">
-                                                <img src="./resources/img/logo-3.png" alt="">
+                                                <img src="./resources/img/Partners/asttecs.png" alt="">
+                                                <img src="./resources/img/Partners/cisco.gif" alt="">
+                                                <img src="./resources/img/Partners/digium.png" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-4.png" alt="">
-                                                <img src="./resources/img/logo-5.png" alt="">
-                                                <img src="./resources/img/logo-6.png" alt="">
-                                        </div>
-                                </div>
-                                <div class="logo-container">
-                                        <div class="img-container">
-                                                <img src="./resources/img/logo-1.png" alt="">
-                                                <img src="./resources/img/logo-2.png" alt="">
-                                                <img src="./resources/img/logo-3.png" alt="">
-                                        </div>
-                                        <div class="img-container">
-                                                <img src="./resources/img/logo-4.png" alt="">
-                                                <img src="./resources/img/logo-5.png" alt="">
-                                                <img src="./resources/img/logo-6.png" alt="">
+                                                <img src="./resources/img/Partners/grandstream.png" alt="">
+                                                <img src="./resources/img/Partners/level3.png" alt="">
+                                                <img src="./resources/img/Partners/logo-portaone.png" alt="">
                                         </div>
                                 </div>
                                 <div class="logo-container">
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-1.png" alt="">
-                                                <img src="./resources/img/logo-2.png" alt="">
-                                                <img src="./resources/img/logo-3.png" alt="">
+                                                <img src="./resources/img/Partners/panasonic.png" alt="">
+                                                <img src="./resources/img/Partners/polycom_logo_detail.gif" alt="">
+                                                <img src="./resources/img/Partners/Sangoma-Logo.png" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/logo-4.png" alt="">
-                                                <img src="./resources/img/logo-5.png" alt="">
-                                                <img src="./resources/img/logo-6.png" alt="">
+                                                <img src="./resources/img/Partners/tata.png" alt="">
+                                                <img src="./resources/img/Partners/yealink-logo.jpg" alt="">
+                                                <!-- <img src="./resources/img/Partners/" alt=""> -->
                                         </div>
                                 </div>
                         </div>

@@ -18,23 +18,6 @@ var clicked = false;
 //     }
 // })
 
-const ViewMore = document.getElementsByClassName("ViewMore");
-const FullContent = document.getElementsByClassName("full-content");
-const HalfContent = document.getElementsByClassName("half-content");
-let FullContentClicked = false;
-for (let i = 0; i < ViewMore.length; i++) {
-    ViewMore[i].addEventListener("click", () => {   
-        if (FullContentClicked) {
-            FullContent[i].style.display = "none";
-            HalfContent[i].style.display = "block";
-            FullContentClicked = false;
-        } else {
-            FullContent[i].style.display = "block";
-            HalfContent[i].style.display = "none";
-            FullContentClicked = true;
-        }
-    })
-}
 
 window.onscroll = function() {stickNav()};
 
@@ -46,7 +29,6 @@ var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickNav() {
-  console.log(sticky);
   if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky")
   } else {
@@ -63,7 +45,6 @@ for (let i = 0; i < faqQuest.length; i++) {
     faqQuest[i].addEventListener("click", () => {
 
         const name = addBtn[i].attributes.name.nodeValue;
-        console.log(name)
 
         if (name === "add")
             addBtn[i].attributes.name.nodeValue = "remove";
@@ -143,8 +124,8 @@ tabs.forEach(tab => {
 
 $('.integration-layout-1').slick({
   infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 2,
+  slidesToScroll: 2,
   arrows: false,
   autoplay: true,
   autoplaySpeed: 2000,
@@ -295,5 +276,50 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+$('.integration-layout').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: true,
+      }
+    },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          centerMode: false,
+
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          centerMode: false,
+        }
+      }
+    ]
+});
 
 AOS.init();

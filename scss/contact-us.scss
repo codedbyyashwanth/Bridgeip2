@@ -641,10 +641,26 @@ header {
                 align-items: center;
                 flex-wrap: wrap;
 
+                @media (max-width:1161px) {
+                        justify-content: center;
+                }
+
                 img {
                         width: 94%;
                         max-width: 600px;
                         margin: 20px;
+
+                        @media (max-width:1552px) {
+                                max-width: 500px;
+                        }
+
+                        @media (max-width:1324px) {
+                                max-width: 450px;
+                        }
+
+                        @media (max-width:1161px) {
+                                margin-bottom: 0;
+                        }
                 }
 
                 form {
@@ -654,6 +670,18 @@ header {
                         margin: 30px 0;
                         border-radius: 10px;
                         background-color: #D6F9FF;
+
+                        @media (max-width:1430px) {
+                                max-width: 700px;
+                        }
+
+                        @media (max-width:1324px) {
+                                max-width: 600px;
+                        }
+
+                        @media (max-width:1161px) {
+                                max-width: 100%;
+                        }
 
                         h3 {
                                 color: #fafafa;
@@ -673,12 +701,20 @@ header {
                                 outline: none;
                                 background-color: rgb(255, 255, 255);
                                 border-radius: 6px;
+
+                                @media (max-width:1161px) {
+                                        max-width: 100%;
+                                }
                         }
 
                         .options {
                                 margin: 20px auto;
                                 width: 90%;
                                 max-width: 750px;
+
+                                @media (max-width:1161px) {
+                                        max-width: 100%;
+                                }
 
                                 input {
                                         margin-right: 5px;
@@ -701,6 +737,10 @@ header {
                                         background-color: rgb(255, 255, 255);
                                         border-radius: 6px;
                                 }
+
+                                @media (max-width:1161px) {
+                                        max-width: 100%;
+                                }
                         }
 
                         textarea {
@@ -722,6 +762,10 @@ header {
                                         outline: none;
                                         border: none;
                                         cursor: pointer;
+
+                                        @media (max-width:1161px) {
+                                                margin-right: 50px;
+                                        }
         
                                         @media (max-width:600px) {
                                                 margin: 20px auto;
