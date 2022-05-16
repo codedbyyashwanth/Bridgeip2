@@ -312,6 +312,163 @@ header {
 }
 
 @media (max-width: 950px) {
+        header {
+                nav {
+                        ul li {
+                                .nav-items {
+                                        max-width: 600px;
+                                        top: 150%;
+                                        left: 0%;
+                                        border-radius: 10px;
+                                        box-shadow: $secondary-shadow;
+                                        padding: 20px;
+                                        visibility: collapse;
+                                        background-color: #fff;
+                
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: flex-start;
+                
+                                        .items-content {
+                                                width: 400px;
+                                                margin: 0 15px;
+                
+                                                .heading {
+                                                        margin-bottom: 20px;
+                                                        p {
+                                                                font-size: 0.9rem;
+                                                                color: rgba($primary-color, 0.9);
+                                                        }
+                                                }
+                
+                                                .links {
+                                                        .link {
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                align-items: flex-start;
+                                                                margin: 15px 0;
+                
+                                                                img {
+                                                                        width: 35px;
+                                                                        height: 35px;
+                                                                        margin: 0px 10px;
+                                                                }
+                
+                                                                .text-content {
+                                                                        a {
+                                                                                font-weight: 600;
+                                                                        }
+                                                                        p {
+                                                                                font-size: 0.7rem;
+                                                                                color: rgba($primary-color, 0.95);
+                                                                        }
+                                                                }
+                                                        }
+                
+                                                }
+                                        }
+                
+                                        .company-content {
+                                                width: 300px;
+                                                margin: 0 15px;
+                                                
+                                                p {
+                                                        font-size: 0.9rem;
+                                                }
+                
+                                                img {
+                                                        width: 60%;
+                                                        margin-top: 20px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+@media (max-width: 662px) {
+        header {
+                nav {
+                        ul li {
+                                .nav-items {
+                                        width: 100%;
+                                        max-width: 600px;
+                                        top: 150%;
+                                        left: 0%;
+                                        border-radius: 10px;
+                                        box-shadow: $secondary-shadow;
+                                        padding: 20px;
+                                        visibility: collapse;
+                                        background-color: #fff;
+                                        overflow: auto;
+                
+                                        display: flex;
+                                        justify-content: left;
+                                        align-items: flex-start;
+                
+                                        .items-content {
+                                                width: 400px;
+                                                margin: 0 15px;
+                
+                                                .heading {
+                                                        display: none;
+                                                        margin-bottom: 20px;
+                                                        p {
+                                                                font-size: 0.9rem;
+                                                                color: rgba($primary-color, 0.9);
+                                                        }
+                                                }
+                
+                                                .links {
+                                                        .link {
+                                                                display: flex;
+                                                                justify-content: left;
+                                                                align-items: flex-start;
+                                                                margin: 10px 0;
+                
+                                                                img {
+                                                                        width: 35px;
+                                                                        height: 35px;
+                                                                        margin: 0px 10px;
+                                                                }
+                
+                                                                .text-content {
+                                                                        a {
+                                                                                font-weight: 600;
+                                                                        }
+                                                                        p {
+                                                                                display: none;
+                                                                                font-size: 0.7rem;
+                                                                                color: rgba($primary-color, 0.95);
+                                                                        }
+                                                                }
+                                                        }
+                
+                                                }
+                                        }
+                
+                                        .company-content {
+                                                display: none;
+                                                width: 300px;
+                                                margin: 0 15px;
+                                                
+                                                p {
+                                                        font-size: 0.9rem;
+                                                }
+                
+                                                img {
+                                                        width: 60%;
+                                                        margin-top: 20px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+@media (max-width: 950px) {
     header {
 
         .menu {
