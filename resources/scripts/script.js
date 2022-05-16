@@ -263,7 +263,7 @@ $('.logo-section').slick({
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
 
 })
 
@@ -282,7 +282,7 @@ $('.integration-layout').slick({
   slidesToScroll: 4,
   arrows: false,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
   responsive: [
     {
       breakpoint: 1400,
