@@ -784,23 +784,25 @@ header nav ul li .active-page {
   margin: 20px auto;
 }
 
-.contact-sales-section .contact-sales-layout .cards button {
+.contact-sales-section .contact-sales-layout .cards a, .contact-sales-section .contact-sales-layout .cards button {
   padding: 12px 35px;
   background-color: #FF8303;
   color: #fafafa;
   border-radius: 50px;
   outline: none;
+  font-size: 0.9rem;
+  text-decoration: none;
   border: none;
   cursor: pointer;
 }
 
 @media (max-width: 600px) {
-  .contact-sales-section .contact-sales-layout .cards button {
+  .contact-sales-section .contact-sales-layout .cards a, .contact-sales-section .contact-sales-layout .cards button {
     margin: 20px auto;
   }
 }
 
-.contact-sales-section .contact-sales-layout .cards button:hover {
+.contact-sales-section .contact-sales-layout .cards a:hover, .contact-sales-section .contact-sales-layout .cards button:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
@@ -855,18 +857,45 @@ header nav ul li .active-page {
   font-weight: 600;
 }
 
-.contact-map-section .contact-map-layout iframe {
+.contact-map-section .contact-map-layout .maps {
   width: 94%;
   max-width: 900px;
-  border: none;
 }
 
 @media (max-width: 1170px) {
-  .contact-map-section .contact-map-layout iframe {
+  .contact-map-section .contact-map-layout .maps {
     width: 94%;
     max-width: 500px;
     height: 500px;
   }
+}
+
+.contact-map-section .contact-map-layout .maps iframe {
+  width: 100%;
+  height: 407px;
+  border: none;
+}
+
+.contact-map-section .contact-map-layout .maps .slick-dots li.slick-active button:before {
+  color: #FF8303;
+}
+
+.contact-map-section .contact-map-layout .maps .slick-dots li button::before {
+  font-size: 1.3rem;
+}
+
+.contact-map-section .contact-map-layout .maps .slick-dots li button {
+  background-color: #e2e2e2;
+  border-radius: 100%;
+}
+
+.contact-map-section .contact-map-layout .maps .slick-dots li.slick-active button {
+  background-color: #FF8303;
+  border-radius: 100%;
+}
+
+.contact-map-section .contact-map-layout .maps .slick-dots li.slick-active button:before, .contact-map-section .contact-map-layout .maps .slick-dots li button:before {
+  color: transparent;
 }
 
 .enquiry-form-section {

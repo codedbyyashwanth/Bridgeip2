@@ -574,7 +574,7 @@ header nav ul li .active-page {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 100px 0 0 0;
+  padding: 100px 0 50px 0;
 }
 
 .header-container .text-container span {
@@ -1083,7 +1083,7 @@ header nav ul li .active-page {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 80px 0;
+  margin: 40px 0;
 }
 
 @media (max-width: 600px) {
@@ -1096,7 +1096,19 @@ header nav ul li .active-page {
 
 .business-edition-section .business-edition-layout .tab-content .text-content {
   width: 97%;
-  max-width: 800px;
+  max-width: 950px;
+}
+
+@media (max-width: 1546px) {
+  .business-edition-section .business-edition-layout .tab-content .text-content {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .business-edition-section .business-edition-layout .tab-content .text-content {
+    max-width: 750px;
+  }
 }
 
 .business-edition-section .business-edition-layout .tab-content .text-content h4 {
@@ -1151,7 +1163,7 @@ header nav ul li .active-page {
 
 @media (max-width: 1400px) {
   .business-edition-section .business-edition-layout .tab-content .text-content {
-    max-width: 500px;
+    max-width: 650px;
   }
   .business-edition-section .business-edition-layout .tab-content .text-content h4 {
     font-size: 1.4rem;
@@ -1162,6 +1174,15 @@ header nav ul li .active-page {
   .business-edition-section .business-edition-layout .tab-content .img-container img {
     max-width: 600px;
   }
+}
+
+@media (max-width: 1400px) and (max-width: 1320px) {
+  .business-edition-section .business-edition-layout .tab-content .img-container img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1400px) {
   .business-edition-section .business-edition-layout .tab-content .img-container .circle-yellow, .business-edition-section .business-edition-layout .tab-content .img-container .circle-grey {
     top: -10%;
     right: 5%;
@@ -1176,7 +1197,7 @@ header nav ul li .active-page {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1225px) {
   .business-edition-section .business-edition-layout .tab-content {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1542,7 +1563,7 @@ header nav ul li .active-page {
 
 .business-contain-section .business-contain-layout .img-container {
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 60px;
 }
 
 .business-contain-section .business-contain-layout .img-container img {

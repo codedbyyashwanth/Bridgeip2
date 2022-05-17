@@ -524,7 +524,7 @@ header {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        padding: 100px 0 0 0;
+        padding: 100px 0 50px 0;
 
         .text-container {
 
@@ -1008,7 +1008,7 @@ header {
                         justify-content: space-between;
                         align-items: center;
                         flex-wrap: wrap;
-                        margin: 80px 0;
+                        margin: 40px 0;
 
                         @media (max-width: 600px) {
                                 justify-content: center;
@@ -1016,7 +1016,15 @@ header {
 
                         .text-content {
                                 width: 97%;
-                                max-width: 800px;
+                                max-width: 950px;
+
+                                @media (max-width:1546px) {
+                                        max-width: 850px;
+                                }
+
+                                @media (max-width:1440px) {
+                                        max-width: 750px;
+                                }
 
                                 h4 {
                                         font-size: 1.6rem;
@@ -1074,7 +1082,7 @@ header {
                 @media (max-width:1400px) {
                         .tab-content {
                                         .text-content {
-                                                max-width: 500px;
+                                                max-width: 650px;
                 
                                                 h4 {
                                                         font-size: 1.4rem;
@@ -1089,6 +1097,10 @@ header {
         
                                                 img {
                                                         max-width: 600px;
+
+                                                        @media (max-width:1320px) {
+                                                                max-width: 500px;
+                                                        }
                                                 }
         
                                                 .circle-yellow, .circle-grey {
@@ -1109,7 +1121,7 @@ header {
                         }
                 }
 
-                @media (max-width:1200px) {
+                @media (max-width:1225px) {
                         .tab-content {
                                 
                                         justify-content: center;
@@ -1471,7 +1483,7 @@ header {
 
                 .img-container {
                         position: relative;
-                        margin-bottom: 200px;
+                        margin-bottom: 60px;
 
                         img {
                                 width: 94%;

@@ -60,7 +60,7 @@
                                 <ul>
                                     <li id="product-parent">
                                             <a   id="products" href="#" class="nav-item" >
-                                                Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
+                                                Products<ion-icon onclick="productMenu" name="arrow-down-circle-outline"></ion-icon>
                                         </a>
                                                 <div id="product-items" class="nav-items">
                                                         <div class="items-content">
@@ -110,7 +110,7 @@
                                                 </div>
                                         </li>
                                     <li id="solution-parent">
-                                            <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                                            <a id="solutions" href="#">Solutions<ion-icon onclick="solutionMenu" name="arrow-down-circle-outline"></ion-icon></a>
                                             <div id="solution-items" class="nav-items">
                                                 <div id="items-content" class="items-content">
                                                         <div class="heading">
@@ -198,7 +198,7 @@
                                     const solutionsItems = document.getElementById('solution-items');
                                     var productClicked = false,  solutionClicked = false;
 
-                                    productsBtn.addEventListener('click', () => {
+                                    const productMenu = () => {
                                         if (productClicked) {
                                                 productsItems.style.visibility = "collapse";
                                                 productsItems.classList.remove("active-nav-items");
@@ -210,11 +210,27 @@
                                                 solutionClicked = false;
                                                 productClicked = true;
                                         }
-                                    })
+                                    }
+
+                                    const solutionMenu = () => {
+                                        if (solutionClicked) {
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionsItems.classList.remove("active-nav-items");
+                                                solutionClicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "collapse";
+                                                solutionsItems.style.visibility = "visible";
+                                                solutionsItems.classList.add("active-nav-items");
+                                                solutionClicked = true;
+                                                productClicked = false;
+                                        }
+                                    }
+
+                                    productsBtn.addEventListener('click', productMenu);
+                                    solutionsBtn.addEventListener('click', solutionMenu);
 
                                     addEventListener("click", (e) => {
                                         var values = e.path;
-                                        console.log(e.target.parentNode)
 
                                         if (e.target.parentNode.id !== "product-parent" && e.target.parentNode.className !== "heading" && e.target.parentNode.className !== "company-content" && e.target.parentNode.className !== "links" && e.target.parentNode.className !== "text-content") {
                                                 if (e.target.id !== "products") {
@@ -239,19 +255,7 @@
 
                                     
 
-                                    solutionsBtn.addEventListener('click', () => {
-                                        if (solutionClicked) {
-                                                solutionsItems.style.visibility = "collapse";
-                                                solutionsItems.classList.remove("active-nav-items");
-                                                solutionClicked = false;
-                                        } else {
-                                                productsItems.style.visibility = "collapse";
-                                                solutionsItems.style.visibility = "visible";
-                                                solutionsItems.classList.add("active-nav-items");
-                                                solutionClicked = true;
-                                                productClicked = false;
-                                        }
-                                    })
+                                    
 
 
 
@@ -387,7 +391,7 @@
                         <div class="market-posts">
                                 <h3 class="heading">Great Customer Service</h3>
                                 <div class="img-container">
-                                        <img src="./resources/img/customer-serivce.png" alt="">
+                                        <img src="./resources/img/customer-serivce.png" alt="" style="opacity: 0.8;">
                                         <div class="content">
                                                 <div class="text-content">
                                                         <br>
@@ -464,7 +468,7 @@
                                         </div>
                                         <div class="text-content">
                                                 <p>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</p>
-                                                <button>View More</button>
+                                                <a href="./pages/products.html">View More</a>
                                         </div>
                                 </div>
                                 <div id="contact" data-tab-content>
@@ -473,7 +477,7 @@
                                         </div>
                                         <div class="text-content">
                                                 <p>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</p>
-                                                <button>View More</button>
+                                                <a href="./pages/contact.html">View More</a>
                                         </div>
                                 </div>
                                 <div id="broadcasting" data-tab-content>
@@ -482,7 +486,7 @@
                                         </div>
                                         <div class="text-content">
                                                 <p>Unified Communication Suite to Help Your Team Connect, Collaborate, And Work from Anywhere.</p>
-                                                <button>View More</button>
+                                                <a href="./pages/IVRBroadcast.html">View More</a>
                                         </div>
                                 </div>
                       </div>
@@ -582,7 +586,7 @@
                                         <img src="./resources/img/brand.png" alt="">
                                 </div>
                         </div> -->
-                        <!-- <div class="opinions">
+                        <div class="opinions">
                                 <p>"BridgeCubex Solutions is a very valuable partner in our business; their lines have a 100% up-time and a very prompt support team. Whenever I have any questions, they’ve always been cleared on priority. We’re very happy with the service and will openly recommend them to all."</p>
                                 <div class="img-container">
                                         <img src="https://www.bridgei2p.com/wp-content/uploads/2015/02/shantanu.jpg" alt="">
@@ -597,15 +601,6 @@
                                         <img src="https://www.bridgei2p.com/wp-content/uploads/2015/02/SBT-Reasearch-sagar-tarawade--300x300.jpg" alt="">
                                 </div>
                                 <h4> Mr.Sagar Tarawade</h4>
-                        </div> -->
-                        <div class="opinions">
-                                <p>"I appreciate his service and active support. I personally suggest to every one who need VOIP service, BridegI2P is best choice for your business.
-
-                                        Thanks & Regards"</p>
-                                <div class="img-container">
-                                        <img src="https://lh3.googleusercontent.com/a/AATXAJyq2UMjHl5DmLEvoEVIwleEP_ce_OaUg_LJPplKjw=w60-h60-p-rp-mo-br100" alt="">
-                                </div>
-                                <h4>Rajesh Kumar</h4>
                         </div>
                         <div class="opinions">
                                 <p>"
@@ -627,29 +622,48 @@
                         </div>
                         <div class="opinions">
                                 <p>"
-                                        Absolutely very helpful, the most reliable source. An active support team who is very helpful and resolves issues immediately. Pleasure working with them..
-                                        "</p>
-                                <div class="img-container">
-                                        <img src="https://lh3.googleusercontent.com/a/AATXAJxYCoCMLiegXRAa1SZfu3INe2leJHZJCeYZ48eB=w60-h60-p-rp-mo-br100" alt="">
-                                </div>
-                                <h4> Lokesh N</h4>
-                        </div>
-                        <div class="opinions">
-                                <p>"Excellent Services for VoIP. I have been using Bridgei2p solutions VoIP services for almost past 2 years and their services are just splendid.
-                                        Completely reliable and flexible team."</p>
-                                <div class="img-container">
-                                        <img src="https://lh3.googleusercontent.com/a/AATXAJwfxJEpaTxTk3Y5jf9dz8-f_3QINjQIQ3OOfJxk=w60-h60-p-rp-mo-br100" alt="">
-                                </div>
-                                <h4>Suman kumar</h4>
-                        </div>
-                        <div class="opinions">
-                                <p>"
                                         Bridgei2p provides good service and they support as and when required. There was an issue towards speakers, Bi2p team visited and tried to rectify the issue and they are unable to rectify, later they replaced the devices or phones immediately. thanks team.
                                         "</p>
                                 <div class="img-container">
                                         <img src="https://lh3.googleusercontent.com/a-/AOh14GjFO7cgLhDovGs9a3hMt_7rAiIqcl8dZgY9N7NXuw=w60-h60-p-rp-mo-br100" alt="">
                                 </div>
                                 <h4>Naveed Pasha</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>
+                                        We and our clients are Very Happy for your Support and Services. Since One year we are using your services and support.  
+ Even single time also we have not faced any technical challenge and If we request any other technical support,  immediately your team  resolved the query. Keep Going…”
+
+                                </p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-1.jpeg" alt="">
+                                </div>
+                                <h4>Piramanayagam S</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>Running a company that offers 24/7 care requires a phone system and service. Company like Bridgei2p that is available at a second’s notice around the clock every day of the year. Their service technicians go above and beyond the call of duty to make sure our phone system and business runs smoothly.</p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-2.jpeg" alt="">
+                                </div>
+                                <h4>Raj Kanojia</h4>
+                        </div>
+                        <div class="opinions">
+                                <p>
+                                        I would like to thank Mr. Karthik and entire Bridgei2p team for your excellent service to our organization. We are really impressed by your Quality and Timely support that you have been providing us since past 5 years. We look forward to a long-term business relationship with you.
+                                </p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-3.jpeg" alt="">
+                                </div>
+                                <h4>Deeshith Shetty </h4>
+                        </div>
+                        <div class="opinions">
+                                <p>
+                                         I once again thank you for your excellent service from your team and especially Shilpa from Bridgei2p VoIP. She really rocks and she is very polite attending the calls whenever we require, I appreciate your Service.
+                                </p>
+                                <div class="img-container">
+                                        <img src="./resources/img/img-4.jpeg" alt="">
+                                </div>
+                                <h4>George</h4>
                         </div>
                         <!-- <div class="opinions">
                                 <p>"Typeform is a product-grade system for our entire growth funnel"</p>
@@ -822,26 +836,26 @@
                         <div class="sitemap">
                                 <h3>Company</h3>
                                 <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="./pages/about.html">About us</a></li>
+                                        <li><a href="./pages/contact-us.html">Contact Us </a></li>
                                         <li><a href="#">Careers</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
                                 <h3>Products</h3>
                                 <ul>
-                                        <li><a href="#"> Business Phone System</a></li>
-                                        <li><a href="#"> Cloud Contact Centre Solution</a></li>
-                                        <li><a href="#"> Voice/VR Broadcasting</a></li>
+                                        <li><a href="./pages/products.html"> Business Phone System</a></li>
+                                        <li><a href="./pages/contact.html"> Cloud Contact Centre Solution</a></li>
+                                        <li><a href="./pages/IVRBroadcast.html"> Voice/VR Broadcasting</a></li>
                                 </ul>
                                 <h3>Solutions</h3>
                                 <ul>
-                                        <li><a href="#"> Professional Services</a></li>
-                                        <li><a href="#"> Call Center</a></li>
-                                        <li><a href="#"> Healthcare</a></li>
-                                        <li><a href="#"> Financial Services</a></li>
-                                        <li><a href="#"> Retail</a></li>
-                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                        <li><a href="./pages/solutions/professional-services.html"> Professional Services</a></li>
+                                        <li><a href="./pages/solutions/call-center.html"> Call Center</a></li>
+                                        <li><a href="./pages/solutions/health.html"> Healthcare</a></li>
+                                        <li><a href="./pages/solutions/financial.html"> Financial Services</a></li>
+                                        <li><a href="./pages/solutions/retail.html"> Retail</a></li>
+                                        <li><a href="./pages/solutions/industrial-distribution.html"> Industrial/Distribution</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
@@ -896,12 +910,11 @@
                                         </ul>
                                 </div>
                                 <div class="social-links">
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                        <ion-icon name="logo-instagram"></ion-icon>
-                                        <ion-icon name="logo-linkedin"></ion-icon>
-                                        <ion-icon name="logo-youtube"></ion-icon>
-                                        <ion-icon name="logo-twitter"></ion-icon>
-                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                        <a href="https://www.facebook.com/Bridgei2p"><ion-icon name="logo-facebook"></ion-icon></a>
+                                        <a href="https://www.instagram.com/rajeshbridge/"><ion-icon name="logo-instagram"></ion-icon></a>
+                                        <a href="https://www.linkedin.com/company/bridgei2p/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                                        <a href="https://www.youtube.com/channel/UCLV-WbPUXNCY9fOot8pURNA/"><ion-icon name="logo-youtube"></ion-icon></a>
+                                        <a href="https://twitter.com/bridgei2p"><ion-icon name="logo-twitter"></ion-icon></a>
                                 </div>
                         </div>
                 </div>

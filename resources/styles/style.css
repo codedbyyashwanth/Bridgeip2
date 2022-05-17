@@ -315,6 +315,7 @@ header nav ul li a {
 }
 
 header nav ul li a ion-icon {
+  cursor: pointer;
   font-size: 1.2rem;
   color: #191A19;
   margin: 0 10px;
@@ -765,7 +766,9 @@ header nav ul li .active-page {
   position: absolute;
   top: 20px;
   left: 20px;
+  font-size: 1.3rem;
   z-index: 100;
+  font-weight: 800;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
 }
@@ -983,7 +986,7 @@ header nav ul li .active-page {
   color: #fafafa;
 }
 
-.featured-section .featured-layout .tab-content .active .text-content button {
+.featured-section .featured-layout .tab-content .active .text-content a {
   padding: 12px 35px;
   margin: 20px 0;
   background-color: #FF8303;
@@ -992,9 +995,11 @@ header nav ul li .active-page {
   outline: none;
   border: none;
   cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.featured-section .featured-layout .tab-content .active .text-content button:hover {
+.featured-section .featured-layout .tab-content .active .text-content a:hover {
   background-color: rgba(255, 131, 3, 0.8);
 }
 
@@ -1208,7 +1213,7 @@ header nav ul li .active-page {
   padding: 0 10px;
   margin: auto;
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .opinion-section .opinion-layout h4 {
@@ -1253,9 +1258,9 @@ header nav ul li .active-page {
 }
 
 .opinion-section .opinion-layout .opinions {
-  height: 420px;
+  height: 470px;
   margin: 20px 10px;
-  padding: 40px 20px;
+  padding: 20px 20px;
   border-radius: 5px;
   opacity: 0.5;
   -webkit-box-shadow: 0 0 20px #d1d1d1;

@@ -60,7 +60,7 @@
                                 <ul>
                                         <li id="product-parent">
                                                 <a   id="products" href="#" class="nav-item" >
-                                                    Products<ion-icon  name="arrow-down-circle-outline"></ion-icon>
+                                                    Products<ion-icon  onclick="productMenu"    name="arrow-down-circle-outline"></ion-icon>
                                             </a>
                                                     <div id="product-items" class="nav-items">
                                                             <div class="items-content">
@@ -110,7 +110,7 @@
                                                     </div>
                                             </li>
                                         <li id="solution-parent">
-                                                <a id="solutions" href="#">Solutions<ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                                                <a id="solutions" href="#">Solutions<ion-icon  onclick="solutionMenu"  name="arrow-down-circle-outline"></ion-icon></a>
                                                 <div id="solution-items" class="nav-items">
                                                     <div id="items-content" class="items-content">
                                                             <div class="heading">
@@ -197,20 +197,36 @@
                                 const productsItems = document.getElementById('product-items');
                                 const solutionsItems = document.getElementById('solution-items');
                                 var productClicked = false,  solutionClicked = false;
-
-                                productsBtn.addEventListener('click', () => {
-                                    if (productClicked) {
-                                            productsItems.style.visibility = "collapse";
-                                            productsItems.classList.remove("active-nav-items");
-                                            productClicked = false;
-                                    } else {
-                                            productsItems.style.visibility = "visible";
-                                            productsItems.classList.add("active-nav-items");
-                                            solutionsItems.style.visibility = "collapse";
-                                            solutionClicked = false;
-                                            productClicked = true;
+                                const productMenu = () => {
+                                        if (productClicked) {
+                                                productsItems.style.visibility = "collapse";
+                                                productsItems.classList.remove("active-nav-items");
+                                                productClicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "visible";
+                                                productsItems.classList.add("active-nav-items");
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionClicked = false;
+                                                productClicked = true;
+                                        }
                                     }
-                                })
+
+                                    const solutionMenu = () => {
+                                        if (solutionClicked) {
+                                                solutionsItems.style.visibility = "collapse";
+                                                solutionsItems.classList.remove("active-nav-items");
+                                                solutionClicked = false;
+                                        } else {
+                                                productsItems.style.visibility = "collapse";
+                                                solutionsItems.style.visibility = "visible";
+                                                solutionsItems.classList.add("active-nav-items");
+                                                solutionClicked = true;
+                                                productClicked = false;
+                                        }
+                                    }
+
+                                    productsBtn.addEventListener('click', productMenu);
+                                    solutionsBtn.addEventListener('click', solutionMenu);
 
                                 addEventListener("click", (e) => {
                                     var values = e.path;
@@ -234,22 +250,6 @@
                                                     solutionClicked = false;
                                                 }
                                         }
-                                    }
-                                })
-
-                                
-
-                                solutionsBtn.addEventListener('click', () => {
-                                    if (solutionClicked) {
-                                            solutionsItems.style.visibility = "collapse";
-                                            solutionsItems.classList.remove("active-nav-items");
-                                            solutionClicked = false;
-                                    } else {
-                                            productsItems.style.visibility = "collapse";
-                                            solutionsItems.style.visibility = "visible";
-                                            solutionsItems.classList.add("active-nav-items");
-                                            solutionClicked = true;
-                                            productClicked = false;
                                     }
                                 })
 
@@ -279,7 +279,7 @@
                           <div class="swiper-slide" style="padding: 40px 0;">
                                 <div class="header-container">
                                         <div class="text-container">
-                                                <span>Home Right business phone system</span>
+                                                <span>Home > Products > Business Phone System</span>
                                                 <h2>Unlock the Power of a <br> Business Phone System</h2>
                                                 <p style="font-size: 1.2rem; font-weight:600;">Revolutionize. Reconnect. Anywhere. Anytime.
                                                         Never Miss a Business Lead & Work Smart with VoIP.</p>
@@ -1476,26 +1476,26 @@
                         <div class="sitemap">
                                 <h3>Company</h3>
                                 <ul>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact Us </a></li>
+                                        <li><a href="./about.html">About us</a></li>
+                                        <li><a href="./contact-us.html">Contact Us </a></li>
                                         <li><a href="#">Careers</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
                                 <h3>Products</h3>
                                 <ul>
-                                        <li><a href="#"> Business Phone System</a></li>
-                                        <li><a href="#"> Cloud Contact Centre Solution</a></li>
-                                        <li><a href="#"> Voice/VR Broadcasting</a></li>
+                                        <li><a href="./products.html"> Business Phone System</a></li>
+                                        <li><a href="./contact.html"> Cloud Contact Centre Solution</a></li>
+                                        <li><a href="./IVRBroadcast.html"> Voice/VR Broadcasting</a></li>
                                 </ul>
                                 <h3>Solutions</h3>
                                 <ul>
-                                        <li><a href="#"> Professional Services</a></li>
-                                        <li><a href="#"> Call Center</a></li>
-                                        <li><a href="#"> Healthcare</a></li>
-                                        <li><a href="#"> Financial Services</a></li>
-                                        <li><a href="#"> Retail</a></li>
-                                        <li><a href="#"> Industrial/Distribution</a></li>
+                                        <li><a href="./solutions/professional-services.html"> Professional Services</a></li>
+                                        <li><a href="./solutions/call-center.html"> Call Center</a></li>
+                                        <li><a href="./solutions/health.html"> Healthcare</a></li>
+                                        <li><a href="./solutions/financial.html"> Financial Services</a></li>
+                                        <li><a href="./solutions/retail.html"> Retail</a></li>
+                                        <li><a href="./solutions/industrial-distribution.html"> Industrial/Distribution</a></li>
                                 </ul>
                         </div>
                         <div class="sitemap">
@@ -1550,12 +1550,11 @@
                                         </ul>
                                 </div>
                                 <div class="social-links">
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                        <ion-icon name="logo-instagram"></ion-icon>
-                                        <ion-icon name="logo-linkedin"></ion-icon>
-                                        <ion-icon name="logo-youtube"></ion-icon>
-                                        <ion-icon name="logo-twitter"></ion-icon>
-                                        <ion-icon name="logo-whatsapp"></ion-icon>
+                                        <a href="https://www.facebook.com/Bridgei2p"><ion-icon name="logo-facebook"></ion-icon></a>
+                                        <a href="https://www.instagram.com/rajeshbridge/"><ion-icon name="logo-instagram"></ion-icon></a>
+                                        <a href="https://www.linkedin.com/company/bridgei2p/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                                        <a href="https://www.youtube.com/channel/UCLV-WbPUXNCY9fOot8pURNA/"><ion-icon name="logo-youtube"></ion-icon></a>
+                                        <a href="https://twitter.com/bridgei2p"><ion-icon name="logo-twitter"></ion-icon></a>
                                 </div>
                         </div>
                 </div>
