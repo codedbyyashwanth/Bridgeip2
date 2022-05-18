@@ -110,7 +110,9 @@
                                                 </div>
                                         </li>
                                     <li id="solution-parent">
-                                            <a id="solutions" href="#">Solutions<ion-icon onclick="solutionMenu" name="arrow-down-circle-outline"></ion-icon></a>
+                                            <a id="solutions" href="#">
+                                                    Solutions<ion-icon id="solution-icon" name="arrow-down-circle-outline"></ion-icon>
+                                            </a>
                                             <div id="solution-items" class="nav-items">
                                                 <div id="items-content" class="items-content">
                                                         <div class="heading">
@@ -196,6 +198,7 @@
                                     const solutionsBtn = document.getElementById('solutions');
                                     const productsItems = document.getElementById('product-items');
                                     const solutionsItems = document.getElementById('solution-items');
+                                    const solutionIcon = document.getElementById('solution-icon');
                                     var productClicked = false,  solutionClicked = false;
 
                                     const productMenu = () => {
@@ -228,6 +231,7 @@
 
                                     productsBtn.addEventListener('click', productMenu);
                                     solutionsBtn.addEventListener('click', solutionMenu);
+                                    solutionIcon.addEventListener('click', solutionMenu);
 
                                     addEventListener("click", (e) => {
                                         var values = e.path;
@@ -561,7 +565,7 @@
                         <div class="text-content">
                                 <h2>Get Started with Bridgei2p Today</h2>
                         </div>
-                        <a href="./pages/contact-us.html">Click to call</a>
+                        <a href="./pages/under-contruction.html">Click to call</a>
                 </div>
                 <div class="half-bg"></div>
         </section>
@@ -764,39 +768,39 @@
                         <div class="logo-section" >
                                 <div class="logo-container">
                                         <div class="img-container">
-                                                <img src="./resources/img/Clients/aayuja.png" alt="">
-                                                <img src="./resources/img/Clients/BDS-Serv-Final-1.png" alt="">
-                                                <img src="./resources/img/Clients/boston.png" alt="">
+                                                <img src="./resources/img/Client/Client Logos_aayuja.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_BDS.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Collabera.svg" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/Clients/callabes.png" alt="">
-                                                <img src="./resources/img/Clients/eclinical.png" alt="">
-                                                <img src="./resources/img/Clients/freshdesk.png" alt="">
-                                        </div>
-                                </div>
-                                <div class="logo-container">
-                                        <div class="img-container">
-                                                <img src="./resources/img/Clients/genisys.jpg" alt="">
-                                                <img src="./resources/img/Clients/hackerearth.png" alt="">
-                                                <img src="./resources/img/Clients/iquanti.png" alt="">
-                                        </div>
-                                        <div class="img-container">
-                                                <img src="./resources/img/Clients/JMR.png" alt="">
-                                                <img src="./resources/img/Clients/nqa.png" alt="">
-                                                <img src="./resources/img/Clients/opteamix.png" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Boston.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_eclinical solutions.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_freshdesk.svg" alt="">
                                         </div>
                                 </div>
                                 <div class="logo-container">
                                         <div class="img-container">
-                                                <img src="./resources/img/Clients/PFS-Logo.png" alt="">
-                                                <img src="./resources/img/Clients/welspun.png" alt="">
-                                                <img src="./resources/img/Clients/walmart-india.png" alt="">
+                                                <img src="./resources/img/Client/Client Logos_genisys.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_iquanti.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_hackerearth.svg" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/Clients/techaspect.png" alt="">
-                                                <img src="./resources/img/Clients/tavant.png" alt="">
-                                                <img src="./resources/img/Clients/suntechno.jpg" alt="">
-                                                <img src="./resources/img/Clients/progility.png" alt="">
+                                                <img src="./resources/img/Client/Client Logos_JMR.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_nqa.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_opteamix.svg" alt="">
+                                        </div>
+                                </div>
+                                <div class="logo-container">
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_PFS.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_progility.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Suntechno.svg" alt="">
+                                        </div>
+                                        <div class="img-container">
+                                                <img src="./resources/img/Client/Client Logos_Tavant.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_Techaspect.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_walmart.svg" alt="">
+                                                <img src="./resources/img/Client/Client Logos_welspun.svg" alt="">
                                         </div>
                                 </div>
                         </div>
@@ -806,26 +810,27 @@
                         <div class="logo-section">
                                 <div class="logo-container"  >
                                         <div class="img-container">
-                                                <img src="./resources/img/Partners/asttecs.png" alt="">
-                                                <img src="./resources/img/Partners/cisco.gif" alt="">
-                                                <img src="./resources/img/Partners/digium.png" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_asttecs.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_cisco.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_contaque.svg" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/Partners/grandstream.png" alt="">
-                                                <img src="./resources/img/Partners/level3.png" alt="">
-                                                <img src="./resources/img/Partners/logo-portaone.png" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_digium.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Grandstream.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Level 3.svg" alt="">
                                         </div>
                                 </div>
                                 <div class="logo-container">
                                         <div class="img-container">
-                                                <img src="./resources/img/Partners/panasonic.png" alt="">
-                                                <img src="./resources/img/Partners/polycom_logo_detail.gif" alt="">
-                                                <img src="./resources/img/Partners/Sangoma-Logo.png" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Panasonic.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Polycom.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Porta one.svg" alt="">
                                         </div>
                                         <div class="img-container">
-                                                <img src="./resources/img/Partners/tata.png" alt="">
-                                                <img src="./resources/img/Partners/yealink-logo.jpg" alt="">
-                                                <!-- <img src="./resources/img/Partners/" alt=""> -->
+                                                <img src="./resources/img/Partner/Partner logos_Sangoma.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Tata.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Yealink.svg" alt="">
+                                                <img src="./resources/img/Partner/Partner logos_Zoom.svg" alt="">
                                         </div>
                                 </div>
                         </div>

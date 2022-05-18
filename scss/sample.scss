@@ -1,0 +1,539 @@
+@import './base';
+
+.head-section {
+
+        background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    transition: ease 0.4s;
+    background-color: #ffffff;
+
+    .user-acc {
+        width: 90%;
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        @media (max-width: 600px) {
+                display: none;
+        }
+
+        .search-bar, .login-btn a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 15px;
+                margin-top: 10px;
+        }
+
+        .search-bar {
+                width: 200px;
+                height: 45px;
+                border-radius: 5px;
+                display: flex;
+                align-items:center;
+                                        
+                input{
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        display: none;
+                        padding: 10px 10px;
+                }
+
+                button {
+                        width: 60px;
+                        height: 40px;
+                        outline: none;
+                        border: none;
+                        background-color: #2980BF;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        ion-icon {
+                                font-size: 1.2rem;
+                                color: $secondary-color;
+                        }
+                }
+        }
+
+        .login-btn {
+                overflow: hidden;
+
+                a {
+                        cursor: pointer;
+                        text-decoration: none;
+                }
+
+                ion-icon {
+                        padding: 12px;
+                        color: #fafafa;
+                        background-color: #EACA1C;
+                }
+
+                button {
+                        width: 150px;
+                        height: 40px;
+                        background-color: #4C687F;
+                        border: none;
+                        outline: none;
+                        color: #fafafa;
+                        font-size: 1.1rem;
+                        cursor: pointer;
+                }
+        }
+    }
+
+    .navbar {
+        width: 94%;
+        padding: 10px 0px;
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    .logo img {
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .logo .govt {
+            width: 200px;
+            margin-left: 20px;
+    }
+
+    .menu {
+        display: none;
+
+        ion-icon {
+            font-size: 2rem;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+
+    nav {
+        display: block;
+
+        ul li {
+            display: inline-block;
+            margin: 5px 15px;
+            position: relative;
+            
+
+            #contact-us-btn {
+                padding: 8px 20px;
+                border: 1px solid rgb(92, 92, 92);
+                border-radius: 5px;
+                display: inline-block;
+
+                &:hover {
+                        background-color: $accent-color;
+                        color: #ffffff;
+                        border: 1px solid $accent-color;
+                }
+            }
+
+            
+                .nav-items {
+                        max-width: 600px;
+                        position: absolute;
+                        top: 160%;
+                        left: -100%;
+                        z-index: 10000;
+                        border-radius: 10px;
+                        box-shadow: $secondary-shadow;
+                        padding: 20px;
+                        visibility: collapse;
+                        background-color: #fff;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+
+                        @media (max-width:1106px) {
+                                max-width: 550px;
+                                top: 165%;
+                                left: -120%;
+                        }
+
+                        .items-content {
+                                width: 400px;
+                                margin: 0 15px;
+
+                                .heading {
+                                        margin-bottom: 20px;
+                                        p {
+                                                font-size: 0.9rem;
+                                                color: rgba($primary-color, 0.9);
+                                        }
+                                }
+
+                                .links {
+                                        .link {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: flex-start;
+                                                margin: 15px 0;
+
+                                                img {
+                                                        width: 35px;
+                                                        height: 35px;
+                                                        margin: 0px 10px;
+                                                }
+
+                                                .text-content {
+                                                        a {
+                                                                font-weight: 600;
+                                                        }
+                                                        p {
+                                                                font-size: 0.7rem;
+                                                                color: rgba($primary-color, 0.95);
+                                                        }
+                                                }
+                                        }
+
+                                }
+                        }
+
+                        .company-content {
+                                width: 300px;
+                                margin: 0 15px;
+                                
+                                p {
+                                        font-size: 0.9rem;
+                                }
+
+                                img {
+                                        width: 60%;
+                                        margin-top: 20px;
+                                }
+                        }
+                }
+
+               .active-nav-items {
+                        animation: come-down ease 0.4s;
+                }
+
+                @keyframes come-down {
+                        0% {
+                                transform: translateY(-10px);
+                        }
+
+                        100% {
+                                transform: translateY(0px);
+                        }
+                }
+
+             a {
+                font-size: 0.95rem;
+                text-decoration: none;
+                font-weight: 500;
+                color: $primary-color;
+                cursor: pointer;
+
+                display: flex;
+                align-items: center;
+
+                ion-icon {
+                        cursor: pointer;
+                        font-size: 1.2rem;
+                        color: $primary-color;
+                        margin: 0 10px;
+                }
+
+
+                &:hover {
+                    color: $accent-color;
+                    transition: ease 0.4s;
+                }
+
+                &:focus, &:focus ion-icon {
+                        color: $accent-color;
+                    }
+
+                &:hover ion-icon{
+                        color: $accent-color;
+                        transition: ease 0.4s;
+                    }
+            }
+
+            .active-page {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+}
+
+.swiper {
+        .swiper-pagination-bullet-active {
+                background-color: $accent-color;
+        }
+}
+
+@media (max-width: 1315px) {
+        .logo .govt {
+                display: none;
+        }
+
+        header {
+                nav {
+                        ul li {
+                                margin: 5px 10px;
+                        }
+                }
+        }
+}
+
+@media (max-width: 1100px) {
+
+        header {
+                nav {
+                        ul li {
+                                margin: 5px;
+                        }
+                }
+        }
+}
+
+@media (max-width: 950px) {
+        header {
+                nav {
+                        ul li {
+                                .nav-items {
+                                        max-width: 600px;
+                                        top: 150%;
+                                        left: 0%;
+                                        border-radius: 10px;
+                                        box-shadow: $secondary-shadow;
+                                        padding: 20px;
+                                        visibility: collapse;
+                                        background-color: #fff;
+                
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: flex-start;
+                
+                                        .items-content {
+                                                width: 400px;
+                                                margin: 0 15px;
+                
+                                                .heading {
+                                                        margin-bottom: 20px;
+                                                        p {
+                                                                font-size: 0.9rem;
+                                                                color: rgba($primary-color, 0.9);
+                                                        }
+                                                }
+                
+                                                .links {
+                                                        .link {
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                align-items: flex-start;
+                                                                margin: 15px 0;
+                
+                                                                img {
+                                                                        width: 35px;
+                                                                        height: 35px;
+                                                                        margin: 0px 10px;
+                                                                }
+                
+                                                                .text-content {
+                                                                        a {
+                                                                                font-weight: 600;
+                                                                        }
+                                                                        p {
+                                                                                font-size: 0.7rem;
+                                                                                color: rgba($primary-color, 0.95);
+                                                                        }
+                                                                }
+                                                        }
+                
+                                                }
+                                        }
+                
+                                        .company-content {
+                                                width: 300px;
+                                                margin: 0 15px;
+                                                
+                                                p {
+                                                        font-size: 0.9rem;
+                                                }
+                
+                                                img {
+                                                        width: 60%;
+                                                        margin-top: 20px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+@media (max-width: 662px) {
+        header {
+                nav {
+                        ul li {
+                                .nav-items {
+                                        width: 100%;
+                                        max-width: 600px;
+                                        top: 150%;
+                                        left: 0%;
+                                        border-radius: 10px;
+                                        box-shadow: $secondary-shadow;
+                                        padding: 20px;
+                                        visibility: collapse;
+                                        background-color: #fff;
+                                        overflow: auto;
+                
+                                        display: flex;
+                                        justify-content: left;
+                                        align-items: flex-start;
+                
+                                        .items-content {
+                                                width: 400px;
+                                                margin: 0 15px;
+                
+                                                .heading {
+                                                        display: none;
+                                                        margin-bottom: 20px;
+                                                        p {
+                                                                font-size: 0.9rem;
+                                                                color: rgba($primary-color, 0.9);
+                                                        }
+                                                }
+                
+                                                .links {
+                                                        .link {
+                                                                display: flex;
+                                                                justify-content: left;
+                                                                align-items: flex-start;
+                                                                margin: 10px 0;
+                
+                                                                img {
+                                                                        width: 35px;
+                                                                        height: 35px;
+                                                                        margin: 0px 10px;
+                                                                }
+                
+                                                                .text-content {
+                                                                        a {
+                                                                                font-weight: 600;
+                                                                        }
+                                                                        p {
+                                                                                display: none;
+                                                                                font-size: 0.7rem;
+                                                                                color: rgba($primary-color, 0.95);
+                                                                        }
+                                                                }
+                                                        }
+                
+                                                }
+                                        }
+                
+                                        .company-content {
+                                                display: none;
+                                                width: 300px;
+                                                margin: 0 15px;
+                                                
+                                                p {
+                                                        font-size: 0.9rem;
+                                                }
+                
+                                                img {
+                                                        width: 60%;
+                                                        margin-top: 20px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+@media (max-width: 950px) {
+    header {
+
+        .menu {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .govt {
+                display: none;
+        }
+
+        .nav {
+            display: block;
+            width: 94%;
+            margin: auto;
+            position: absolute;
+            top: 100%;
+            left: 10px;
+            z-index: 100;
+            right: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgb(235, 235, 235);
+            background-color: #ffffff;
+            animation: movenav ease 1s;
+
+            ul li {
+                display: block;
+                margin: 15px 15px;
+            }
+        }
+
+        @keyframes movenav {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+}
+
+.hero-sec {
+        width: 100%;
+        text-align: center;
+        img {
+                max-width: 600px;
+                margin: 30px auto;
+        }
+
+        h2 {
+                font-size: 3rem;
+        }
+}
